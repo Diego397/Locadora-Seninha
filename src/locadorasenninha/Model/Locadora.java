@@ -7,11 +7,12 @@ package locadorasenninha.Model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
-/**
- *
- * @author Windows
- */
+
 public class Locadora {
     
     public ArrayList<Carro> listaCarros = new ArrayList<Carro>();
@@ -163,12 +164,30 @@ public class Locadora {
     
     //Métodos para verificar se uma pessoa é maior de idade------------------------------------------
     //(Precisa ser implementada!!!!!!!!!)------------------------------------------------------------
-    public boolean verificarIdade (String dataDeNascimento){
+    public boolean verificarIdade (Calendar dataDeNascimento){
+//        LocalDateTime now = LocalDateTime.now();
+        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        dateFormat.format(cal.getTime())
+
+        Calendar calendar.add(Calendar.YEAR,18);
+        DataNascimento.before(dataAtual)*/
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        dateFormat.format(cal.getTime());
+
+        Calendar cal.add(Calendar.YEAR,18);
+        if (dataDeNascimento.before(cal))
+            return true;
+
+
+
         return true;
     }
     
     //Métodos de cadastro:---------------------------------------------------------------------------
-    public boolean cadastrarCliente(String nome, String cpf, String dataDeNascimento, 
+    public boolean cadastrarCliente(String nome, String cpf, Calendar dataDeNascimento,
             String email, String endereco, String cep, String telefone, String senha) {
 
         if(verificarCPF_Cliente(cpf) && verificarIdade(dataDeNascimento)){
@@ -179,7 +198,7 @@ public class Locadora {
         return false;
     }
     
-    public boolean cadastrarFuncionario(String nome, String cpf, String dataDeNascimento, 
+    public boolean cadastrarFuncionario(String nome, String cpf, Calendar dataDeNascimento,
             String endereco, String email, String cep, String telefone, String senha) {
 
         if(verificarCPF_Funcionario(cpf) && verificarIdade(dataDeNascimento)){
@@ -255,12 +274,4 @@ public class Locadora {
         //Uma reserva não pode ser cancelada quando o carro foi retirado;
         //Devolução
     }
-
-
-
-
-
-
-
-
 }

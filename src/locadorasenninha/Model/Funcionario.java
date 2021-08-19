@@ -6,7 +6,7 @@
 package locadorasenninha.Model;
 
 import java.util.ArrayList;
-
+import java.util.Calendar;
 /**
  *
  * @author Windows
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Funcionario {
     private String nome;
     private String cpf;
-    private String dataDeNascimento; //Não sei qual utilizar para data
+    private Calendar dataDeNascimento; //Não sei qual utilizar para data
     private String endereco;
     private String email;
     private String cep;
@@ -25,7 +25,7 @@ public class Funcionario {
     private ArrayList<Reserva> reservas_funcionario = new ArrayList<Reserva>(); //não sabemos se precisa
 
     //Método Construtor:
-    public Funcionario(String nome, String cpf, String dataDeNascimento, String endereco, String email, String cep, String telefone, String senha) {
+    public Funcionario(String nome, String cpf, Calendar dataDeNascimento, String endereco, String email, String cep, String telefone, String senha) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataDeNascimento = dataDeNascimento;
@@ -53,11 +53,11 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
-    public String getDataDeNascimento() {
+    public Calendar getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(String dataDeNascimento) {
+    public void setDataDeNascimento(Calendar dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 

@@ -8,10 +8,6 @@ package locadorasenninha.Model;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-/**
- *
- * @author Windows
- */
 public class Reserva {
     private int numeroReserva; // identificador da reserva
   

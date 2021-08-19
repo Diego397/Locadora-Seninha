@@ -5,10 +5,6 @@
  */
 package locadorasenninha.Model;
 
-/**
- *
- * @author Windows
- */
 public class Admin {
     
     private String usuario;

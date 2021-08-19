@@ -6,6 +6,7 @@
 package locadorasenninha.Model;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  *
@@ -16,7 +17,7 @@ public class Cliente {
     //Atributos:
     private String nome;
     private String cpf;
-    private String dataDeNascimento;
+    private Calendar dataDeNascimento;
     private String email;
     private String endereco;
     private String cep;
@@ -27,7 +28,7 @@ public class Cliente {
     private ArrayList<Reserva> reservasCliente = new ArrayList<Reserva>();
 
     //Método Construtor:
-    public Cliente(String nome, String cpf, String dataDeNascimento, String email, 
+    public Cliente(String nome, String cpf, Calendar dataDeNascimento, String email,
             String endereco, String cep, String telefone, String senha) {
         this.nome = nome;
         this.cpf = cpf;
@@ -56,11 +57,11 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public String getDataDeNascimento() {
+    public Calendar getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(String dataDeNascimento) {
+    public void setDataDeNascimento(Calendar dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 

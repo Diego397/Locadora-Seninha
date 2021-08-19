@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a72cc6c-6a6c-4d69-814f-d8e59275462c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Cliente.java" afterDir="false" />
+    </list>
+    <list id="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" name="Changes by dackp" comment="">
+      <change afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Locadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Locadora.java" afterDir="false" />
+    </list>
+    <list id="295e9b85-51ed-4430-b20c-3ff577bc65c7" name="Changes by lulul" comment="" />
+    <list id="27fb7e0e-0da8-442d-8af9-0496f39fcc48" name="Changes by marcu" comment="">
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Locadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Locadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locadorasenninha/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/locadorasenninha/Model/Reserva.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/locadorasenninha/Model/Cliente.java">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="18" end1="19" start2="19" end2="20" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="29" end1="30" start2="30" end2="31" changelist="6a72cc6c-6a6c-4d69-814f-d8e59275462c" />
+        <range start1="58" end1="59" start2="59" end2="60" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="62" end1="63" start2="63" end2="64" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/locadorasenninha/Model/Locadora.java">
+      <ranges>
+        <range start1="9" end1="9" start2="9" end2="13" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="10" end1="14" start2="14" end2="15" changelist="27fb7e0e-0da8-442d-8af9-0496f39fcc48" />
+        <range start1="165" end1="166" start2="166" end2="185" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="170" end1="171" start2="189" end2="190" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="181" end1="182" start2="200" end2="201" changelist="1279e2e9-f8b2-4cb0-b831-d6e02ccefbd1" />
+        <range start1="257" end1="265" start2="276" end2="276" changelist="27fb7e0e-0da8-442d-8af9-0496f39fcc48" />
+        <range start1="266" end1="267" start2="277" end2="277" changelist="27fb7e0e-0da8-442d-8af9-0496f39fcc48" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectId" id="1wvItNpKwg44bdnEseXmQv8VPmL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="locadorasenninha.Model.Main" />
+      <module name="TecnicasDeProgTrabalho" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="locadorasenninha.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TelaInicial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="locadorasenninha.View.TelaInicial" />
+      <module name="TecnicasDeProgTrabalho" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="locadorasenninha.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TelaInicial" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a72cc6c-6a6c-4d69-814f-d8e59275462c" name="Changes" comment="" />
+      <created>1629332849797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629332849797</updated>
+      <workItem from="1629332851670" duration="3398000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

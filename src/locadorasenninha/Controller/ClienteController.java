@@ -21,7 +21,10 @@ public class ClienteController {
             Calendar dataDeNascimento = Calendar.getInstance();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             dataDeNascimento.setTime(sdf.parse(dataDeNascimentoString));// all done
-            Cliente cliente = new Cliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha)
+            Cliente cliente = new Cliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
+
+            return true;
         }
+        return false;
     }
 }

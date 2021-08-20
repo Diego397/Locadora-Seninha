@@ -113,7 +113,7 @@ public class Locadora {
         return false;
     }
 
-    public boolean loginCliente(String cpf, String senha){
+/*    public boolean loginCliente(String cpf, String senha){
         for(int i=0;i<listaClientes.size();i++){ 
             if((listaClientes).get(i).getCpf() == cpf && (listaClientes).get(i).getSenha() == senha){
                 return true; // Login efetuado com sucesso
@@ -121,7 +121,7 @@ public class Locadora {
         }		
         return false; // Não existe o usuário ou senha incorreta
     }	
-
+*/
 //    public boolean loginFuncionario(String cpf, String senha){
 //        for(int i=0;i<listaFuncionarios.size();i++){
 //            if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
@@ -142,17 +142,16 @@ public class Locadora {
 //        return true;
 //    }
     
-    public boolean verificarCPF_Cliente(String cpf){
-
-        for(int i=0;i<listaClientes.size();i++){ 
-            if((listaClientes).get(i).getCpf() == cpf){
-                return false;
-            }
-        }		
-        return true;
-    }
-    
-    public boolean verificarPlaca (String placa){
+//    public boolean verificarCPF_Cliente(String cpf){
+//
+//     for(int i=0;i<listaClientes.size();i++){
+//         if((listaClientes).get(i).getCpf() == cpf){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+public boolean verificarPlaca (String placa){
 
         for(int i=0;i<listaCarros.size();i++){ 
             if((listaCarros).get(i).getPlaca() == placa){
@@ -184,7 +183,7 @@ public class Locadora {
     }
     
     //Métodos de cadastro:---------------------------------------------------------------------------
-    public boolean cadastrarCliente(String nome, String cpf, Calendar dataDeNascimento,
+/*    public boolean cadastrarCliente(String nome, String cpf, Calendar dataDeNascimento,
             String email, String endereco, String cep, String telefone, String senha) {
 
         if(verificarCPF_Cliente(cpf) && verificarIdade(dataDeNascimento)){
@@ -194,7 +193,7 @@ public class Locadora {
         }
         return false;
     }
-    
+*/
 //    public boolean cadastrarFuncionario(String nome, String cpf, Calendar dataDeNascimento,
 //            String endereco, String email, String cep, String telefone, String senha) {
 //
@@ -238,12 +237,11 @@ public class Locadora {
     }
     
     //Métodos de Remoção:----------------------------------------------------------------------------
-    public void removerCliente(String cpf, Cliente cliente){
-        for (int i = 0; i < listaClientes.size(); i++)
-            if ((listaClientes.get(i)).getCpf() == cpf && analisarReservasCliente(cliente))
-                listaClientes.remove(i);
-    }
-    
+//    public void removerCliente(String cpf, Cliente cliente){
+//     for (int i = 0; i < listaClientes.size(); i++)
+//         if ((listaClientes.get(i)).getCpf() == cpf && analisarReservasCliente(cliente))
+//             listaClientes.remove(i);
+// }
 //    public void removerFuncionario(String cpf){
 //        for (int i = 0; i < listaFuncionarios.size(); i++)
 //            if ((listaFuncionarios.get(i)).getCpf() == cpf)

@@ -20,10 +20,25 @@ public class ClienteController {
         {
             Calendar dataDeNascimento = Calendar.getInstance();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            dataDeNascimento.setTime(sdf.parse(dataDeNascimentoString));// all done
-            Cliente cliente = new Cliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
+            try{ dataDeNascimento.setTime(sdf.parse(dataDeNascimentoString)); }
+            catch (ParseException e) { e.printStackTrace(); }
 
-            return true;
+            Cliente cliente = new Cliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
+            return cliente.cadastrarCliente(cliente);
+        }
+        return false;
+    }
+
+    public boolean removerCliente(String cpf){
+        if (cpf != null && cpf.length() == 11 ) {
+            //return removerCliente(cpf);
+        }
+        return false;
+    }
+
+    public boolean loginCliente(String cpf, String senha){
+        if(cpf != null && cpf.length() == 11 && senha != null && senha.length() < 30){
+            //return loginCliente(cpf, senha);
         }
         return false;
     }

@@ -121,6 +121,21 @@ public class Cliente {
         return false;
     }
 
+    public void removerCliente(String cpf, Cliente cliente){
+        for (int i = 0; i < locadora.listaClientes.size(); i++)
+            if ((locadora.listaClientes.get(i)).getCpf() == cpf && locadora.analisarReservasCliente(cliente))
+                locadora.listaClientes.remove(i);
+    }
+
+    public boolean loginCliente(String cpf, String senha){
+        for(int i=0;i<locadora.listaClientes.size();i++){
+            if((locadora.listaClientes).get(i).getCpf() == cpf && (locadora.listaClientes).get(i).getSenha() == senha){
+                return true; // Login efetuado com sucesso
+            }
+        }
+        return false; // Não existe o usuário ou senha incorreta
+    }
+
     public boolean verificarCPF_Cliente(String cpf){
 
         for(int i=0;i<locadora.listaClientes.size();i++){
@@ -132,22 +147,13 @@ public class Cliente {
     }
 
     public boolean verificarIdade (Calendar dataDeNascimento){
-//        LocalDateTime now = LocalDateTime.now();
-        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Calendar cal = Calendar.getInstance();
-        dateFormat.format(cal.getTime())
-
-        Calendar calendar.add(Calendar.YEAR,18);
-        DataNascimento.before(dataAtual)*/
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Calendar cal = Calendar.getInstance();
         dateFormat.format(cal.getTime());
 
         cal.add(Calendar.YEAR,18);
-        if (dataDeNascimento.before(cal))
-            return true;
-        return false;
+        return dataDeNascimento.before(cal);
     }
     
 }

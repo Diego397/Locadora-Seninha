@@ -165,7 +165,7 @@ public class Funcionario {
                 return true; // Login efetuado com sucesso
             }
         }
-        return false; // Não existe o usuário ou senha incorreta
+        return false; // Não existe usuário ou senha incorreta
     }
 
 }

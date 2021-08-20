@@ -5,13 +5,11 @@
  */
 package locadorasenninha.Model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-/**
- *
- * @author Windows
- */
 public class Cliente {
     
     //Atributos:
@@ -23,6 +21,7 @@ public class Cliente {
     private String cep;
     private String telefone;
     private String senha;
+    private Locadora locadora;
     
     //Lista de Reservas do Cliente:
     private ArrayList<Reserva> reservasCliente = new ArrayList<Reserva>();
@@ -111,6 +110,44 @@ public class Cliente {
 
     public void setReservas(ArrayList<Reserva> reservas) {
         this.reservasCliente = reservas;
+    }
+
+    public boolean cadastrarCliente(Cliente cliente) {
+
+        if(verificarCPF_Cliente(cliente.getCpf()) && verificarIdade(cliente.getDataDeNascimento())){
+            locadora.listaClientes.add(cliente);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verificarCPF_Cliente(String cpf){
+
+        for(int i=0;i<locadora.listaClientes.size();i++){
+            if((locadora.listaClientes).get(i).getCpf() == cpf){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean verificarIdade (Calendar dataDeNascimento){
+//        LocalDateTime now = LocalDateTime.now();
+        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        dateFormat.format(cal.getTime())
+
+        Calendar calendar.add(Calendar.YEAR,18);
+        DataNascimento.before(dataAtual)*/
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        dateFormat.format(cal.getTime());
+
+        cal.add(Calendar.YEAR,18);
+        if (dataDeNascimento.before(cal))
+            return true;
+        return false;
     }
     
 }

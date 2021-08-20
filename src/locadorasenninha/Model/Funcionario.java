@@ -150,4 +150,22 @@ public class Funcionario {
         return false;
     }
 
+    public boolean removerFuncionario(String cpf){
+        for (int i = 0; i < locadora.listaFuncionarios.size(); i++)
+            if ((locadora.listaFuncionarios.get(i)).getCpf() == cpf) {
+                locadora.listaFuncionarios.remove(i);
+                return true;
+            }
+        return false;
+    }
+
+    public boolean loginFuncionario(String cpf, String senha){
+        for(int i=0;i<locadora.listaFuncionarios.size();i++){
+            if((locadora.listaFuncionarios).get(i).getCpf() == cpf && (locadora.listaFuncionarios).get(i).getSenha() == senha){
+                return true; // Login efetuado com sucesso
+            }
+        }
+        return false; // Não existe o usuário ou senha incorreta
+    }
+
 }

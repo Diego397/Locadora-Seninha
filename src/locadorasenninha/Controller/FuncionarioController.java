@@ -12,8 +12,28 @@ public class FuncionarioController {
         && senha != null && senha.length() < 30)
         {
             Funcionario funcionario = new Funcionario (nome, cpf, dataDeNascimento, endereco, email, cep, telefone, senha);
-            funcionario.cadastrarFuncionario(funcionario);
-            return true;
+            boolean aux = funcionario.cadastrarFuncionario(funcionario);
+            if(aux) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removerFuncionario(String cpf){
+        if (cpf != null && cpf.length() == 11 ){
+            boolean aux = removerFuncionario(cpf);
+            if(aux)
+                return true;
+        }
+        return false;
+    }
+
+    public boolean loginFuncionario(String cpf, String senha){
+        if(cpf != null && cpf.length() == 11 && senha != null && senha.length() < 30){
+            boolean aux = loginFuncionario(cpf, senha);
+            if(aux)
+                return true;
         }
         return false;
     }

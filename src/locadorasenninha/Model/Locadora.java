@@ -122,14 +122,14 @@ public class Locadora {
         return false; // Não existe o usuário ou senha incorreta
     }	
 
-    public boolean loginFuncionario(String cpf, String senha){
-        for(int i=0;i<listaFuncionarios.size();i++){ 
-            if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
-                return true; // Login efetuado com sucesso
-            }
-        }		
-        return false; // Não existe o usuário ou senha incorreta
-    }
+//    public boolean loginFuncionario(String cpf, String senha){
+//        for(int i=0;i<listaFuncionarios.size();i++){
+//            if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
+//                return true; // Login efetuado com sucesso
+//            }
+//        }
+//        return false; // Não existe o usuário ou senha incorreta
+//    }
     
     //Métodos para verificação de repetições:--------------------------------------------------------
 //    public boolean verificarCPF_Funcionario(String cpf){
@@ -205,7 +205,7 @@ public class Locadora {
 //        return false;
 //    }
 
-    public boolean cadastrarCarroCarro(String modelo, String placa, String cor, String chassi, 
+    public boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
                   int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
 
         if(verificarPlaca(placa)){
@@ -244,11 +244,11 @@ public class Locadora {
                 listaClientes.remove(i);
     }
     
-    public void removerFuncionario(String cpf){
-        for (int i = 0; i < listaFuncionarios.size(); i++)
-            if ((listaFuncionarios.get(i)).getCpf() == cpf)
-                listaFuncionarios.remove(i);    
-    }
+//    public void removerFuncionario(String cpf){
+//        for (int i = 0; i < listaFuncionarios.size(); i++)
+//            if ((listaFuncionarios.get(i)).getCpf() == cpf)
+//                listaFuncionarios.remove(i);
+//    }
     
     public void removerCarro(String placa, Carro carro){
         for (int i = 0; i < listaCarros.size(); i++)

@@ -5,6 +5,8 @@
  */
 package locadorasenninha.Model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 /**
@@ -20,6 +22,7 @@ public class Funcionario {
     private String cep;
     private String telefone;
     private String senha;
+    private Locadora locadora;
     
     //Funcionário precisa ter lista de reservas?
     private ArrayList<Reserva> reservas_funcionario = new ArrayList<Reserva>(); //não sabemos se precisa
@@ -108,5 +111,43 @@ public class Funcionario {
     public void setReservas_funcionario(ArrayList<Reserva> reservas_funcionario) {
         this.reservas_funcionario = reservas_funcionario;
     }
-    
+
+    public boolean cadastrarFuncionario(Funcionario funcionario) {
+
+        if(verificarCPF_Funcionario(cpf) && verificarIdade(dataDeNascimento)){
+            locadora.listaFuncionarios.add(this);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verificarCPF_Funcionario(String cpf){
+
+        for(int i=0;i<locadora.listaFuncionarios.size();i++){
+            if((locadora.listaFuncionarios).get(i).getCpf() == cpf){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean verificarIdade (Calendar dataDeNascimento){
+//        LocalDateTime now = LocalDateTime.now();
+        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        dateFormat.format(cal.getTime())
+
+        Calendar calendar.add(Calendar.YEAR,18);
+        DataNascimento.before(dataAtual)*/
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        dateFormat.format(cal.getTime());
+
+        cal.add(Calendar.YEAR,18);
+        if (dataDeNascimento.before(cal))
+            return true;
+        return false;
+    }
+
 }

@@ -132,15 +132,15 @@ public class Locadora {
     }
     
     //Métodos para verificação de repetições:--------------------------------------------------------
-    public boolean verificarCPF_Funcionario(String cpf){
-
-        for(int i=0;i<listaFuncionarios.size();i++){ 
-            if((listaFuncionarios).get(i).getCpf() == cpf){
-                return false;
-            }
-        }		
-        return true;
-    }
+//    public boolean verificarCPF_Funcionario(String cpf){
+//
+//        for(int i=0;i<listaFuncionarios.size();i++){
+//            if((listaFuncionarios).get(i).getCpf() == cpf){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
     
     public boolean verificarCPF_Cliente(String cpf){
 
@@ -177,13 +177,10 @@ public class Locadora {
         Calendar cal = Calendar.getInstance();
         dateFormat.format(cal.getTime());
 
-        Calendar cal.add(Calendar.YEAR,18);
+        cal.add(Calendar.YEAR,18);
         if (dataDeNascimento.before(cal))
             return true;
-
-
-
-        return true;
+        return false;
     }
     
     //Métodos de cadastro:---------------------------------------------------------------------------
@@ -198,17 +195,16 @@ public class Locadora {
         return false;
     }
     
-    public boolean cadastrarFuncionario(String nome, String cpf, Calendar dataDeNascimento,
-            String endereco, String email, String cep, String telefone, String senha) {
+//    public boolean cadastrarFuncionario(String nome, String cpf, Calendar dataDeNascimento,
+//            String endereco, String email, String cep, String telefone, String senha) {
+//
+//        if(verificarCPF_Funcionario(cpf) && verificarIdade(dataDeNascimento)){
+//            listaFuncionarios.add(this);
+//            return true;
+//        }
+//        return false;
+//    }
 
-        if(verificarCPF_Funcionario(cpf) && verificarIdade(dataDeNascimento)){
-            Funcionario funcionario = new Funcionario (nome, cpf, dataDeNascimento, endereco, email, cep, telefone, senha);
-            listaFuncionarios.add(funcionario);
-            return true;
-        }
-        return false;
-    }
-    
     public boolean cadastrarCarroCarro(String modelo, String placa, String cor, String chassi, 
                   int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
 

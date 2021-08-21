@@ -8,7 +8,7 @@ import locadorasenninha.Model.Locadora;
 import java.util.Calendar;
 
 public class ReservaController {
-    public boolean VerificaGerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao, String status, Carro carro, Cliente cliente, Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral, int numeroReserva) {
+    public boolean VerificaGerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao, String status, Carro carro, Cliente cliente, Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral, int numeroReserva) throws Exception {
         if (numeroReserva > 1 && numeroReserva < 99999)
         {
             if (dataEmissao != null && dataRetirada != null && dataDevolucao != null)

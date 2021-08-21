@@ -14,10 +14,10 @@ import java.time.LocalDateTime;
 
 
 public class Locadora {
-    
-    public ArrayList<Carro> listaCarros = new ArrayList<Carro>();
+
+    public static ArrayList<Carro> listaCarros = new ArrayList<Carro>();
 	
-    public ArrayList<Reserva> reservasLocadora = new ArrayList<Reserva>();
+    public static ArrayList<Reserva> reservasLocadora = new ArrayList<Reserva>();
 
     public ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
 	
@@ -31,9 +31,9 @@ public class Locadora {
     public ArrayList<Carro> getCarros() {
         return listaCarros;
     }
-    
+
     //Método que devolve um carro
-    public boolean devolverCarro(Carro carro){
+    public static boolean devolverCarro(Carro carro){
       for(int i = 0; i < reservasLocadora.size();i++){
         if(reservasLocadora.get(i).getCarro() == carro){
           reservasLocadora.remove(carro);
@@ -41,14 +41,14 @@ public class Locadora {
         }
       }
       return false;
-      
+
     }
 
     //Método que gera uma NOVA RESERVA
-    public boolean gerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao, 
-            String status, Carro carro, Cliente cliente, Funcionario funcionario, 
-            double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral, 
-            int numeroReserva) throws Exception{
+    public static boolean gerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao,
+                                       String status, Carro carro, Cliente cliente, Funcionario funcionario,
+                                       double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral,
+                                       int numeroReserva) throws Exception{
         
       Reserva reserva = new Reserva(numeroReserva,dataEmissao,dataRetirada, 
              dataDevolucao, status, carro, cliente, 
@@ -73,7 +73,7 @@ public class Locadora {
         return reservasLocadora;
     }
 
-    public boolean verificarReserva (String cpf) {
+    public static boolean verificarReserva(String cpf) {
         for (int i = 0; i < reservasLocadora.size(); i++){
             if ( ((reservasLocadora.get(i)).getCliente()).getCpf() == cpf )
                 return true; // cliente possui uma reserva ativa
@@ -83,7 +83,7 @@ public class Locadora {
     }
 
     //Método que CANCELA uma reserva
-    public boolean cancelarReserva (int numeroReserva) {
+    public static boolean cancelarReserva(int numeroReserva) {
         for (int i = 0; i < reservasLocadora.size(); i++){
             if ((reservasLocadora.get(i)).getNumeroReserva() == numeroReserva){
                 reservasLocadora.remove(i);
@@ -153,7 +153,7 @@ public class Locadora {
 //     }
 //     return true;
 // }
-public boolean verificarPlaca (String placa){
+public static boolean verificarPlaca(String placa){
 
         for(int i=0;i<listaCarros.size();i++){ 
             if((listaCarros).get(i).getPlaca() == placa){
@@ -206,8 +206,8 @@ public boolean verificarPlaca (String placa){
 //        return false;
 //    }
 
-    public boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
-                  int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
+    public static boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
+                                         int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
 
         if(verificarPlaca(placa)){
             Carro carro = new Carro (modelo, placa, cor, chassi, 
@@ -225,8 +225,8 @@ public boolean verificarPlaca (String placa){
         //Finalizada (devolvido) ou  Cancelada, retornar false.
         return true;
     }
-    
-    public boolean analisarReservasCarro(Carro carro){
+
+    public static boolean analisarReservasCarro(Carro carro){
         //Rodar a lista de reservas do carro, se encontrar alguma reserva que não
         //tem os status Finalizada ou Cancelada, retornar false.
         return true;
@@ -262,7 +262,7 @@ public boolean verificarPlaca (String placa){
 //        return false;
 //    }
     
-    public boolean removerCarro(String placa){ //void, Carro carro
+    public static boolean removerCarro(String placa){ //void, Carro carro
         for (int i = 0; i < listaCarros.size(); i++)
         {
             //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
@@ -288,7 +288,7 @@ public boolean verificarPlaca (String placa){
     public boolean verificarStatusReserva(Reserva reserva){
         return true;
     }
-    
+
 //    public void cancelarReserva(){
         //Uma reserva não pode ser cancelada quando o carro foi retirado;
         //Devolução

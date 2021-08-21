@@ -247,6 +247,18 @@ public boolean verificarPlaca (String placa){
 //            if ((listaFuncionarios.get(i)).getCpf() == cpf)
 //                listaFuncionarios.remove(i);
 //    }
+
+//    public boolean removerFuncionario(String cpf){
+//        if (cpf != null && cpf.length() == 11 ){
+//            for (int i = 0; i < this.listaFuncionarios.size(); i++)
+//                if ((this.listaFuncionarios.get(i)).getCpf() == cpf) {
+//                    this.listaFuncionarios.remove(i);
+//                    return true;
+//                }
+//            return false;
+//        }
+//        return false;
+//    }
     
     public void removerCarro(String placa, Carro carro){
         for (int i = 0; i < listaCarros.size(); i++)

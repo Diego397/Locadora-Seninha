@@ -415,8 +415,11 @@ public class ExibirFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+
     private void buttonRemoverFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverFuncionarioActionPerformed
         JOptionPane.showMessageDialog(null, "Funcionário Removido!");
+
         ListaFuncionarios novatela = new ListaFuncionarios();
         novatela.setVisible(true);
         this.setVisible(false);

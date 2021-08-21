@@ -22,7 +22,7 @@ public class Funcionario {
     private String cep;
     private String telefone;
     private String senha;
-    private Locadora locadora;
+    private static Locadora locadora;
     
     //Funcionário precisa ter lista de reservas?
     private ArrayList<Reserva> reservas_funcionario = new ArrayList<Reserva>(); //não sabemos se precisa
@@ -150,7 +150,7 @@ public class Funcionario {
         return false;
     }
 
-    public boolean removerFuncionario(String cpf){
+    public static boolean removerFuncionario(String cpf){
         for (int i = 0; i < locadora.listaFuncionarios.size(); i++)
             if ((locadora.listaFuncionarios.get(i)).getCpf() == cpf) {
                 locadora.listaFuncionarios.remove(i);
@@ -159,7 +159,7 @@ public class Funcionario {
         return false;
     }
 
-    public boolean loginFuncionario(String cpf, String senha){
+    public static boolean loginFuncionario(String cpf, String senha){
         for(int i=0;i<locadora.listaFuncionarios.size();i++){
             if((locadora.listaFuncionarios).get(i).getCpf() == cpf && (locadora.listaFuncionarios).get(i).getSenha() == senha){
                 return true; // Login efetuado com sucesso

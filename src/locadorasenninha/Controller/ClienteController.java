@@ -36,9 +36,9 @@ public class ClienteController {
         return false;
     }
 
-    public boolean loginCliente(String cpf, String senha){
+    public boolean loginClienteController(String cpf, String senha){
         if(cpf != null && cpf.length() == 11 && senha != null && senha.length() < 30){
-            //return loginCliente(cpf, senha);
+            return Cliente.loginCliente(cpf, senha);
         }
         return false;
     }

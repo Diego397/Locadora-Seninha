@@ -163,14 +163,14 @@ public boolean verificarPlaca (String placa){
     
     //Métodos para verificar se uma pessoa é maior de idade------------------------------------------
     //(Precisa ser implementada!!!!!!!!!)------------------------------------------------------------
-    public boolean verificarIdade (Calendar dataDeNascimento){
-//        LocalDateTime now = LocalDateTime.now();
-        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+ /*   public boolean verificarIdade (Calendar dataDeNascimento){
+        LocalDateTime now = LocalDateTime.now();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Calendar cal = Calendar.getInstance();
         dateFormat.format(cal.getTime())
 
         Calendar calendar.add(Calendar.YEAR,18);
-        DataNascimento.before(dataAtual)*/
+        DataNascimento.before(dataAtual)
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Calendar cal = Calendar.getInstance();
@@ -180,8 +180,8 @@ public boolean verificarPlaca (String placa){
         if (dataDeNascimento.before(cal))
             return true;
         return false;
-    }
-    
+    } */
+
     //Métodos de cadastro:---------------------------------------------------------------------------
 /*    public boolean cadastrarCliente(String nome, String cpf, Calendar dataDeNascimento,
             String email, String endereco, String cep, String telefone, String senha) {

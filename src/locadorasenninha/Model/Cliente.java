@@ -21,7 +21,7 @@ public class Cliente {
     private String cep;
     private String telefone;
     private String senha;
-    private Locadora locadora;
+    private static Locadora locadora;
     
     //Lista de Reservas do Cliente:
     private ArrayList<Reserva> reservasCliente = new ArrayList<Reserva>();
@@ -112,6 +112,10 @@ public class Cliente {
         this.reservasCliente = reservas;
     }
 
+    public Locadora getLocadora() { return locadora; }
+
+    public void setLocadora(Locadora locadora){ this.locadora = locadora; }
+
     public boolean cadastrarCliente(Cliente cliente) {
 
         if(verificarCPF_Cliente(cliente.getCpf()) && verificarIdade(cliente.getDataDeNascimento())){
@@ -127,7 +131,7 @@ public class Cliente {
                 locadora.listaClientes.remove(i);
     }
 
-    public boolean loginCliente(String cpf, String senha){
+    public static boolean loginCliente(String cpf, String senha){
         for(int i=0;i<locadora.listaClientes.size();i++){
             if((locadora.listaClientes).get(i).getCpf() == cpf && (locadora.listaClientes).get(i).getSenha() == senha){
                 return true; // Login efetuado com sucesso

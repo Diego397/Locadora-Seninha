@@ -1,6 +1,5 @@
 package locadorasenninha.Controller;
 
-import locadorasenninha.Model.Locadora;
 import locadorasenninha.Model.Carro;
 
 public class CarroController {
@@ -18,7 +17,14 @@ public class CarroController {
                         {
                             if (taxaAtraso > 0 && taxaAtraso <= 9999)
                             {
+<<<<<<< Updated upstream
                                 return Locadora.cadastrarCarro(modelo, placa, cor, chassi, passageiros, bagagem, taxaDiaria, taxaAtraso);
+=======
+                                Carro carro = new Carro (modelo, placa, cor, chassi,
+                                        passageiros, bagagem, taxaDiaria, taxaAtraso); //chama cadastrarCarro da model (nao sei porque esta reclamando que precisa ser static)
+                                return carro.cadastrarCarro(carro);
+                                /*cadastrarCarro(String modelo, String placa, String cor, String chassi, int passageiros, double bagagem, double taxaDiaria, double taxaAtraso)*/
+>>>>>>> Stashed changes
                             }
                         }
                     }
@@ -32,8 +38,12 @@ public class CarroController {
     {
         if (placa != null && placa.length() == 7)
         {
-            return Locadora.removerCarro(placa); //Pede static
+            return Carro.removerCarro(placa); //Pede static
         }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         return false;
     }
 
@@ -41,7 +51,7 @@ public class CarroController {
     {
         if (carro != null)
         {
-            return Locadora.devolverCarro(carro); ////Pede static
+            return Carro.devolverCarro(carro); ////Pede static
         }
         return false;
     }

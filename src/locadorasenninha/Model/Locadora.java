@@ -33,6 +33,7 @@ public class Locadora {
     }
 
     //Método que devolve um carro
+<<<<<<< Updated upstream
     public static boolean devolverCarro(Carro carro){
       for(int i = 0; i < reservasLocadora.size();i++){
         if(reservasLocadora.get(i).getCarro() == carro){
@@ -43,6 +44,18 @@ public class Locadora {
       return false;
 
     }
+=======
+//    public boolean devolverCarro(Carro carro){
+//      for(int i = 0; i < reservasLocadora.size();i++){
+//        if(reservasLocadora.get(i).getCarro() == carro){
+//          reservasLocadora.remove(carro);
+//          return true;
+//        }
+//      }
+//      return false;
+//
+//    }
+>>>>>>> Stashed changes
 
     //Método que gera uma NOVA RESERVA
     public static boolean gerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao,
@@ -153,6 +166,7 @@ public class Locadora {
 //     }
 //     return true;
 // }
+<<<<<<< Updated upstream
 public static boolean verificarPlaca(String placa){
 
         for(int i=0;i<listaCarros.size();i++){ 
@@ -162,6 +176,17 @@ public static boolean verificarPlaca(String placa){
         }		
         return true;
     }
+=======
+//public boolean verificarPlaca (String placa){
+//
+//        for(int i=0;i<listaCarros.size();i++){
+//            if((listaCarros).get(i).getPlaca() == placa){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+>>>>>>> Stashed changes
     
     //Métodos para verificar se uma pessoa é maior de idade------------------------------------------
     //(Precisa ser implementada!!!!!!!!!)------------------------------------------------------------
@@ -206,6 +231,7 @@ public static boolean verificarPlaca(String placa){
 //        return false;
 //    }
 
+<<<<<<< Updated upstream
     public static boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
                                          int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
 
@@ -217,6 +243,19 @@ public static boolean verificarPlaca(String placa){
         }
         return false;
     }
+=======
+//    public boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
+//                  int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
+//
+//        if(verificarPlaca(placa)){
+//            Carro carro = new Carro (modelo, placa, cor, chassi,
+//                  passageiros, bagagem, taxaDiaria, taxaAtraso);
+//            listaCarros.add(carro);
+//            return true;
+//        }
+//        return false;
+//    }
+>>>>>>> Stashed changes
 
     //Métodos para verificar se há reservas ativas no Cliente e no Carro:----------------------------
     //(PRECISAM SER FEITAS!!!!!!!!!!)----------------------------------------------------------------
@@ -262,6 +301,7 @@ public static boolean verificarPlaca(String placa){
 //        return false;
 //    }
     
+<<<<<<< Updated upstream
     public static boolean removerCarro(String placa){ //void, Carro carro
         for (int i = 0; i < listaCarros.size(); i++)
         {
@@ -278,6 +318,24 @@ public static boolean verificarPlaca(String placa){
         }
         return false;
     }
+=======
+//    public boolean static removerCarro(String placa){ //void, Carro carro
+//        for (int i = 0; i < listaCarros.size(); i++)
+//        {
+//            //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
+//            if (((listaCarros.get(i)).getPlaca() == placa))
+//            {
+//                Carro carro = listaCarros.get(i);
+//                if (analisarReservasCarro(carro))
+//                {
+//                    listaCarros.remove(i);
+//                    return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+>>>>>>> Stashed changes
     
     //Método para gerenciar uma reserva:-----------------------------------------------------------------
     //(PRECISAM SER FEITAS!!!!!!!!!!)--------------------------------------------------------------------

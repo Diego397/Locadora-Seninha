@@ -24,6 +24,7 @@ public class Carro {
     private double bagagem;
     private double taxaDiaria;
     private double taxaAtraso;
+    private static Locadora locadora;
     //private imagem;
 
     //Lista de Reservas do Carro:
@@ -121,4 +122,54 @@ public class Carro {
     
     //Outros Métodos:
 
+<<<<<<< Updated upstream
+=======
+    public boolean cadastrarCarro(Carro carro) {
+
+        if(verificarPlaca(carro.placa)){
+            locadora.listaCarros.add(carro);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verificarPlaca (String placa){
+
+        for(int i=0;i<locadora.listaCarros.size();i++){
+            if((locadora.listaCarros).get(i).getPlaca() == placa){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean removerCarro(String placa){ //void, Carro carro
+        for (int i = 0; i < locadora.listaCarros.size(); i++)
+        {
+            //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
+            if (((locadora.listaCarros.get(i)).getPlaca() == placa))
+            {
+                Carro carro = locadora.listaCarros.get(i);
+                if (locadora.analisarReservasCarro(carro))
+                {
+                    locadora.listaCarros.remove(i);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static boolean devolverCarro(Carro carro){
+        for(int i = 0; i < locadora.reservasLocadora.size();i++){
+            if(locadora.reservasLocadora.get(i).getCarro() == carro){
+                locadora.reservasLocadora.remove(carro);
+                return true;
+            }
+        }
+        return false;
+
+    }
+    
+>>>>>>> Stashed changes
 }

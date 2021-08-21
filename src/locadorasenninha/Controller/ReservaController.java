@@ -28,4 +28,22 @@ public class ReservaController {
         }
         return false;
     }
+
+    public boolean VerificaCancelarReserva(int numeroReserva)
+    {
+        if (numeroReserva > 0 && numeroReserva < 99999)
+        {
+            return Locadora.cancelarReserva(numeroReserva); //Pede static
+        }
+        return false;
+    }
+
+    public boolean VerificaVerificarReserva(String cpf)
+    {
+        if (cpf != null && cpf.length() == 11)
+        {
+            return Locadora.verificarReserva(cpf); //Pede static
+        }
+        return false;
+    }
 }

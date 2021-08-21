@@ -29,18 +29,20 @@ public class CarroController {
         return false;
     }
 
+    public boolean VerificaRemoverCarro(String placa)
+    {
+        if (placa != null && placa.length() == 7)
+        {
+            return Locadora.removerCarro(placa); //Pede static
+        }
+    }
 
-
-
-    /*    public boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
-                  int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
-
-        if(verificarPlaca(placa)){
-            Carro carro = new Carro (modelo, placa, cor, chassi,
-                  passageiros, bagagem, taxaDiaria, taxaAtraso);
-            listaCarros.add(carro);
-            return true;
+    public boolean VerificaDevolverCarro(Carro carro)
+    {
+        if (carro != null)
+        {
+            return Locadora.devolverCarro(carro); ////Pede static
         }
         return false;
-    }*/
+    }
 }

@@ -83,12 +83,14 @@ public class Locadora {
     }
 
     //Método que CANCELA uma reserva
-    public void cancelarReserva (int numeroReserva) {
+    public boolean cancelarReserva (int numeroReserva) {
         for (int i = 0; i < reservasLocadora.size(); i++){
             if ((reservasLocadora.get(i)).getNumeroReserva() == numeroReserva){
-                    reservasLocadora.remove(i);
+                reservasLocadora.remove(i);
+                return true;
             }
         }
+        return false;
     }
 
 
@@ -260,10 +262,21 @@ public boolean verificarPlaca (String placa){
 //        return false;
 //    }
     
-    public void removerCarro(String placa, Carro carro){
+    public boolean removerCarro(String placa){ //void, Carro carro
         for (int i = 0; i < listaCarros.size(); i++)
-            if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro)))
-                listaCarros.remove(i);    
+        {
+            //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
+            if (((listaCarros.get(i)).getPlaca() == placa))
+            {
+                Carro carro = listaCarros.get(i);
+                if (analisarReservasCarro(carro))
+                {
+                    listaCarros.remove(i);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     
     //Método para gerenciar uma reserva:-----------------------------------------------------------------
@@ -276,8 +289,8 @@ public boolean verificarPlaca (String placa){
         return true;
     }
     
-    public void cancelarReserva(){
+//    public void cancelarReserva(){
         //Uma reserva não pode ser cancelada quando o carro foi retirado;
         //Devolução
-    }
+//    }
 }

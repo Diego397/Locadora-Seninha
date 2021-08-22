@@ -1,5 +1,3 @@
-//teste
-
 package locadorasenninha.Model;
 
 public class Admin {

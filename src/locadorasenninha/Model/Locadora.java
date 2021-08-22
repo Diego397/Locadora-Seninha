@@ -1,12 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package locadorasenninha.Model;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
@@ -27,99 +24,24 @@ public class Locadora {
     
     private int numeroReservas; // Regista o numero total de reservas da locadora;
     
-    //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
     public ArrayList<Carro> getCarros() {
         return listaCarros;
-    }
-
-    //Método que devolve um carro
-<<<<<<< Updated upstream
-    public static boolean devolverCarro(Carro carro){
-      for(int i = 0; i < reservasLocadora.size();i++){
-        if(reservasLocadora.get(i).getCarro() == carro){
-          reservasLocadora.remove(carro);
-          return true;
-        }
-      }
-      return false;
-
-    }
-=======
-//    public boolean devolverCarro(Carro carro){
-//      for(int i = 0; i < reservasLocadora.size();i++){
-//        if(reservasLocadora.get(i).getCarro() == carro){
-//          reservasLocadora.remove(carro);
-//          return true;
-//        }
-//      }
-//      return false;
-//
-//    }
->>>>>>> Stashed changes
-
-    //Método que gera uma NOVA RESERVA
-    public static boolean gerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao,
-                                       String status, Carro carro, Cliente cliente, Funcionario funcionario,
-                                       double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral,
-                                       int numeroReserva) throws Exception{
-        
-      Reserva reserva = new Reserva(numeroReserva,dataEmissao,dataRetirada, 
-             dataDevolucao, status, carro, cliente, 
-             funcionario,valorTotalDiaria,valorTotalAtraso, 
-            valorTotalGeral);
-
-      for (int i = 0; i < reservasLocadora.size(); i++)
-      {
-        if (reserva.getDataRetirada() == reservasLocadora.get(i).getDataRetirada() || reserva.getDataDevolucao() == reservasLocadora.get(i).getDataDevolucao() || reserva.getDataRetirada().before(reservasLocadora.get(i).getDataDevolucao()) || reserva.getDataDevolucao().after(reservasLocadora.get(i).getDataRetirada()))
-        {
-            System.out.println("Data indisponivel");
-            return false;
-        }
-      }
-
-      reservasLocadora.add(reserva);
-      return true;
-      //this.notifyObservers(); é necessario ?
     }
 
     public ArrayList<Reserva> getReservas() {
         return reservasLocadora;
     }
 
-    public static boolean verificarReserva(String cpf) {
-        for (int i = 0; i < reservasLocadora.size(); i++){
-            if ( ((reservasLocadora.get(i)).getCliente()).getCpf() == cpf )
-                return true; // cliente possui uma reserva ativa
-        }
-
-        return false; // Não há reservas ativas
-    }
-
-    //Método que CANCELA uma reserva
-    public static boolean cancelarReserva(int numeroReserva) {
-        for (int i = 0; i < reservasLocadora.size(); i++){
-            if ((reservasLocadora.get(i)).getNumeroReserva() == numeroReserva){
-                reservasLocadora.remove(i);
-                return true;
-            }
-        }
-        return false;
-    }
-
-
     public ArrayList<Cliente> getClientes() {
         return listaClientes;
     }
 
-
-    //Método auxiliar que verifica se um CPF de cliente já está cadastrado
-
     public ArrayList<Funcionario> getFuncionarios(){
         return listaFuncionarios;
     }
-    //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
     
-    //Métodos de Login:------------------------------------------------------------------------------
+
+//MÉTODO OPERACIONAL ADMIN
     public boolean loginAdmin(String usuario, String senha){
 
         if(usuario == "admin" && senha == "admin"){
@@ -127,228 +49,278 @@ public class Locadora {
         }
         return false;
     }
+       
 
-/*    public boolean loginCliente(String cpf, String senha){
+//MÉTODOS OPERACIONAIS ENVOLVENDO CARRO
+
+    public boolean cadastrarCarro(String modelo, String placa, String cor, 
+                                    String chassi, int passageiros, int bagagem, 
+                                    double taxaDiaria, double taxaAtraso) {
+        if(verificarPlaca(placa)){
+            //Instanciar um carro usando o construtor;
+            Carro carro = new Carro (modelo, placa, cor, chassi, passageiros, bagagem, taxaDiaria, taxaAtraso);
+            //Adicionar o carro na lista de carros:
+            listaCarros.add(carro);
+            return true; //Indica que o carro foi cadastrado no sistema;
+        }
+        return false; //Indica que o carro não foi cadastrado no sistema;
+    }
+
+    private boolean verificarPlaca (String placa){
+
+        for(int i=0;i<listaCarros.size();i++){
+            if((listaCarros).get(i).getPlaca() == placa){
+                return false;
+            }
+        }
+        return true;
+    }    
+
+    public void retirarCarro (Carro carro, Reserva reserva, Cliente cliente){
+        reserva.setStatus("ATIVA");
+        
+        //Percorrer a lista de reservas do cliente para modificar o status da reserva em questão:
+        for (int i = 0; i < cliente.getReservasCliente().size(); i++){
+            if (cliente.getReservasCliente().get(i).getNumeroReserva() == reserva.getNumeroReserva()){
+                cliente.getReservasCliente().get(i).setStatus("ATIVA");
+            }
+        }
+        
+        //Percorrer a lista de reservas do carro mudar seu status para "ATIVA":
+        for (int i = 0; i < carro.getReservasCarro().size(); i++){
+            if (carro.getReservasCarro().get(i).getNumeroReserva() == reserva.getNumeroReserva()){
+                cliente.getReservasCliente().get(i).setStatus("ATIVA");
+            }
+        }
+      //Tornar o carro indisponível:
+      carro.setStatus(false);
+    }
+
+
+    public static void devolverCarro(Carro carro, Reserva reserva, Cliente cliente){
+        reserva.setStatus("FINALIZADA");
+        
+        //Percorrer a lista de reservas do cliente para modificar o status da reserva em questão:
+          for (int i = 0; i < cliente.getReservasCliente().size(); i++){
+              if (cliente.getReservasCliente().get(i).getNumeroReserva() == reserva.getNumeroReserva()){
+                  cliente.getReservasCliente().get(i).setStatus("FINALIZADA");
+              }
+          }
+          
+        //Percorrer a lista de reservas do carro para remover a reserva em questão:
+        for (int i = 0; i < carro.getReservasCarro().size(); i++){
+            if (carro.getReservasCarro().get(i).getNumeroReserva() == reserva.getNumeroReserva()){
+                  carro.getReservasCarro().remove(i);
+              }
+          }
+        //Tornar o carro disponível novamente:
+        carro.setStatus(true);
+      } 
+
+
+//MÉTODOS OPERACIONAIS ENVOLVENDO CLIENTE
+
+    public boolean cadastrarCliente(String nome, String cpf, String dataDeNascimento, 
+            String email, String endereco, String cep, String telefone, String senha) {
+
+        if(verificarCPF_Cliente(cpf)){
+            //Instancia um Cliente utilizando o Construtor
+            Cliente cliente = new Cliente (nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
+            //Adiciona o cliente na lista de clientes:
+            listaClientes.add(cliente); 
+            return true; //Indica que o cliente foi cadastrado no sistema;
+        }
+        return false; //Indica que o cliente não foi cadastrado no sistema;
+    }
+
+    public boolean verificarCPF_Cliente(String cpf){
+        for(int i=0;i<listaClientes.size();i++){ 
+            if((listaClientes).get(i).getCpf() == cpf){
+                return false;
+            }
+        }		
+        return true;
+    }
+
+    public boolean loginCliente(String cpf, String senha){
         for(int i=0;i<listaClientes.size();i++){ 
             if((listaClientes).get(i).getCpf() == cpf && (listaClientes).get(i).getSenha() == senha){
                 return true; // Login efetuado com sucesso
             }
         }		
         return false; // Não existe o usuário ou senha incorreta
-    }	
-*/
-//    public boolean loginFuncionario(String cpf, String senha){
-//        for(int i=0;i<listaFuncionarios.size();i++){
-//            if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
-//                return true; // Login efetuado com sucesso
-//            }
-//        }
-//        return false; // Não existe o usuário ou senha incorreta
-//    }
-    
-    //Métodos para verificação de repetições:--------------------------------------------------------
-//    public boolean verificarCPF_Funcionario(String cpf){
-//
-//        for(int i=0;i<listaFuncionarios.size();i++){
-//            if((listaFuncionarios).get(i).getCpf() == cpf){
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-    
-//    public boolean verificarCPF_Cliente(String cpf){
-//
-//     for(int i=0;i<listaClientes.size();i++){
-//         if((listaClientes).get(i).getCpf() == cpf){
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-<<<<<<< Updated upstream
-public static boolean verificarPlaca(String placa){
+    }		
 
-        for(int i=0;i<listaCarros.size();i++){ 
-            if((listaCarros).get(i).getPlaca() == placa){
+//MÉTODOS OPERACIONAIS ENVOLVENDO FUNCIONÁRIO
+
+    public boolean cadastrarFuncionario(String nome, String cpf, String datadeNascimento, String endereco, String email, String cep, String telefone, String senha) {
+        if (verificarCPF_Funcionario(cpf)){
+            //Instanciar um funcionário usando o método construtor:
+            Funcionario funcionario = new Funcionario (nome, cpf, datadeNascimento, endereco, email, cep, telefone, senha);
+            listaFuncionarios.add(funcionario);
+            return true; //indica que o funcionário foi cadastrado no sistema;
+        }
+    return false;//Indica que o funionário não foi cadastrado no sistema;
+    }
+
+    public boolean verificarCPF_Funcionario(String cpf){
+        for(int i=0;i<listaFuncionarios.size();i++){ 
+            if((listaFuncionarios).get(i).getCpf() == cpf){
                 return false;
             }
         }		
         return true;
     }
-=======
-//public boolean verificarPlaca (String placa){
-//
-//        for(int i=0;i<listaCarros.size();i++){
-//            if((listaCarros).get(i).getPlaca() == placa){
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
->>>>>>> Stashed changes
-    
-    //Métodos para verificar se uma pessoa é maior de idade------------------------------------------
-    //(Precisa ser implementada!!!!!!!!!)------------------------------------------------------------
- /*   public boolean verificarIdade (Calendar dataDeNascimento){
-        LocalDateTime now = LocalDateTime.now();
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Calendar cal = Calendar.getInstance();
-        dateFormat.format(cal.getTime())
 
-        Calendar calendar.add(Calendar.YEAR,18);
-        DataNascimento.before(dataAtual)
-
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Calendar cal = Calendar.getInstance();
-        dateFormat.format(cal.getTime());
-
-        cal.add(Calendar.YEAR,18);
-        if (dataDeNascimento.before(cal))
-            return true;
-        return false;
-    } */
-
-    //Métodos de cadastro:---------------------------------------------------------------------------
-/*    public boolean cadastrarCliente(String nome, String cpf, Calendar dataDeNascimento,
-            String email, String endereco, String cep, String telefone, String senha) {
-
-        if(verificarCPF_Cliente(cpf) && verificarIdade(dataDeNascimento)){
-            Cliente cliente = new Cliente (nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
-            listaClientes.add(cliente);
-            return true;
-        }
-        return false;
-    }
-*/
-//    public boolean cadastrarFuncionario(String nome, String cpf, Calendar dataDeNascimento,
-//            String endereco, String email, String cep, String telefone, String senha) {
-//
-//        if(verificarCPF_Funcionario(cpf) && verificarIdade(dataDeNascimento)){
-//            listaFuncionarios.add(this);
-//            return true;
-//        }
-//        return false;
-//    }
-
-<<<<<<< Updated upstream
-    public static boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
-                                         int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
-
-        if(verificarPlaca(placa)){
-            Carro carro = new Carro (modelo, placa, cor, chassi, 
-                  passageiros, bagagem, taxaDiaria, taxaAtraso);
-            listaCarros.add(carro);
-            return true;
-        }
-        return false;
-    }
-=======
-//    public boolean cadastrarCarro(String modelo, String placa, String cor, String chassi,
-//                  int passageiros, double bagagem, double taxaDiaria, double taxaAtraso) {
-//
-//        if(verificarPlaca(placa)){
-//            Carro carro = new Carro (modelo, placa, cor, chassi,
-//                  passageiros, bagagem, taxaDiaria, taxaAtraso);
-//            listaCarros.add(carro);
-//            return true;
-//        }
-//        return false;
-//    }
->>>>>>> Stashed changes
-
-    //Métodos para verificar se há reservas ativas no Cliente e no Carro:----------------------------
-    //(PRECISAM SER FEITAS!!!!!!!!!!)----------------------------------------------------------------
-    public boolean analisarReservasCliente(Cliente cliente){
-        //Ideia: rodar a lista de reservas do cliente, se encontrar alguma reserva que não tem os status
-        //Finalizada (devolvido) ou  Cancelada, retornar false.
-        return true;
+    public boolean loginFuncionario(String cpf, String senha){
+        for(int i=0;i<listaFuncionarios.size();i++){ 
+            if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
+                return true; // Login efetuado com sucesso
+            }
+        }		
+        return false; // Não existe o usuário ou senha incorreta
     }
 
-    public static boolean analisarReservasCarro(Carro carro){
-        //Rodar a lista de reservas do carro, se encontrar alguma reserva que não
-        //tem os status Finalizada ou Cancelada, retornar false.
-        return true;
+
+//MÉTODOS OPERACIONAIS ENVOLVENDO RESERVA    
+
+    public boolean verificarDisponibilidadeCarro(Calendar dataRetiradaCliente, Calendar dataDevolucaoCliente, Calendar dataRetiradaCarro, Calendar dataDevolucaoCarro){
+        return (dataDevolucaoCliente.before(dataRetiradaCarro) || dataDevolucaoCarro.before(dataRetiradaCliente));
+    }
+
+    public void fazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada, 
+            Calendar dataDevolucao, Carro carro, Cliente cliente, 
+            Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, 
+            double valorTotalGeral){
+        //Incrementar o numero da reserva;
+        numeroReserva = numeroReserva + 1;
+        Reserva reserva = new Reserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, 
+                                    funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
+        //Adicionar nas listas de reserva de cada objeto;
+        reservasLocadora.add(reserva);
+        cliente.getReservasCliente().add(reserva);
+        carro.getReservasCarro().add(reserva);
     }
     
-    //Método para verificar se um carro está disponível em um intervalo de datas:
-    //(Precisa ser implementada!!!!!!!!!)------------------------------------------------------------
-    public boolean verificarDisponibilidadeCarro(Calendar dataRetirada, Calendar dataDevolucao){
-        return true;
-    }
-    
-    //Métodos de Remoção:----------------------------------------------------------------------------
-//    public void removerCliente(String cpf, Cliente cliente){
-//     for (int i = 0; i < listaClientes.size(); i++)
-//         if ((listaClientes.get(i)).getCpf() == cpf && analisarReservasCliente(cliente))
-//             listaClientes.remove(i);
-// }
-//    public void removerFuncionario(String cpf){
-//        for (int i = 0; i < listaFuncionarios.size(); i++)
-//            if ((listaFuncionarios.get(i)).getCpf() == cpf)
-//                listaFuncionarios.remove(i);
-//    }
-
-//    public boolean removerFuncionario(String cpf){
-//        if (cpf != null && cpf.length() == 11 ){
-//            for (int i = 0; i < this.listaFuncionarios.size(); i++)
-//                if ((this.listaFuncionarios.get(i)).getCpf() == cpf) {
-//                    this.listaFuncionarios.remove(i);
-//                    return true;
-//                }
-//            return false;
-//        }
-//        return false;
-//    }
-    
-<<<<<<< Updated upstream
-    public static boolean removerCarro(String placa){ //void, Carro carro
-        for (int i = 0; i < listaCarros.size(); i++)
-        {
-            //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
-            if (((listaCarros.get(i)).getPlaca() == placa))
-            {
-                Carro carro = listaCarros.get(i);
-                if (analisarReservasCarro(carro))
-                {
-                    listaCarros.remove(i);
-                    return true;
-                }
+    public void cancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
+        reserva.setStatus("CANCELADA");
+        
+        //Percorrer a lista de reservas do cliente para modificar o status da reserva em questão:
+        for (int i = 0; i < cliente.getReservasCliente().size(); i++){
+            if (cliente.getReservasCliente().get(i).getNumeroReserva() == reserva.getNumeroReserva()){
+                cliente.getReservasCliente().get(i).setStatus("CANCELADA");
             }
         }
-        return false;
-    }
-=======
-//    public boolean static removerCarro(String placa){ //void, Carro carro
-//        for (int i = 0; i < listaCarros.size(); i++)
-//        {
-//            //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
-//            if (((listaCarros.get(i)).getPlaca() == placa))
-//            {
-//                Carro carro = listaCarros.get(i);
-//                if (analisarReservasCarro(carro))
-//                {
-//                    listaCarros.remove(i);
-//                    return true;
-//                }
-//            }
-//        }
-//        return false;
-//    }
->>>>>>> Stashed changes
-    
-    //Método para gerenciar uma reserva:-----------------------------------------------------------------
-    //(PRECISAM SER FEITAS!!!!!!!!!!)--------------------------------------------------------------------
-    public void fazerReserva(){
-        //Nesse método, acho que é só jogar no construtor;
-    }
-    //Essa não sei se precisa
-    public boolean verificarStatusReserva(Reserva reserva){
-        return true;
+        //Percorrer a lista de reservas do carro para remover a reserva em questão:
+        for (int i = 0; i < carro.getReservasCarro().size(); i++){
+            if (carro.getReservasCarro().get(i).getNumeroReserva() == reserva.getNumeroReserva()){
+                carro.getReservasCarro().remove(i);
+            }
+        }
     }
 
-//    public void cancelarReserva(){
-        //Uma reserva não pode ser cancelada quando o carro foi retirado;
-        //Devolução
-//    }
+    //Métodos para calcular valor de uma reserva:-----------------------------------------------------------------
+    public double calcularValorReserva (Calendar dataRetirada, Calendar dataDevolucao, double taxaDiaria) throws ParseException {
+        //Formato da data:
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        
+        //Converter de Calendar para String:
+        String dataRetiradaString = formato.format(dataRetirada.getTime());
+        String dataDevolucaoString = formato.format(dataDevolucao.getTime());
+        
+        //Declarar variáveis do tipo Date para armazenar essas datas:
+        Date dataRetiradaDate;
+        Date dataDevolucaoDate;
+        
+        //Atribuir as strings às variáveis do tipo Date:
+        dataRetiradaDate = formato.parse(dataRetiradaString);
+        dataDevolucaoDate = formato.parse(dataDevolucaoString);
+        
+        //Calcular a diferença entre as datas em milissegundos:
+        long diferenca = dataDevolucaoDate.getTime() - dataRetiradaDate.getTime();
+        
+        //Converter a diferença para double para possibilitar o trabalho com numeros reais:
+        double doubleDiferenca = diferenca;
+        
+        //Converter de milissegundos para dias:
+        double dias = doubleDiferenca/(24 * 60 * 60 * 1000);
+        
+        //Arredondar a diferença para cima:
+        dias = Math.ceil(dias);
+        
+        //Multiplicar pelo valor da taxa diária:
+        double valorDiarias = dias*taxaDiaria;
+        
+        //Retornar o valor total das diárias:
+        return valorDiarias;
+    }
+    
+    public double calcularTaxaTotalAtraso (Calendar dataDevolucao, Calendar dataDevolvidoEm, double taxaDiariaAtraso) throws ParseException{
+      //Formato da data:
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        
+        //Criar variável para armazenar o valor do atraso:
+        double valorAtraso;
+
+        //Analisar a data atual:
+        Calendar dataAtual = Calendar.getInstance();
+        
+        //Adicionar 10 minutos de tolerância à data de entrega:
+        dataDevolucao.add(Calendar.MINUTE, 10);
+        if(dataAtual.before(dataDevolucao)){ //Se o cliente não tiver extrapolado essa tolerância, não tem taxa de atraso.
+            valorAtraso = 0.0;
+        } else { //Caso tenha extrapolado, calcula-se o valor do atraso.
+            //Converter de Calendar para String:
+            String dataDevolucaoString = formato.format(dataDevolucao.getTime());
+            String dataDevolvidoEmString = formato.format(dataDevolvidoEm.getTime());
+
+            //Declarar variáveis do tipo Date para armazenar essas datas:
+            Date dataDevolucaoDate;
+            Date dataDevolvidoEmDate;
+
+            //Atribuir as strings às variáveis do tipo Date:
+            dataDevolucaoDate = formato.parse(dataDevolucaoString);
+            dataDevolvidoEmDate = formato.parse(dataDevolvidoEmString);
+
+            //Calcular a diferença entre as datas em milissegundos:
+            long diferenca = dataDevolvidoEmDate.getTime() - dataDevolucaoDate.getTime();
+
+            //Converter a diferença para double para possibilitar o trabalho com numeros reais:
+            double doubleDiferenca = diferenca;
+
+            //Converter de milissegundos para dias:
+            double dias = doubleDiferenca/(24 * 60 * 60 * 1000);
+
+            //Arredondar a diferença para cima:
+            dias = Math.ceil(dias);
+
+            //Multiplicar pelo valor da taxa diária de atraso:
+            valorAtraso = dias*taxaDiariaAtraso;
+        }
+        
+        //Retornar o valor total do atraso:
+        return valorAtraso;
+    }
+
+    public double calcularValorTotalReserva (double ValorTotalDiarias, double ValorTotalAtraso){
+      return (ValorTotalDiarias + ValorTotalAtraso);
+    }
+    
+    //Método para cancelar reservas no caso em que um cliente atrasa a ponto de chocar com a retirada de outro cliente:
+    public void cancelarPorChoqueHorarios(){
+        //Instanciar a data e hora atuais (momento):
+        Calendar agora = Calendar.getInstance();
+        
+        //Analisar a lista de reservas:
+        for(int i = 0; i< reservasLocadora.size(); i++){
+            //Se a data da retirada da reserva tiver passado e o carro ainda não foi devolvido, cancelar a reserva:
+            if (reservasLocadora.get(i).getDataRetirada().before(agora) && (reservasLocadora.get(i).getCarro().getStatus() == false)){
+                cancelarReserva(reservasLocadora.get(i).getCarro(), reservasLocadora.get(i), reservasLocadora.get(i).getCliente());
+            }
+        }
+    }
+    
+
 }
+
+

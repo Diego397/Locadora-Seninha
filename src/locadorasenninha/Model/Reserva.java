@@ -1,5 +1,3 @@
-//teste
-
 package locadorasenninha.Model;
 
 import java.util.ArrayList;
@@ -23,14 +21,14 @@ public class Reserva {
     
     //Método Construtor:
     public Reserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada, 
-            Calendar dataDevolucao, String status, Carro carro, Cliente cliente, 
+            Calendar dataDevolucao, Carro carro, Cliente cliente, 
             Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, 
             double valorTotalGeral) {
         this.numeroReserva = numeroReserva;
         this.dataEmissao = dataEmissao;
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
-        this.status = status;
+        this.status = "RESERVADA";
         this.carro = carro;
         this.cliente = cliente;
         this.funcionario = funcionario;
@@ -127,10 +125,6 @@ public class Reserva {
     public void setValorTotalGeral(double valorTotalGeral) {
         this.valorTotalGeral = valorTotalGeral;
     }
-
-    
-    
-    //Métodos Operacionais:
 
 
 }

@@ -1,34 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package locadorasenninha.Model;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-/**
- *
- * @author Windows
- */
+
 public class Funcionario {
     private String nome;
     private String cpf;
-    private Calendar dataDeNascimento; //Não sei qual utilizar para data
+    private String dataDeNascimento; 
     private String endereco;
     private String email;
     private String cep;
     private String telefone;
     private String senha;
-    private static Locadora locadora;
     
     //Funcionário precisa ter lista de reservas?
     private ArrayList<Reserva> reservas_funcionario = new ArrayList<Reserva>(); //não sabemos se precisa
 
     //Método Construtor:
-    public Funcionario(String nome, String cpf, Calendar dataDeNascimento, String endereco, String email, String cep, String telefone, String senha) {
+    public Funcionario(String nome, String cpf, String dataDeNascimento, String endereco, String email, String cep, String telefone, String senha) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataDeNascimento = dataDeNascimento;
@@ -56,11 +47,11 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
-    public Calendar getDataDeNascimento() {
+    public String getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(Calendar dataDeNascimento) {
+    public void setDataDeNascimento(String dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 
@@ -112,6 +103,10 @@ public class Funcionario {
         this.reservas_funcionario = reservas_funcionario;
     }
 
+
+    //Métodos Operacionais
+
+    /*
     public boolean cadastrarFuncionario(Funcionario funcionario) {
 
         if(verificarCPF_Funcionario(cpf) && verificarIdade(dataDeNascimento)){
@@ -132,13 +127,13 @@ public class Funcionario {
     }
 
     public boolean verificarIdade (Calendar dataDeNascimento){
-//        LocalDateTime now = LocalDateTime.now();
-        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        LocalDateTime now = LocalDateTime.now();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Calendar cal = Calendar.getInstance();
         dateFormat.format(cal.getTime())
 
         Calendar calendar.add(Calendar.YEAR,18);
-        DataNascimento.before(dataAtual)*/
+        DataNascimento.before(dataAtual)
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Calendar cal = Calendar.getInstance();
@@ -167,5 +162,7 @@ public class Funcionario {
         }
         return false; // Não existe usuário ou senha incorreta
     }
+
+    */
 
 }

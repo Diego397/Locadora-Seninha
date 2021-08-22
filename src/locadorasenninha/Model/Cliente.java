@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package locadorasenninha.Model;
 
 import java.text.DateFormat;
@@ -15,19 +10,19 @@ public class Cliente {
     //Atributos:
     private String nome;
     private String cpf;
-    private Calendar dataDeNascimento;
+    private String dataDeNascimento;
     private String email;
     private String endereco;
     private String cep;
     private String telefone;
     private String senha;
-    private static Locadora locadora;
+    //private static Locadora locadora;
     
     //Lista de Reservas do Cliente:
     private ArrayList<Reserva> reservasCliente = new ArrayList<Reserva>();
 
     //Método Construtor:
-    public Cliente(String nome, String cpf, Calendar dataDeNascimento, String email,
+    public Cliente(String nome, String cpf, String dataDeNascimento, String email,
             String endereco, String cep, String telefone, String senha) {
         this.nome = nome;
         this.cpf = cpf;
@@ -39,6 +34,7 @@ public class Cliente {
         this.senha = senha;
     }
     
+
     //Métodos Getters e Setters:
     public String getNome() {
         return nome;
@@ -56,11 +52,11 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public Calendar getDataDeNascimento() {
+    public String getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(Calendar dataDeNascimento) {
+    public void setDataDeNascimento(String dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 
@@ -104,18 +100,28 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public ArrayList<Reserva> getReservas() {
+    public ArrayList<Reserva> getReservasCliente() {
         return reservasCliente;
     }
 
-    public void setReservas(ArrayList<Reserva> reservas) {
-        this.reservasCliente = reservas;
+    public void setReservasCliente(ArrayList<Reserva> reservasCliente) {
+        this.reservasCliente = reservasCliente;
+    } 
+
+    /*
+    public Locadora getLocadora() { 
+        return locadora; 
     }
 
-    public Locadora getLocadora() { return locadora; }
+    public void setLocadora(Locadora locadora){ 
+        this.locadora = locadora; 
+    }
 
-    public void setLocadora(Locadora locadora){ this.locadora = locadora; }
+*/
 
+    //Métodos Operacionais
+
+    /*
     public boolean cadastrarCliente(Cliente cliente) {
 
         if(verificarCPF_Cliente(cliente.getCpf()) && verificarIdade(cliente.getDataDeNascimento())){
@@ -159,5 +165,5 @@ public class Cliente {
         cal.add(Calendar.YEAR,18);
         return dataDeNascimento.before(cal);
     }
-    
+    */
 }

@@ -14,10 +14,8 @@ public class FuncionarioController {
         && senha != null && senha.length() < 30)
         {
             Funcionario funcionario = new Funcionario (nome, cpf, dataDeNascimento, endereco, email, cep, telefone, senha);
-            boolean aux = funcionario.cadastrarFuncionario(funcionario);
-            if(aux) {
-                return true;
-            }
+            return funcionario.cadastrarFuncionario(funcionario);
+                        
         }
         return false;
     }

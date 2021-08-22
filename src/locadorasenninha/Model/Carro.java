@@ -1,13 +1,8 @@
-
 package locadorasenninha.Model;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author Windows
- */
 public class Carro {
     
     //Atributos:
@@ -20,7 +15,8 @@ public class Carro {
     private double bagagem;
     private double taxaDiaria;
     private double taxaAtraso;
-    private static Locadora locadora;
+    //private static Locadora locadora;
+
     //private imagem;
 
     //Lista de Reservas do Carro:
@@ -40,9 +36,10 @@ public class Carro {
         this.bagagem = bagagem;
         this.taxaDiaria = taxaDiaria;
         this.taxaAtraso = taxaAtraso;
+        //this.locadora = locadora;
     }
     
-    
+
     //Métodos Getters e Setters:
     public String getModelo() {
         return modelo;
@@ -116,10 +113,17 @@ public class Carro {
         this.Status = Status;
     }
     
-    //Outros Métodos:
+    public ArrayList<Reserva> getReservasCarro() {
+        return reservasCarro;
+    }
 
-<<<<<<< Updated upstream
-=======
+
+    public void setReservasCarro(ArrayList<Reserva> reservasCarro) {
+        this.reservasCarro = reservasCarro;
+    }
+    
+    //Métodos Operacionais
+/*
     public boolean cadastrarCarro(Carro carro) {
 
         if(verificarPlaca(carro.placa)){
@@ -127,8 +131,8 @@ public class Carro {
             return true;
         }
         return false;
-    }
-
+    }    
+    
     public boolean verificarPlaca (String placa){
 
         for(int i=0;i<locadora.listaCarros.size();i++){
@@ -139,16 +143,15 @@ public class Carro {
         return true;
     }
 
-    public static boolean removerCarro(String placa){ //void, Carro carro
+    public static boolean removerCarro(String placa){ 
         for (int i = 0; i < locadora.listaCarros.size(); i++)
         {
-            //if (((listaCarros.get(i)).getPlaca() == placa) && (analisarReservasCarro(carro))) listaCarros.remove(i);
             if (((locadora.listaCarros.get(i)).getPlaca() == placa))
             {
                 Carro carro = locadora.listaCarros.get(i);
                 if (locadora.analisarReservasCarro(carro))
                 {
-                    locadora.listaCarros.remove(i);
+                    (locadora.listaCarros).remove(i);
                     return true;
                 }
             }
@@ -166,6 +169,7 @@ public class Carro {
         return false;
 
     }
+
+   */
     
->>>>>>> Stashed changes
 }

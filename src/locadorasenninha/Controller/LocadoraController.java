@@ -18,8 +18,8 @@ public class LocadoraController {
 
     //Carro
 
-    public boolean verificaCadastrarCarro(String modelo, String placa, String cor, String chassi, int passageiros,
-                                          int bagagem, double taxaDiaria, double taxaAtraso)
+    public boolean verificaCadastrarCarro(String modelo, String placa, String cor, String chassi, String passageiros,
+                                          String bagagem, double taxaDiaria, double taxaAtraso)
     {
         if (modelo != null && modelo.length() > 0 && modelo.length() < 30)
         {
@@ -27,13 +27,16 @@ public class LocadoraController {
             {
                 if (cor != null && cor.length() > 0 && cor.length() < 30)
                 {
-                    if (bagagem > 0 && bagagem <= 9999)
+                    if (bagagem !=null && Integer.parseInt(bagagem) > 0 && Integer.parseInt(bagagem) <= 9999)
                     {
                         if (taxaDiaria > 0 && taxaDiaria <= 9999)
                         {
                             if (taxaAtraso > 0 && taxaAtraso <= 9999)
                             {
-                                return locadora.cadastrarCarro(modelo, placa, cor, chassi, passageiros, bagagem, taxaDiaria, taxaAtraso);
+                                if(passageiros != null && Integer.parseInt(passageiros) > 0)
+                                {
+                                    return Locadora.cadastrarCarro(modelo, placa, cor, chassi, passageiros, bagagem, taxaDiaria, taxaAtraso);
+                                }
                             }
                         }
                     }

@@ -56,7 +56,7 @@ public class Locadora {
 //MÉTODOS OPERACIONAIS ENVOLVENDO CARRO
 
     public static boolean cadastrarCarro(String modelo, String placa, String cor,
-                                    String chassi, int passageiros, int bagagem, 
+                                    String chassi, String passageiros, String bagagem, 
                                     double taxaDiaria, double taxaAtraso) {
         if(verificarPlaca(placa)){
             //Instanciar um carro usando o construtor;

@@ -11,8 +11,8 @@ public class Carro {
     private String cor;
     private String chassi;
     private boolean Status; //True = Disponível e False = Indisponível
-    private int passageiros;
-    private double bagagem;
+    private String passageiros;
+    private String bagagem;
     private double taxaDiaria;
     private double taxaAtraso;
     //private static Locadora locadora;
@@ -25,7 +25,7 @@ public class Carro {
     //Método Construtor:
 
     public Carro(String modelo, String placa, String cor, String chassi, 
-                  int passageiros, double bagagem, double taxaDiaria, 
+            String passageiros, String bagagem, double taxaDiaria, 
                   double taxaAtraso) {
         this.modelo = modelo;
         this.placa = placa;
@@ -73,19 +73,19 @@ public class Carro {
         this.chassi = chassi;
     }
 
-    public int getPassageiros() {
+    public String getPassageiros() {
         return passageiros;
     }
 
-    public void setPassageiros(int passageiros) {
+    public void setPassageiros(String passageiros) {
         this.passageiros = passageiros;
     }
 
-    public double getBagagem() {
+    public String getBagagem() {
         return bagagem;
     }
 
-    public void setBagagem(double bagagem) {
+    public void setBagagem(String bagagem) {
         this.bagagem = bagagem;
     }
 

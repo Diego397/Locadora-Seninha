@@ -184,9 +184,6 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
         String usuario = textFieldUsuarioAdmin.getText();
         String senha = String.valueOf(passwordFieldLoginAdmin.getPassword());
 
-        System.out.println(usuario);
-        System.out.println(senha);
-
         if (usuario.equals("admin") && senha.equals("admin"))
         {
             JOptionPane.showMessageDialog(null, "Login Efetuado!");

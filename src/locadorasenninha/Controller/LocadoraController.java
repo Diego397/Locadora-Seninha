@@ -4,6 +4,8 @@ import locadorasenninha.Model.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Calendar;
 
 public class LocadoraController {
@@ -103,6 +105,30 @@ public class LocadoraController {
         {
             locadora.cancelarReserva(carro, reserva, cliente);
             return true;
+        }
+        return false;
+    }
+
+    public boolean verificaDataReserva(String dataRetirada, String dataDevolucao) throws ParseException {
+        if (dataRetirada != null && dataRetirada.length() > 0 && dataDevolucao != null && dataDevolucao.length() > 0)
+        {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Calendar dataDevolucaoCal = Calendar.getInstance();
+            Calendar dataRetiradaCal = Calendar.getInstance();
+            try{
+                dataDevolucaoCal.setTime(sdf.parse(dataDevolucao));
+                dataRetiradaCal.setTime(sdf.parse(dataRetirada));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            Calendar atualTime = Calendar.getInstance();
+            atualTime.getTime();
+
+            if (dataRetiradaCal.after(atualTime) && dataDevolucaoCal.after(dataRetiradaCal))
+            {
+                return true;
+            }
         }
         return false;
     }

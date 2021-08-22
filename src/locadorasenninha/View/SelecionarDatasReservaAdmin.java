@@ -1,6 +1,11 @@
 //Tratar as entradas em relacao a data
 package locadorasenninha.View;
 
+import locadorasenninha.Model.Main;
+
+import javax.swing.*;
+import java.text.ParseException;
+
 public class SelecionarDatasReservaAdmin extends javax.swing.JFrame {
 
 
@@ -70,7 +75,11 @@ public class SelecionarDatasReservaAdmin extends javax.swing.JFrame {
         buttonConfirmarDatas.setText("PRÓXIMO");
         buttonConfirmarDatas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonConfirmarDatasActionPerformed(evt);
+                try {
+                    buttonConfirmarDatasActionPerformed(evt);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -242,10 +251,20 @@ public class SelecionarDatasReservaAdmin extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_buttonRetornarSelecionarDatasReservaActionPerformed
 
-    private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConfirmarDatasActionPerformed
-        SelecionarCarroAdmin novatela = new SelecionarCarroAdmin();
-        novatela.setVisible(true);
-        this.setVisible(false);
+    private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) throws ParseException {//GEN-FIRST:event_buttonConfirmarDatasActionPerformed
+        String dataRetirada = textFieldDataRetirada.getText();
+        String dataDevolucao = textFieldDataDevolucaoSelecionarDatasReserva.getText();
+
+        if (Main.controller.verificaDataReserva(dataRetirada, dataDevolucao))
+        {
+            SelecionarCarroAdmin novatela = new SelecionarCarroAdmin();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Data inválida!");
+        }
     }//GEN-LAST:event_buttonConfirmarDatasActionPerformed
 
     private void textFieldHoraRetiradaSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldHoraRetiradaSelecionarDatasReservaActionPerformed

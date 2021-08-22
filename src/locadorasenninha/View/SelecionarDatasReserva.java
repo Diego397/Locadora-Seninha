@@ -1,6 +1,14 @@
 //Tratar as entradas em relacao a data
 package locadorasenninha.View;
 
+import locadorasenninha.Controller.LocadoraController;
+import locadorasenninha.Model.Main;
+
+import javax.swing.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class SelecionarDatasReserva extends javax.swing.JFrame {
 
 
@@ -70,7 +78,11 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
         buttonConfirmarDatas.setText("PRÓXIMO");
         buttonConfirmarDatas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonConfirmarDatasActionPerformed(evt);
+                try {
+                    buttonConfirmarDatasActionPerformed(evt);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -242,10 +254,22 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_buttonRetornarSelecionarDatasReservaActionPerformed
 
-    private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConfirmarDatasActionPerformed
-        SelecionarCarro novatela = new SelecionarCarro();
-        novatela.setVisible(true);
-        this.setVisible(false);
+    private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) throws ParseException {//GEN-FIRST:event_buttonConfirmarDatasActionPerformed
+
+        String dataRetirada = textFieldDataRetirada.getText();
+        String dataDevolucao = textFieldDataDevolucaoSelecionarDatasReserva.getText();
+
+        if (Main.controller.verificaDataReserva(dataRetirada, dataDevolucao))
+        {
+            SelecionarCarro novatela = new SelecionarCarro();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Data inválida!");
+        }
+
     }//GEN-LAST:event_buttonConfirmarDatasActionPerformed
 
     private void textFieldHoraRetiradaSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldHoraRetiradaSelecionarDatasReservaActionPerformed

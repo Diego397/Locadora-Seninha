@@ -1,3 +1,4 @@
+/*
 package locadorasenninha.Controller;
 
 import locadorasenninha.Model.Carro;
@@ -20,7 +21,9 @@ public class ReservaController {
                         if (funcionario != null)
                         {
                             return Locadora.gerarReserva(dataEmissao, dataRetirada, dataDevolucao, status, carro, cliente, funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral, numeroReserva); //chama a funcao gerarReserva da Locadora (nao sei pq pede pra ser static)
-                            /*gerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao, String status, Carro carro, Cliente cliente, Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral, int numeroReserva)*/
+                            */
+/*gerarReserva(Calendar dataEmissao, Calendar dataRetirada, Calendar dataDevolucao, String status, Carro carro, Cliente cliente, Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, double valorTotalGeral, int numeroReserva)*//*
+
                         }
                     }
                 }
@@ -46,4 +49,4 @@ public class ReservaController {
         }
         return false;
     }
-}
+}*/

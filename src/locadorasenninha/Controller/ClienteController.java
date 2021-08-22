@@ -1,3 +1,4 @@
+/*
 package locadorasenninha.Controller;
 import locadorasenninha.Model.Cliente;
 
@@ -43,3 +44,4 @@ public class ClienteController {
         return false;
     }
 }
+*/

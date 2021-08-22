@@ -1,3 +1,4 @@
+/*
 package locadorasenninha.Controller;
 
 import locadorasenninha.Model.Carro;
@@ -49,3 +50,4 @@ public class CarroController {
         return false;
     }
 }
+*/

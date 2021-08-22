@@ -8,14 +8,6 @@ import java.util.Calendar;
 
 public class Main{
     public static void main(String args[]){
-
-        /*DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Calendar cal = Calendar.getInstance();
-        dateFormat.format(cal.getTime());
-
-        cal.add(Calendar.YEAR,18);
-        System.out.println(cal);*/
-
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

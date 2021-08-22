@@ -16,9 +16,9 @@ public class Locadora {
 	
     public static ArrayList<Reserva> reservasLocadora = new ArrayList<Reserva>();
 
-    public ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+    public static ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
 	
-    public ArrayList<Funcionario> listaFuncionarios = new ArrayList<Funcionario>();
+    public static ArrayList<Funcionario> listaFuncionarios = new ArrayList<Funcionario>();
 
     private Admin admin = new Admin("admin", "admin");
     
@@ -53,7 +53,7 @@ public class Locadora {
 
 //MÉTODOS OPERACIONAIS ENVOLVENDO CARRO
 
-    public boolean cadastrarCarro(String modelo, String placa, String cor, 
+    public static boolean cadastrarCarro(String modelo, String placa, String cor,
                                     String chassi, int passageiros, int bagagem, 
                                     double taxaDiaria, double taxaAtraso) {
         if(verificarPlaca(placa)){
@@ -66,7 +66,7 @@ public class Locadora {
         return false; //Indica que o carro não foi cadastrado no sistema;
     }
 
-    private boolean verificarPlaca (String placa){
+    private static boolean verificarPlaca(String placa){
 
         for(int i=0;i<listaCarros.size();i++){
             if((listaCarros).get(i).getPlaca() == placa){
@@ -120,7 +120,7 @@ public class Locadora {
 
 //MÉTODOS OPERACIONAIS ENVOLVENDO CLIENTE
 
-    public boolean cadastrarCliente(String nome, String cpf, String dataDeNascimento, 
+    public static boolean cadastrarCliente(String nome, String cpf, String dataDeNascimento,
             String email, String endereco, String cep, String telefone, String senha) {
 
         if(verificarCPF_Cliente(cpf)){
@@ -133,7 +133,7 @@ public class Locadora {
         return false; //Indica que o cliente não foi cadastrado no sistema;
     }
 
-    public boolean verificarCPF_Cliente(String cpf){
+    private static boolean verificarCPF_Cliente(String cpf){
         for(int i=0;i<listaClientes.size();i++){ 
             if((listaClientes).get(i).getCpf() == cpf){
                 return false;
@@ -142,28 +142,26 @@ public class Locadora {
         return true;
     }
 
-    public boolean loginCliente(String cpf, String senha){
+    public static boolean loginCliente(String cpf, String senha){
         for(int i=0;i<listaClientes.size();i++){ 
             if((listaClientes).get(i).getCpf() == cpf && (listaClientes).get(i).getSenha() == senha){
                 return true; // Login efetuado com sucesso
             }
-        }		
+        }
         return false; // Não existe o usuário ou senha incorreta
     }		
 
 //MÉTODOS OPERACIONAIS ENVOLVENDO FUNCIONÁRIO
 
-    public boolean cadastrarFuncionario(String nome, String cpf, String datadeNascimento, String endereco, String email, String cep, String telefone, String senha) {
-        if (verificarCPF_Funcionario(cpf)){
-            //Instanciar um funcionário usando o método construtor:
-            Funcionario funcionario = new Funcionario (nome, cpf, datadeNascimento, endereco, email, cep, telefone, senha);
+    public static boolean cadastrarFuncionario(Funcionario funcionario) {
+        if (verificarCPF_Funcionario(funcionario.getCpf())){
             listaFuncionarios.add(funcionario);
             return true; //indica que o funcionário foi cadastrado no sistema;
         }
     return false;//Indica que o funionário não foi cadastrado no sistema;
     }
 
-    public boolean verificarCPF_Funcionario(String cpf){
+    public static boolean verificarCPF_Funcionario(String cpf){
         for(int i=0;i<listaFuncionarios.size();i++){ 
             if((listaFuncionarios).get(i).getCpf() == cpf){
                 return false;
@@ -172,7 +170,7 @@ public class Locadora {
         return true;
     }
 
-    public boolean loginFuncionario(String cpf, String senha){
+    public static boolean loginFuncionario(String cpf, String senha){
         for(int i=0;i<listaFuncionarios.size();i++){ 
             if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
                 return true; // Login efetuado com sucesso
@@ -181,6 +179,15 @@ public class Locadora {
         return false; // Não existe o usuário ou senha incorreta
     }
 
+//    public static boolean removerFuncionario(String cpf){
+//        for (int i = 0; i < listaFuncionarios.size(); i++)
+//            if ((listaFuncionarios.get(i)).getCpf() == cpf) {
+//                listaFuncionarios.remove(i);
+//                return true;
+//            }
+//        return false;
+//    }
+
 
 //MÉTODOS OPERACIONAIS ENVOLVENDO RESERVA    
 
@@ -188,10 +195,10 @@ public class Locadora {
         return (dataDevolucaoCliente.before(dataRetiradaCarro) || dataDevolucaoCarro.before(dataRetiradaCliente));
     }
 
-    public void fazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada, 
-            Calendar dataDevolucao, Carro carro, Cliente cliente, 
-            Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, 
-            double valorTotalGeral){
+    public static void fazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada,
+                                    Calendar dataDevolucao, Carro carro, Cliente cliente,
+                                    Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso,
+                                    double valorTotalGeral){
         //Incrementar o numero da reserva;
         numeroReserva = numeroReserva + 1;
         Reserva reserva = new Reserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, 
@@ -202,7 +209,7 @@ public class Locadora {
         carro.getReservasCarro().add(reserva);
     }
     
-    public void cancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
+    public static void cancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
         reserva.setStatus("CANCELADA");
         
         //Percorrer a lista de reservas do cliente para modificar o status da reserva em questão:

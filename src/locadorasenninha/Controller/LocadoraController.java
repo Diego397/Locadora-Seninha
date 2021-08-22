@@ -7,7 +7,15 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class LocadoraController {
-//Carro
+
+    public Locadora locadora;
+
+    public LocadoraController(Locadora locadora) {
+        this.locadora = locadora;
+    }
+
+    //Carro
+
     public boolean verificaCadastrarCarro(String modelo, String placa, String cor, String chassi, int passageiros,
                                           int bagagem, double taxaDiaria, double taxaAtraso)
     {
@@ -23,7 +31,7 @@ public class LocadoraController {
                         {
                             if (taxaAtraso > 0 && taxaAtraso <= 9999)
                             {
-                                return Locadora.cadastrarCarro(modelo, placa, cor, chassi, passageiros, bagagem, taxaDiaria, taxaAtraso);
+                                return locadora.cadastrarCarro(modelo, placa, cor, chassi, passageiros, bagagem, taxaDiaria, taxaAtraso);
                             }
                         }
                     }
@@ -37,7 +45,7 @@ public class LocadoraController {
     {
         if (carro != null && reserva != null && cliente != null)
         {
-            Locadora.devolverCarro(carro, reserva, cliente);
+            locadora.devolverCarro(carro, reserva, cliente);
             return true;
         }
         return false;
@@ -53,14 +61,14 @@ public class LocadoraController {
                 && endereco.length() < 300 && cep != null && cep.length() == 9 && telefone!= null
                 && telefone.length() == 16 &&  senha != null && senha.length() < 30)
         {
-            return Locadora.cadastrarCliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
+            return locadora.cadastrarCliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
         }
         return false;
     }
 
     public boolean verificaLoginCliente(String cpf, String senha){
         if(cpf != null && cpf.length() == 14 && senha != null && senha.length() < 30){
-            return Locadora.loginCliente(cpf, senha);
+            return locadora.loginCliente(cpf, senha);
         }
     return false;
 }
@@ -80,7 +88,7 @@ public class LocadoraController {
                     {
                         if (funcionario != null)
                         {
-                            Locadora.fazerReserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
+                            locadora.fazerReserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
                             return true;
                         }
                     }
@@ -93,7 +101,7 @@ public class LocadoraController {
     public boolean verificaCancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
         if (carro != null && reserva != null && cliente != null)
         {
-            Locadora.cancelarReserva(carro, reserva, cliente);
+            locadora.cancelarReserva(carro, reserva, cliente);
             return true;
         }
         return false;
@@ -102,21 +110,21 @@ public class LocadoraController {
 //Funcionario
     public boolean verificaCadastrarFuncionario(String nome, String cpf, String dataDeNascimento,
                                         String endereco, String email, String cep, String telefone, String senha){
-        if(nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 11 && dataDeNascimento != null &&
-                dataDeNascimento.length() == 8 && endereco != null && endereco.length() > 0 && endereco.length() < 300 && email != null && email.length() > 0 &&
-                email.length() < 100 && cep != null && cep.length() == 8 && telefone!= null && telefone.length()>=11 && telefone.length() < 15
+        if(nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 14 && dataDeNascimento != null &&
+                dataDeNascimento.length() == 10 && endereco != null && endereco.length() > 0 && endereco.length() < 300 && email != null && email.length() > 0 &&
+                email.length() < 100 && cep != null && cep.length() == 9 && telefone!= null && telefone.length() == 16
                 && senha != null && senha.length() < 30)
         {
             Funcionario funcionario = new Funcionario (nome, cpf, dataDeNascimento, endereco, email, cep, telefone, senha);
-            return Locadora.cadastrarFuncionario(funcionario);
+            return locadora.cadastrarFuncionario(funcionario);
 
         }
         return false;
     }
 
     public boolean verificaLoginFuncionario(String cpf, String senha){
-        if(cpf != null && cpf.length() == 11 && senha != null && senha.length() < 30){
-            return Locadora.loginFuncionario(cpf,senha);
+        if(cpf != null && cpf.length() == 14 && senha != null && senha.length() < 30){
+            return locadora.loginFuncionario(cpf,senha);
         }
         return false;
     }

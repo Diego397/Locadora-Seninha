@@ -1,3 +1,4 @@
+//OK
 package locadorasenninha.View;
 
 public class TelaInicial extends javax.swing.JFrame {

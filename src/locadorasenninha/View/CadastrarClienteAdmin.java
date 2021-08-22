@@ -2,6 +2,7 @@
 package locadorasenninha.View;
 
 import locadorasenninha.Controller.LocadoraController;
+import locadorasenninha.Model.Main;
 
 import javax.swing.JOptionPane;
 
@@ -296,7 +297,7 @@ public class CadastrarClienteAdmin extends javax.swing.JFrame {
         String email = textFieldEmailCliente.getText();
         String senha = textFieldSenhaCliente.getText();
 
-        if (new LocadoraController().verificaCadastrarCliente(nome, cpf, dataNascimento, email, endereco,  cep, telefone, senha))
+        if (Main.controller.verificaCadastrarCliente(nome, cpf, dataNascimento, email, endereco,  cep, telefone, senha))
         {
             JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
             ListaClientesAdmin novatela = new ListaClientesAdmin();

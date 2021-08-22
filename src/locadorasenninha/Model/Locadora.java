@@ -1,3 +1,4 @@
+//String Comparator ta errado na linha 146
 package locadorasenninha.Model;
 
 import java.text.ParseException;
@@ -8,6 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 
 public class Locadora {
@@ -144,7 +146,7 @@ public class Locadora {
 
     public static boolean loginCliente(String cpf, String senha){
         for(int i=0;i<listaClientes.size();i++){ 
-            if((listaClientes).get(i).getCpf() == cpf && (listaClientes).get(i).getSenha() == senha){
+            if(Objects.equals((listaClientes).get(i).getCpf(), cpf) && Objects.equals((listaClientes).get(i).getSenha(), senha)){
                 return true; // Login efetuado com sucesso
             }
         }
@@ -172,7 +174,7 @@ public class Locadora {
 
     public static boolean loginFuncionario(String cpf, String senha){
         for(int i=0;i<listaFuncionarios.size();i++){ 
-            if((listaFuncionarios).get(i).getCpf() == cpf && (listaFuncionarios).get(i).getSenha() == senha){
+            if(Objects.equals((listaFuncionarios).get(i).getCpf(), cpf) && Objects.equals((listaFuncionarios).get(i).getSenha(), senha)){
                 return true; // Login efetuado com sucesso
             }
         }		

@@ -1,4 +1,11 @@
+//OK
 package locadorasenninha.View;
+
+import locadorasenninha.Controller.LocadoraController;
+import locadorasenninha.Model.Locadora;
+import locadorasenninha.Model.Main;
+
+import javax.swing.*;
 
 public class TelaLoginFuncionario extends javax.swing.JFrame {
 
@@ -17,7 +24,7 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         painelSuporteFuncionario = new javax.swing.JPanel();
         labelUsuarioFuncionario = new javax.swing.JLabel();
         labelSenhaFuncionario = new javax.swing.JLabel();
-        textFieldUsuarioFuncionario = new javax.swing.JTextField();
+        textFieldUsuarioFuncionario = new javax.swing.JFormattedTextField();
         buttonEntrarFuncionario = new javax.swing.JButton();
         passwordFieldLoginFuncionario = new javax.swing.JPasswordField();
         IntroLogFuncionario = new javax.swing.JLabel();
@@ -73,6 +80,13 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         });
 
         passwordFieldLoginFuncionario.setForeground(new java.awt.Color(192, 2, 0));
+
+        try {
+            textFieldUsuarioFuncionario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        textFieldUsuarioFuncionario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout painelSuporteFuncionarioLayout = new javax.swing.GroupLayout(painelSuporteFuncionario);
         painelSuporteFuncionario.setLayout(painelSuporteFuncionarioLayout);
@@ -174,9 +188,23 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonEntrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarFuncionarioActionPerformed
-        MenuFuncionario novatela = new MenuFuncionario();
-        novatela.setVisible(true);
-        this.setVisible(false);
+        String usuario = textFieldUsuarioFuncionario.getText();
+        String senha = String.valueOf(passwordFieldLoginFuncionario.getPassword());
+
+        System.out.println(usuario);
+        System.out.println(senha);
+
+        if (Main.controller.verificaLoginFuncionario(usuario, senha))
+        {
+            JOptionPane.showMessageDialog(null, "Login Efetuado!");
+            MenuFuncionario novatela = new MenuFuncionario();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Login Inválido!");
+        }
     }//GEN-LAST:event_buttonEntrarFuncionarioActionPerformed
 
     private void retornarLoginFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarLoginFuncionarioActionPerformed
@@ -229,6 +257,6 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
     private javax.swing.JPanel painelSuporteFuncionario;
     private javax.swing.JPasswordField passwordFieldLoginFuncionario;
     private javax.swing.JButton retornarLoginFuncionario;
-    private javax.swing.JTextField textFieldUsuarioFuncionario;
+    private javax.swing.JFormattedTextField textFieldUsuarioFuncionario;
     // End of variables declaration//GEN-END:variables
 }

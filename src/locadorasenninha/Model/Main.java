@@ -1,12 +1,17 @@
 //É aqui que inicia a
 package locadorasenninha.Model;
 import locadorasenninha.View.TelaInicial;
+import locadorasenninha.Controller.*;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Main{
+
+    public static Locadora locadora = new Locadora();
+    public static LocadoraController controller = new LocadoraController(locadora);
+
     public static void main(String args[]){
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

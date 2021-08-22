@@ -1,5 +1,7 @@
+//OK
 package locadorasenninha.View;
 import locadorasenninha.Controller.LocadoraController;
+import locadorasenninha.Model.Main;
 
 import javax.swing.*;
 
@@ -21,7 +23,7 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         painelSuporteCliente = new javax.swing.JPanel();
         labelCpfCliente = new javax.swing.JLabel();
         labelSenhaCliente = new javax.swing.JLabel();
-        textFieldCPFCliente = new javax.swing.JTextField();
+        textFieldCPFCliente = new javax.swing.JFormattedTextField();
         buttonEntrarCliente = new javax.swing.JButton();
         passwordFieldLoginCliente = new javax.swing.JPasswordField();
         IntroLogCliente = new javax.swing.JLabel();
@@ -77,6 +79,13 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         });
 
         passwordFieldLoginCliente.setForeground(new java.awt.Color(192, 2, 0));
+
+        try {
+            textFieldCPFCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        textFieldCPFCliente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout painelSuporteClienteLayout = new javax.swing.GroupLayout(painelSuporteCliente);
         painelSuporteCliente.setLayout(painelSuporteClienteLayout);
@@ -181,12 +190,7 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         String cpf = textFieldCPFCliente.getText();
         String senha = String.valueOf(passwordFieldLoginCliente.getPassword());
 
-        System.out.println(cpf);
-        System.out.println(cpf.length());
-        System.out.println(senha);
-        System.out.println(senha.length());
-
-        if (new LocadoraController().verificaLoginCliente(cpf, senha))
+        if (Main.controller.verificaLoginCliente(cpf, senha))
         {
             JOptionPane.showMessageDialog(null, "Login Efetuado!");
             ReservasCliente novatela = new ReservasCliente();
@@ -249,6 +253,6 @@ public class TelaLoginCliente extends javax.swing.JFrame {
     private javax.swing.JPanel painelSuporteCliente;
     private javax.swing.JPasswordField passwordFieldLoginCliente;
     private javax.swing.JButton retornarLoginCliente;
-    private javax.swing.JTextField textFieldCPFCliente;
+    private javax.swing.JFormattedTextField textFieldCPFCliente;
     // End of variables declaration//GEN-END:variables
 }

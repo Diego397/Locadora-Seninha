@@ -1,6 +1,7 @@
 package locadorasenninha.View;
 
 import locadorasenninha.Controller.LocadoraController;
+import locadorasenninha.Model.Main;
 
 import javax.swing.JOptionPane;
 
@@ -294,7 +295,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         String email = textFieldEmailFuncionario.getText();
         String senha = textFieldSenhaFuncionario.getText();
 
-        if (new LocadoraController().verificaCadastrarFuncionario(nome, cpf, dataNascimento, email, endereco,  cep, telefone, senha))
+        if (Main.controller.verificaCadastrarFuncionario(nome, cpf, dataNascimento, email, endereco,  cep, telefone, senha))
         {
             JOptionPane.showMessageDialog(null, "Funcionário Cadastrado!");
             ListaFuncionarios novatela = new ListaFuncionarios();

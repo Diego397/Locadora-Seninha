@@ -1,4 +1,10 @@
+//OK
 package locadorasenninha.View;
+
+import locadorasenninha.Controller.LocadoraController;
+
+import javax.swing.*;
+import java.util.Objects;
 
 public class TelaLoginAdmin extends javax.swing.JFrame {
 
@@ -20,7 +26,7 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
         labelSenhaAdmin = new javax.swing.JLabel();
         textFieldUsuarioAdmin = new javax.swing.JTextField();
         buttonEntrarAdmin = new javax.swing.JButton();
-        passwordFieldLoginFuncionario = new javax.swing.JPasswordField();
+        passwordFieldLoginAdmin = new javax.swing.JPasswordField();
         IntroLogAdmin = new javax.swing.JLabel();
         retornarLoginAdmin = new javax.swing.JButton();
 
@@ -73,7 +79,7 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
             }
         });
 
-        passwordFieldLoginFuncionario.setForeground(new java.awt.Color(192, 2, 0));
+        passwordFieldLoginAdmin.setForeground(new java.awt.Color(192, 2, 0));
 
         javax.swing.GroupLayout painelSuporteAdminLayout = new javax.swing.GroupLayout(painelSuporteAdmin);
         painelSuporteAdmin.setLayout(painelSuporteAdminLayout);
@@ -83,7 +89,7 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
                 .addGroup(painelSuporteAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(painelSuporteAdminLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(passwordFieldLoginFuncionario))
+                        .addComponent(passwordFieldLoginAdmin))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelSuporteAdminLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(painelSuporteAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +115,7 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelSenhaAdmin)
                 .addGap(18, 18, 18)
-                .addComponent(passwordFieldLoginFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordFieldLoginAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(buttonEntrarAdmin)
                 .addContainerGap(33, Short.MAX_VALUE))
@@ -175,9 +181,23 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonEntrarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarAdminActionPerformed
-        MenuAdmin novatela = new MenuAdmin();
-        novatela.setVisible(true);
-        this.setVisible(false);
+        String usuario = textFieldUsuarioAdmin.getText();
+        String senha = String.valueOf(passwordFieldLoginAdmin.getPassword());
+
+        System.out.println(usuario);
+        System.out.println(senha);
+
+        if (usuario.equals("admin") && senha.equals("admin"))
+        {
+            JOptionPane.showMessageDialog(null, "Login Efetuado!");
+            MenuAdmin novatela = new MenuAdmin();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Login Inválido!");
+        }
     }//GEN-LAST:event_buttonEntrarAdminActionPerformed
 
     private void retornarLoginAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarLoginAdminActionPerformed
@@ -228,7 +248,7 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelLocadora10;
     private javax.swing.JPanel painelPrincipal;
     private javax.swing.JPanel painelSuporteAdmin;
-    private javax.swing.JPasswordField passwordFieldLoginFuncionario;
+    private javax.swing.JPasswordField passwordFieldLoginAdmin;
     private javax.swing.JButton retornarLoginAdmin;
     private javax.swing.JTextField textFieldUsuarioAdmin;
     // End of variables declaration//GEN-END:variables

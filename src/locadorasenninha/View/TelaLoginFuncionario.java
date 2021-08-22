@@ -61,7 +61,7 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
 
         labelUsuarioFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelUsuarioFuncionario.setForeground(new java.awt.Color(255, 255, 255));
-        labelUsuarioFuncionario.setText("USUÁRIO:");
+        labelUsuarioFuncionario.setText("CPF:");
 
         labelSenhaFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelSenhaFuncionario.setForeground(new java.awt.Color(255, 255, 255));

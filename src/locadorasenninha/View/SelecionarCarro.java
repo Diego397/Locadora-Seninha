@@ -1,3 +1,4 @@
+//Falta pegar os dados da model
 package locadorasenninha.View;
 
 import javax.swing.JOptionPane;

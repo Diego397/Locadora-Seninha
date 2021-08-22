@@ -1,5 +1,7 @@
-
+//OK
 package locadorasenninha.View;
+
+import locadorasenninha.Controller.LocadoraController;
 
 import javax.swing.JOptionPane;
 
@@ -285,11 +287,28 @@ public class CadastrarCliente extends javax.swing.JFrame {
 
     private void buttonCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarClienteActionPerformed
         //Funcao Cadastrar Cliente.
-        JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
-        ListaClientes novatela = new ListaClientes();
-        novatela.setVisible(true);
-        this.setVisible(false);
-        
+        String nome = textFielNomeCliente.getText();
+        String dataNascimento = textFieldDataNascimentoCliente.getText();
+        String cpf = textFieldCPFCLiente.getText();
+        String telefone = textFieldTelefoneCliente.getText();
+        String endereco = textFieldEnderecoCliente.getText();
+        String cep = textFieldCEPCliente.getText();
+        String email = textFieldEmailCliente.getText();
+        String senha = textFieldSenhaCliente.getText();
+
+        if (new LocadoraController().verificaCadastrarCliente(nome, cpf, dataNascimento, email, endereco,  cep, telefone, senha))
+        {
+            JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
+            ListaClientes novatela = new ListaClientes();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Cadastro inválido!");
+        }
+
+
     }//GEN-LAST:event_buttonCadastrarClienteActionPerformed
 
     private void buttonRetornarCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarCadastrarClienteActionPerformed

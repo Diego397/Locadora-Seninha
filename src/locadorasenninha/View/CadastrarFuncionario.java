@@ -1,5 +1,7 @@
 package locadorasenninha.View;
 
+import locadorasenninha.Controller.LocadoraController;
+
 import javax.swing.JOptionPane;
 
 public class CadastrarFuncionario extends javax.swing.JFrame {
@@ -283,10 +285,26 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCadastrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarFuncionarioActionPerformed
-        JOptionPane.showMessageDialog(null, "Funcionário Cadastrado!");
-        ListaFuncionarios novatela = new ListaFuncionarios();
-        novatela.setVisible(true);
-        this.setVisible(false);
+        String nome = textFielNomeFuncionario.getText();
+        String dataNascimento = textFieldDataNascimentoFuncionario.getText();
+        String cpf = textFieldCPFFuncionario.getText();
+        String telefone = textFieldTelefoneFuncionario.getText();
+        String endereco = textFieldEnderecoFuncionario.getText();
+        String cep = textFieldCEPFuncionario.getText();
+        String email = textFieldEmailFuncionario.getText();
+        String senha = textFieldSenhaFuncionario.getText();
+
+        if (new LocadoraController().verificaCadastrarFuncionario(nome, cpf, dataNascimento, email, endereco,  cep, telefone, senha))
+        {
+            JOptionPane.showMessageDialog(null, "Funcionário Cadastrado!");
+            ListaFuncionarios novatela = new ListaFuncionarios();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Cadastro inválido!");
+        }
     }//GEN-LAST:event_buttonCadastrarFuncionarioActionPerformed
 
     private void buttonRetornarCadastrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarCadastrarFuncionarioActionPerformed

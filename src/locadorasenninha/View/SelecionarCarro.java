@@ -1,3 +1,4 @@
+//Recebe os dados da model em relacao a foto
 package locadorasenninha.View;
 
 public class SelecionarCarro extends javax.swing.JFrame {

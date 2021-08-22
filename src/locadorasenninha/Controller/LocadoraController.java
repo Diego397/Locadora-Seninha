@@ -8,7 +8,7 @@ import java.util.Calendar;
 
 public class LocadoraController {
 //Carro
-    public boolean VerificaCadastrarCarro(String modelo, String placa, String cor, String chassi, int passageiros,
+    public boolean verificaCadastrarCarro(String modelo, String placa, String cor, String chassi, int passageiros,
                                           int bagagem, double taxaDiaria, double taxaAtraso)
     {
         if (modelo != null && modelo.length() > 0 && modelo.length() < 30)
@@ -33,7 +33,7 @@ public class LocadoraController {
         return false;
     }
 
-    public boolean VerificaDevolverCarro(Carro carro, Reserva reserva, Cliente cliente)
+    public boolean verificaDevolverCarro(Carro carro, Reserva reserva, Cliente cliente)
     {
         if (carro != null && reserva != null && cliente != null)
         {
@@ -44,29 +44,29 @@ public class LocadoraController {
     }
 
 //Cliente
-    public boolean VerificaCadastrarCliente(String nome, String cpf, String dataDeNascimento, String email,
+    public boolean verificaCadastrarCliente(String nome, String cpf, String dataDeNascimento, String email,
                                     String endereco, String cep, String telefone, String senha){
 
-        if (nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 11
-                && dataDeNascimento != null && dataDeNascimento.length() == 8 && email != null
+        if (nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 14
+                && dataDeNascimento != null && dataDeNascimento.length() == 10 && email != null
                 && email.length() > 0 && email.length() < 100 && endereco != null && endereco.length() > 0
-                && endereco.length() < 300 && cep != null && cep.length() == 8 && telefone!= null
-                && telefone.length()>10 && telefone.length() < 15 &&  senha != null && senha.length() < 30)
+                && endereco.length() < 300 && cep != null && cep.length() == 9 && telefone!= null
+                && telefone.length() == 16 &&  senha != null && senha.length() < 30)
         {
             return Locadora.cadastrarCliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
         }
         return false;
     }
 
-    public boolean VerificaLoginClienteController(String cpf, String senha){
-        if(cpf != null && cpf.length() == 11 && senha != null && senha.length() < 30){
+    public boolean verificaLoginCliente(String cpf, String senha){
+        if(cpf != null && cpf.length() == 14 && senha != null && senha.length() < 30){
             return Locadora.loginCliente(cpf, senha);
         }
     return false;
 }
 
 //Reserva
-    public boolean VerificaFazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada,
+    public boolean verificaFazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada,
                                         Calendar dataDevolucao, Carro carro, Cliente cliente,
                                         Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso,
                                         double valorTotalGeral) throws Exception {
@@ -90,7 +90,7 @@ public class LocadoraController {
         return false;
     }
 
-    public boolean VerificaCancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
+    public boolean verificaCancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
         if (carro != null && reserva != null && cliente != null)
         {
             Locadora.cancelarReserva(carro, reserva, cliente);
@@ -100,7 +100,7 @@ public class LocadoraController {
     }
 
 //Funcionario
-    public boolean VerificaCadastrarFuncionario(String nome, String cpf, String dataDeNascimento,
+    public boolean verificaCadastrarFuncionario(String nome, String cpf, String dataDeNascimento,
                                         String endereco, String email, String cep, String telefone, String senha){
         if(nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 11 && dataDeNascimento != null &&
                 dataDeNascimento.length() == 8 && endereco != null && endereco.length() > 0 && endereco.length() < 300 && email != null && email.length() > 0 &&
@@ -114,7 +114,7 @@ public class LocadoraController {
         return false;
     }
 
-    public boolean VerificaLoginFuncionario(String cpf, String senha){
+    public boolean verificaLoginFuncionario(String cpf, String senha){
         if(cpf != null && cpf.length() == 11 && senha != null && senha.length() < 30){
             return Locadora.loginFuncionario(cpf,senha);
         }

@@ -1,4 +1,7 @@
 package locadorasenninha.View;
+import locadorasenninha.Controller.LocadoraController;
+
+import javax.swing.*;
 
 public class TelaLoginCliente extends javax.swing.JFrame {
 
@@ -175,9 +178,25 @@ public class TelaLoginCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonEntrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarClienteActionPerformed
-        ReservasCliente novatela = new ReservasCliente();
-        novatela.setVisible(true);
-        this.setVisible(false);
+        String cpf = textFieldCPFCliente.getText();
+        String senha = String.valueOf(passwordFieldLoginCliente.getPassword());
+
+        System.out.println(cpf);
+        System.out.println(cpf.length());
+        System.out.println(senha);
+        System.out.println(senha.length());
+
+        if (new LocadoraController().verificaLoginCliente(cpf, senha))
+        {
+            JOptionPane.showMessageDialog(null, "Login Efetuado!");
+            ReservasCliente novatela = new ReservasCliente();
+            novatela.setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Login Inválido!");
+        }
     }//GEN-LAST:event_buttonEntrarClienteActionPerformed
 
     private void retornarLoginClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarLoginClienteActionPerformed

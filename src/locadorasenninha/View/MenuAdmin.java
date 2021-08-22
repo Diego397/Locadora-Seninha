@@ -1,3 +1,4 @@
+//Receber os dados da Model
 package locadorasenninha.View;
 
 public class MenuAdmin extends javax.swing.JFrame {

@@ -269,7 +269,7 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonRetornarCadastrarCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarCadastrarCarroActionPerformed
-        ListaClientes novatela = new ListaClientes();
+        MenuAdmin novatela = new MenuAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_buttonRetornarCadastrarCarroActionPerformed
@@ -287,8 +287,8 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
 
         if (Main.controller.verificaCadastrarCarro(modelo, placa, cor, chassi, passageiros, bagagem, diaria,atraso))
         {
-            JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
-            ListaClientes novatela = new ListaClientes();
+            JOptionPane.showMessageDialog(null, "Carro Cadastrado!");
+            MenuAdmin novatela = new MenuAdmin();
             novatela.setVisible(true);
             this.setVisible(false);
         }

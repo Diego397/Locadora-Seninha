@@ -20,6 +20,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         buttonGerenciarReservas = new javax.swing.JButton();
         buttonGerenciarClientes = new javax.swing.JButton();
         buttonGerenciarFuncionarios = new javax.swing.JButton();
+        buttonCadastrarCarro = new javax.swing.JButton();
         labelMenuAdmin = new javax.swing.JLabel();
         buttonRetornarMenuAdmin = new javax.swing.JButton();
 
@@ -81,16 +82,27 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        buttonCadastrarCarro.setBackground(new java.awt.Color(255, 255, 255));
+        buttonCadastrarCarro.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        buttonCadastrarCarro.setForeground(new java.awt.Color(192, 2, 0));
+        buttonCadastrarCarro.setText("Cadastrar Carro");
+        buttonCadastrarCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastrarCarroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelInicialLayout = new javax.swing.GroupLayout(painelInicial);
         painelInicial.setLayout(painelInicialLayout);
         painelInicialLayout.setHorizontalGroup(
             painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelInicialLayout.createSequentialGroup()
+            .addGroup(painelInicialLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(buttonGerenciarFuncionarios, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                    .addComponent(buttonGerenciarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonGerenciarReservas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonGerenciarFuncionarios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                    .addComponent(buttonGerenciarClientes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonGerenciarReservas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonCadastrarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         painelInicialLayout.setVerticalGroup(
@@ -102,7 +114,9 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addComponent(buttonGerenciarClientes)
                 .addGap(18, 18, 18)
                 .addComponent(buttonGerenciarFuncionarios)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(buttonCadastrarCarro)
+                .addContainerGap())
         );
 
         labelMenuAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -142,8 +156,8 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addGap(109, 109, 109)
                 .addComponent(labelMenuAdmin)
                 .addGap(18, 18, 18)
-                .addComponent(painelInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addComponent(painelInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(buttonRetornarMenuAdmin)
                 .addContainerGap())
         );
@@ -156,7 +170,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
         );
 
         pack();
@@ -185,6 +199,12 @@ public class MenuAdmin extends javax.swing.JFrame {
         novatela.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_buttonGerenciarFuncionariosActionPerformed
+
+    private void buttonCadastrarCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarCarroActionPerformed
+        CadastrarVeiculo novatela = new CadastrarVeiculo();
+        novatela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonCadastrarCarroActionPerformed
 
 
     public static void main(String args[]) {
@@ -221,6 +241,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonCadastrarCarro;
     private javax.swing.JButton buttonGerenciarClientes;
     private javax.swing.JButton buttonGerenciarFuncionarios;
     private javax.swing.JButton buttonGerenciarReservas;

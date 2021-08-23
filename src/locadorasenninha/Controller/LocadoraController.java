@@ -286,4 +286,36 @@ public class LocadoraController {
 
         return dados;
     }
+
+    public String[] exibirCarro(String numeroReserva){
+        Reserva reserva = null;
+
+        ArrayList<Reserva> reservas = locadora.getReservas();
+
+        for(int i=0;i<reservas.size();i++){
+            if(Objects.equals((reservas).get(i).getNumeroReserva(), numeroReserva)){
+                reserva = (reservas).get(i); //Retorna o cliente
+            }
+        }
+        String dados[] = new String[14];
+
+        Carro carro = reserva.getCarro();
+
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
+
+        dados[0] = carro.getModelo();
+        dados[1] = carro.getPlaca();
+        dados[2] = carro.getCor();
+        dados[3] = carro.getPassageiros();
+        dados[4] = carro.getBagagem();
+        dados[5] = dataEmissaoString;
+        dados[6] = String.valueOf(reserva.getValorTotalGeral());
+        dados[7] = String.valueOf(reserva.getValorTotalDiaria());
+        dados[8] = String.valueOf(carro.getTaxaDiaria());
+        dados[9] = String.valueOf(carro.getTaxaAtraso());
+        
+        return dados;
+    }
+
 }

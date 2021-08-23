@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import locadorasenninha.Model.Main;
+import javax.swing.table.TableModel;
 
 public class ListaFuncionarios extends javax.swing.JFrame {
 
@@ -219,6 +221,10 @@ public class ListaFuncionarios extends javax.swing.JFrame {
 
     private void tableListaFuncionariosMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Funcionário Selecionado!");
+        int index = tableListaFuncionarios.getSelectedRow();
+        TableModel model = tableListaFuncionarios.getModel();
+        Main.cpfView = (String)model.getValueAt(index,1);
+
         ExibirFuncionario novatela = new ExibirFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);        

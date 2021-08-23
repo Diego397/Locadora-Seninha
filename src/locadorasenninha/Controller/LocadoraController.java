@@ -203,4 +203,28 @@ public class LocadoraController {
     public int qtdeFuncionarios(){
         return locadora.qtdeFuncionarios();
     }
+
+    public String[] exibirCliente(String cpf){
+        Cliente cliente = null;
+
+        for(int i=0;i<locadora.listaClientes.size();i++){ 
+            if((locadora.listaClientes).get(i).getCpf() == cpf){
+                cliente = (locadora.listaClientes).get(i); //Retorna o cliente
+            }
+        }
+        String dados[] = new String[8];
+
+        dados[0] = cliente.getNome();
+        dados[1] = cliente.getDataDeNascimento();
+        dados[2] = cliente.getCpf();
+        dados[3] = cliente.getTelefone();
+        dados[4] = cliente.getEndereco();
+        dados[5] = cliente.getCep();
+        dados[6] = cliente.getEmail();
+        dados[7] = cliente.getSenha();
+
+        return dados;
+    }
+
+
 }

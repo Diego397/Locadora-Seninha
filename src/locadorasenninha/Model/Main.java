@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Main{
-
+    public static String cpfView = new String();
     public static Locadora locadora = new Locadora();
     public static LocadoraController controller = new LocadoraController(locadora);
 

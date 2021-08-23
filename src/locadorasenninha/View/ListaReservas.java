@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import locadorasenninha.Model.Main;
+import javax.swing.table.TableModel;
 
 public class ListaReservas extends javax.swing.JFrame {
     
@@ -254,6 +256,11 @@ public class ListaReservas extends javax.swing.JFrame {
 
     private void tableListaReservasFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Reserva Selecionada!");
+
+        int index = tableListaReservasFuncionario.getSelectedRow();
+        TableModel model = tableListaReservasFuncionario.getModel();
+        Main.cpfView = (String)model.getValueAt(index,1);
+
         ExibirReservaFuncionario novatela = new ExibirReservaFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);

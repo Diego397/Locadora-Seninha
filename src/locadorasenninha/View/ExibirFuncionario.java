@@ -2,12 +2,23 @@
 package locadorasenninha.View;
 
 import javax.swing.JOptionPane;
+import locadorasenninha.Model.Main;
 
 public class ExibirFuncionario extends javax.swing.JFrame {
+    String[] dados = new String[8];
 
 
     public ExibirFuncionario() {
         initComponents();
+        dados = Main.controller.exibirCliente(Main.cpfView);
+        labelPainelNomeFuncionario.setText(dados[0]);
+        labelPainelDataNascimentoFuncionario.setText(dados[1]);
+        labelPainelCPFFuncionario.setText(dados[2]);
+        labelPainelTelefoneFuncionario.setText(dados[3]);
+        labelPainelEnderecoFuncionario.setText(dados[4]);
+        labelPainelCEPFuncionario.setText(dados[5]);
+        labelPainelEmailFuncionario.setText(dados[6]);
+        labelPainelSenhaFuncionario.setText(dados[7]);
     }
 
 

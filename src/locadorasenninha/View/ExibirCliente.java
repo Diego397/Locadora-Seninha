@@ -1,13 +1,22 @@
 //Model
 package locadorasenninha.View;
-
+import locadorasenninha.Model.Main;
 import javax.swing.JOptionPane;
 
 public class ExibirCliente extends javax.swing.JFrame {
-
+    String[] dados = new String[8];
 
     public ExibirCliente() {
         initComponents();
+        dados = Main.controller.exibirCliente(Main.cpfView);
+        labelPainelNomeClienteExibirClienteFuncionario.setText(dados[0]);
+        labelPainelDataNascimentoClienteExibirClienteFuncionario.setText(dados[1]);
+        labelPainelCPFClienteExibirClienteFuncionario.setText(dados[2]);
+        labelPainelTelefoneClienteExibirClienteFuncionario.setText(dados[3]);
+        labelPainelEnderecoClienteExibirClienteFuncionario.setText(dados[4]);
+        labelPainelCEPClienteExibirClienteFuncionario.setText(dados[5]);
+        labelPainelEmailClienteExibirClienteFuncionario.setText(dados[6]);
+        labelPainelSenhaClienteExibirClienteFuncionario.setText(dados[7]);
     }
 
 

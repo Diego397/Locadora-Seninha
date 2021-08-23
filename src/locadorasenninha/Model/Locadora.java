@@ -402,8 +402,15 @@ public class Locadora {
     public int qtdeFuncionarios(){
         return listaFuncionarios.size();
     }
-    
 
+    public Cliente buscarCliente(String cpf){
+        for(int i=0;i<listaClientes.size();i++){ 
+            if((listaClientes).get(i).getCpf() == cpf){
+                return (listaClientes).get(i); //Retorna o cliente
+            }
+        }
+        return null;
+    }
 }
 
 

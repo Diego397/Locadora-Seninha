@@ -7,7 +7,8 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
-
+import locadorasenninha.Model.Main;
+import javax.swing.table.TableModel;
 
 public class ListaClientes extends javax.swing.JFrame {
 
@@ -221,6 +222,11 @@ public class ListaClientes extends javax.swing.JFrame {
 
     private void tableListaClientesFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaClientesFuncionarioMouseClicked
         JOptionPane.showMessageDialog(null, "Cliente Selecionado!");
+
+        int index = tableListaClientesFuncionario.getSelectedRow();
+        TableModel model = tableListaClientesFuncionario.getModel();
+        Main.cpfView = (String)model.getValueAt(index,1);
+
         ExibirCliente novatela = new ExibirCliente();
         novatela.setVisible(true);
         this.setVisible(false);

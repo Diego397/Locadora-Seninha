@@ -816,7 +816,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Reserva Cancelada!");
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
-        this.setVisible(false);   
+        this.setVisible(false);
     }//GEN-LAST:event_buttonCancelarReservaFuncionarioActionPerformed
 
     private void buttonRetirarCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetirarCarroFuncionarioActionPerformed

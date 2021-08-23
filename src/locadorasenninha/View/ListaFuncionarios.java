@@ -1,6 +1,8 @@
 //Model
 package locadorasenninha.View;
 
+import locadorasenninha.Model.Main;
+
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -13,6 +15,11 @@ public class ListaFuncionarios extends javax.swing.JFrame {
     public ListaFuncionarios() {
         initComponents();
         CreateColumns();
+        String dados[][] = Main.controller.atualizaTabelaFuncionarios();
+
+        for(int i = 0; i< Main.controller.qtdeFuncionarios(); i++){
+            AdicionarDados(dados[i][0],dados[i][1]);
+        }
     }
 
     //Método que cria as colunas

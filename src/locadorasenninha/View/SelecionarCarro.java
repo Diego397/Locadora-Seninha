@@ -1,6 +1,8 @@
 //Falta pegar os dados da model
 package locadorasenninha.View;
 
+import locadorasenninha.Model.Main;
+
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -13,6 +15,11 @@ public class SelecionarCarro extends javax.swing.JFrame {
     public SelecionarCarro(){
         initComponents();
         CreateColumns();
+        String dados[][] = Main.controller.atualizaTabelaCarros();
+
+        for(int i = 0; i< Main.controller.qtdeCarros(); i++){
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2]);
+        }
     }
 
     //Método que cria as colunas
@@ -36,8 +43,8 @@ public class SelecionarCarro extends javax.swing.JFrame {
     }
 
     //Método que adiciona os dados nas linhas da tabela
-    private void AdicionarDados(String modelo,String cor, String disponibilidade, String placa){
-        String[] rowData = {modelo,cor,disponibilidade,placa};
+    private void AdicionarDados(String modelo,String cor, String placa){
+        String[] rowData = {modelo,cor,placa};
         dm.addRow(rowData);
     }
 
@@ -179,8 +186,8 @@ public class SelecionarCarro extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void CarregarDadosActionPerformed(java.awt.event.ActionEvent evt) {
-        AdicionarDados("Fusca","Azul","25/08/2021","PQ45RSK");
-        AdicionarDados("Kombi","Verde da Filadélfia","Imediata","4CBR33");
+        AdicionarDados("Fusca","Azul","PQ45RSK");
+        AdicionarDados("Kombi","Verde da Filadélfia","4CBR33");
     }
 
     private void RetornarBotaoActionPerformed(java.awt.event.ActionEvent evt) {

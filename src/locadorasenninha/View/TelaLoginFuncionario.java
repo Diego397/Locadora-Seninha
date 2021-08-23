@@ -196,7 +196,6 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
 
         if (Main.controller.verificaLoginFuncionario(usuario, senha))
         {
-            JOptionPane.showMessageDialog(null, "Login Efetuado!");
             MenuFuncionario novatela = new MenuFuncionario();
             novatela.setVisible(true);
             this.setVisible(false);

@@ -1,6 +1,8 @@
 //Model
 package locadorasenninha.View;
 
+import locadorasenninha.Model.Main;
+
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -14,6 +16,11 @@ public class ListaReservas extends javax.swing.JFrame {
     public ListaReservas(){
         initComponents();
         CreateColumns();
+        String dados[][] = Main.controller.atualizaTabelaReservas();
+
+        for(int i = 0; i< Main.controller.qtdeReservas(); i++){
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3]);
+        }
     }
     
     //Método que cria as colunas

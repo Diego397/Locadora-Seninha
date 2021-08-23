@@ -16,7 +16,7 @@ public class LocadoraController {
         this.locadora = locadora;
     }
 
-    //Carro
+//Carro
 
     public boolean verificaCadastrarCarro(String modelo, String placa, String cor, String chassi, String passageiros,
                                           String bagagem, double taxaDiaria, double taxaAtraso)
@@ -203,11 +203,4 @@ public class LocadoraController {
     public int qtdeFuncionarios(){
         return locadora.qtdeFuncionarios();
     }
-
-//    public boolean removerFuncionario(String cpf){
-//        if (cpf != null && cpf.length() == 11 ){
-//            return Locadora.removerFuncionario(cpf);
-//        }
-//        return false;
-//    }
 }

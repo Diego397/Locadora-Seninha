@@ -125,6 +125,4 @@ public class Reserva {
     public void setValorTotalGeral(double valorTotalGeral) {
         this.valorTotalGeral = valorTotalGeral;
     }
-
-
 }

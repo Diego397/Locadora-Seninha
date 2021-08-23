@@ -192,7 +192,6 @@ public class TelaLoginCliente extends javax.swing.JFrame {
 
         if (Main.controller.verificaLoginCliente(cpf, senha))
         {
-            JOptionPane.showMessageDialog(null, "Login Efetuado!");
             ReservasCliente novatela = new ReservasCliente();
             novatela.setVisible(true);
             this.setVisible(false);

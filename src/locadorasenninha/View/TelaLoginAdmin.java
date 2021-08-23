@@ -186,7 +186,6 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
 
         if (usuario.equals("admin") && senha.equals("admin"))
         {
-            JOptionPane.showMessageDialog(null, "Login Efetuado!");
             MenuAdmin novatela = new MenuAdmin();
             novatela.setVisible(true);
             this.setVisible(false);

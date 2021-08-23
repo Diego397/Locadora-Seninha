@@ -1,6 +1,8 @@
 //Model
 package locadorasenninha.View;
 
+import locadorasenninha.Model.Main;
+
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -14,6 +16,11 @@ public class ListaClientes extends javax.swing.JFrame {
     public ListaClientes() {
         initComponents();
         CreateColumns();
+        String dados[][] = Main.controller.atualizaTabelaClientes();
+
+        for(int i = 0; i< Main.controller.qtdeClientes(); i++){
+            AdicionarDados(dados[i][0],dados[i][1]);
+        }
     }
     
     //Método que cria as colunas

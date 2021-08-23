@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Calendar;
+import java.util.Objects;
 
 public class LocadoraController {
 
@@ -226,5 +227,25 @@ public class LocadoraController {
         return dados;
     }
 
+    public String[] exibirFuncionario(String cpf){
+        Funcionario funcionario = null;
 
+        for(int i=0;i<locadora.listaFuncionarios.size();i++){
+            if(Objects.equals((locadora.listaFuncionarios).get(i).getCpf(), cpf)){
+                funcionario = (locadora.listaFuncionarios).get(i); //Retorna o cliente
+            }
+        }
+        String dados[] = new String[8];
+
+        dados[0] = funcionario.getNome();
+        dados[1] = funcionario.getDataDeNascimento();
+        dados[2] = funcionario.getCpf();
+        dados[3] = funcionario.getTelefone();
+        dados[4] = funcionario.getEndereco();
+        dados[5] = funcionario.getCep();
+        dados[6] = funcionario.getEmail();
+        dados[7] = funcionario.getSenha();
+
+        return dados;
+    }
 }

@@ -405,8 +405,17 @@ public class Locadora {
 
     public Cliente buscarCliente(String cpf){
         for(int i=0;i<listaClientes.size();i++){ 
-            if((listaClientes).get(i).getCpf() == cpf){
+            if(Objects.equals((listaClientes).get(i).getCpf(), cpf)){
                 return (listaClientes).get(i); //Retorna o cliente
+            }
+        }
+        return null;
+    }
+
+    public Funcionario buscarFuncionario(String cpf){
+        for(int i=0;i<listaFuncionarios.size();i++){
+            if(Objects.equals((listaFuncionarios).get(i).getCpf(), cpf)){
+                return (listaFuncionarios).get(i); //Retorna o funcionario
             }
         }
         return null;

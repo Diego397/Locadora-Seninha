@@ -10,7 +10,7 @@ public class ExibirFuncionario extends javax.swing.JFrame {
 
     public ExibirFuncionario() {
         initComponents();
-        dados = Main.controller.exibirCliente(Main.cpfView);
+        dados = Main.controller.exibirFuncionario(Main.cpfView);
         labelPainelNomeFuncionario.setText(dados[0]);
         labelPainelDataNascimentoFuncionario.setText(dados[1]);
         labelPainelCPFFuncionario.setText(dados[2]);

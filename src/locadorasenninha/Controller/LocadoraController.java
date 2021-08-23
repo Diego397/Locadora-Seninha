@@ -4,8 +4,7 @@ import locadorasenninha.Model.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -245,6 +244,45 @@ public class LocadoraController {
         dados[5] = funcionario.getCep();
         dados[6] = funcionario.getEmail();
         dados[7] = funcionario.getSenha();
+
+        return dados;
+    }
+
+    public String[] exibirReserva(String numeroReserva){
+        Reserva reserva = null;
+
+        ArrayList<Reserva> reservas = locadora.getReservas();
+
+        for(int i=0;i<reservas.size();i++){
+            if(Objects.equals((reservas).get(i).getNumeroReserva(), numeroReserva)){
+                reserva = (reservas).get(i); //Retorna o cliente
+            }
+        }
+        String dados[] = new String[14];
+
+        Carro carro = reserva.getCarro();
+
+        dados[0] = carro.getModelo();
+        dados[1] = carro.getPlaca();
+        dados[2] = carro.getCor();
+        dados[3] = String.valueOf(carro.getTaxaDiaria());
+        dados[4] = String.valueOf(carro.getTaxaAtraso());
+        dados[5] = carro.getPassageiros();
+        dados[6] = carro.getBagagem();
+        dados[7] = String.valueOf(reserva.getValorTotalDiaria());
+        dados[8] = String.valueOf(reserva.getValorTotalAtraso());
+        dados[9] = String.valueOf(reserva.getValorTotalGeral());
+
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+        String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
+        String dataRetiradaString = formato.format(reserva.getDataRetirada().getTime());
+        String dataDevolucaoString = formato.format(reserva.getDataDevolucao().getTime());
+
+        dados[10] = dataEmissaoString;
+        dados[11] = dataRetiradaString;
+        dados[12] = reserva.getStatus();
+        dados[13] = dataDevolucaoString;
 
         return dados;
     }

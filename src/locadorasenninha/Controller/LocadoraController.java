@@ -79,10 +79,10 @@ public class LocadoraController {
 }
 
 //Reserva
-    public boolean verificaFazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada,
-                                        Calendar dataDevolucao, Carro carro, Cliente cliente,
+    public boolean verificaFazerReserva(int numeroReserva, String dataEmissao, String dataRetirada,
+                                        String dataDevolucao, Carro carro, Cliente cliente,
                                         Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso,
-                                        double valorTotalGeral) throws Exception {
+                                        double valorTotalGeral) throws ParseException {
         if (numeroReserva > 1 && numeroReserva < 99999)
         {
             if (dataEmissao != null && dataRetirada != null && dataDevolucao != null)
@@ -93,7 +93,21 @@ public class LocadoraController {
                     {
                         if (funcionario != null)
                         {
-                            locadora.fazerReserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+                            Calendar dataEmissaoCal = Calendar.getInstance();
+                            Calendar dataRetiradaCal = Calendar.getInstance();
+                            Calendar dataDevolucaoCal = Calendar.getInstance();
+
+                            try{
+                                dataEmissaoCal.setTime(sdf.parse(dataEmissao));
+                                dataRetiradaCal.setTime(sdf.parse(dataRetirada));
+                                dataDevolucaoCal.setTime(sdf.parse(dataDevolucao));
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+                            locadora.fazerReserva(numeroReserva, dataEmissaoCal, dataRetiradaCal, dataDevolucaoCal, carro,
+                                    cliente, funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
                             return true;
                         }
                     }
@@ -115,7 +129,7 @@ public class LocadoraController {
     public boolean verificaDataReserva(String dataRetirada, String dataDevolucao) throws ParseException {
         if (dataRetirada != null && dataRetirada.length() > 0 && dataDevolucao != null && dataDevolucao.length() > 0)
         {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
             Calendar dataDevolucaoCal = Calendar.getInstance();
             Calendar dataRetiradaCal = Calendar.getInstance();
             try{

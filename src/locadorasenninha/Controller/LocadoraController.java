@@ -314,7 +314,7 @@ public class LocadoraController {
         dados[7] = String.valueOf(reserva.getValorTotalDiaria());
         dados[8] = String.valueOf(carro.getTaxaDiaria());
         dados[9] = String.valueOf(carro.getTaxaAtraso());
-        
+
         return dados;
     }
 

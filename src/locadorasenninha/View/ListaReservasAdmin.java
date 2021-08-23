@@ -1,12 +1,13 @@
 //Model
 package locadorasenninha.View;
-
+import locadorasenninha.Model.Main;
 import locadorasenninha.Model.Main;
 
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import javax.swing.table.TableModel;
 
 public class ListaReservasAdmin extends javax.swing.JFrame {
     
@@ -254,6 +255,11 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
 
     private void tableListaReservasAdminMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Reserva Selecionada!");
+
+        int index = tableListaReservasAdmin.getSelectedRow();
+        TableModel model = tableListaReservasAdmin.getModel();
+        Main.numeroView = (String)model.getValueAt(index,4);
+
         ExibirReservaAdmin novatela = new ExibirReservaAdmin();
         novatela.setVisible(true);
         this.setVisible(false);

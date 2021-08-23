@@ -1,11 +1,28 @@
 //Model
 package locadorasenninha.View;
-
+import locadorasenninha.Model.Main;
 public class ExibirReservaCliente extends javax.swing.JFrame {
-
+    String[] dados = new String[14];
 
     public ExibirReservaCliente() {
         initComponents();
+
+        dados = Main.controller.exibirReserva(Main.numeroView);
+
+        labelPainelModeloCarroExibirReservaCliente.setText(dados[0]);
+        labelPainelPlacaExibirReservaCliente.setText(dados[1]);
+        labelPainelCorExibirReservaCliente.setText(dados[2]);
+        labelPainelCapacidadePassageirosExibirReservaCliente.setText(dados[3]);
+        labelPainelCapacidadeBagagensExibirReservaCliente.setText(dados[4]);
+        labelPainelTaxaDiariaExibirReservaCliente.setText(dados[5]);
+        labelPainelTaxaDiariaAtrasoExibirReservaCliente.setText(dados[6]);
+        labelPainelValorTotalDiariasExibirReservasCliente.setText(dados[7]);
+        labelPainelTaxaTotalAtrasoExibirReservaCliente.setText(dados[8]);
+        labelPainelValorTotalAluguelExibirReservaCliente.setText(dados[9]);
+        labelPainelDataEmissaoExibirReservaCliente.setText(dados[10]);
+        labelPainelDataRetiradaExibirReservaCliente.setText(dados[11]);
+        labelPainelDataDevolucaoExibirReservaCliente.setText(dados[12]);
+        labelPainelStatusExibirReservaCliente.setText(dados[13]);
     }
 
 

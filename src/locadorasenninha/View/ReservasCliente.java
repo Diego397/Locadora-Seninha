@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import locadorasenninha.Model.Main;
+import javax.swing.table.TableModel;
 
 public class ReservasCliente extends javax.swing.JFrame {
 
@@ -233,6 +235,11 @@ public class ReservasCliente extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Reserva Selecionada!");
+
+        int index = jTable1.getSelectedRow();
+        TableModel model = jTable1.getModel();
+        Main.numeroView = (String)model.getValueAt(index,4);
+
         ExibirReservaCliente novatela = new ExibirReservaCliente();
         novatela.setVisible(true);
         this.setVisible(false);

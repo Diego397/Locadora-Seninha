@@ -160,55 +160,52 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="labelChassi" min="-2" max="-2" attributes="0"/>
-                              <Component id="textFielChassi" pref="230" max="32767" attributes="0"/>
-                              <Component id="labelPlaca" min="-2" max="-2" attributes="0"/>
-                              <Component id="textPlaca" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace pref="324" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="labelPassageiros" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="textFielPassageiros" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="labelBagagem" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="textFielBagagem" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="labelCor" min="-2" max="-2" attributes="0"/>
-                                      <Component id="textFielCor" min="-2" pref="238" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelDiaria" min="-2" max="-2" attributes="0"/>
-                              <Component id="textFielDiaria" min="-2" pref="146" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelAtraso" min="-2" max="-2" attributes="0"/>
-                              <Component id="textFielAtraso" min="-2" pref="155" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="textFielModelo" min="-2" pref="777" max="-2" attributes="0"/>
                               <Component id="labelModelo" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="labelChassi" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textFielChassi" pref="230" max="32767" attributes="0"/>
+                                      <Component id="labelPlaca" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textPlaca" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelCor" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textFielCor" min="-2" pref="238" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelPassageiros" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="textFielPassageiros" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelBagagem" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="textFielBagagem" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelDiaria" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textFielDiaria" min="-2" pref="146" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelAtraso" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textFielAtraso" min="-2" pref="155" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

@@ -36,8 +36,6 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
         textFielCor = new javax.swing.JTextField();
         labelCor = new javax.swing.JLabel();
         textPlaca = new javax.swing.JTextField();
-        textFielStatus = new javax.swing.JTextField();
-        labelStatus = new javax.swing.JLabel();
         textFielPassageiros = new javax.swing.JTextField();
         labelPassageiros = new javax.swing.JLabel();
         textFielBagagem = new javax.swing.JTextField();
@@ -111,10 +109,6 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
         labelCor.setForeground(new java.awt.Color(255, 255, 255));
         labelCor.setText("Cor");
 
-        labelStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelStatus.setForeground(new java.awt.Color(255, 255, 255));
-        labelStatus.setText("Status");
-
         labelPassageiros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelPassageiros.setForeground(new java.awt.Color(255, 255, 255));
         labelPassageiros.setText("Nº Passageiros");
@@ -138,46 +132,40 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
             .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelChassi)
-                            .addComponent(textFielChassi, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                            .addComponent(labelPlaca)
-                            .addComponent(textPlaca))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelCor)
-                                    .addComponent(textFielCor, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelStatus)
-                                    .addComponent(textFielStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelPassageiros)
-                                    .addComponent(textFielPassageiros, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(28, 28, 28)
-                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelBagagem)
-                                    .addComponent(textFielBagagem, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(48, 48, 48))))
-                    .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelDiaria)
-                            .addComponent(textFielDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
-                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelAtraso)
-                            .addComponent(textFielAtraso, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
                         .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textFielModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 777, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelModelo))
-                        .addGap(0, 73, Short.MAX_VALUE))))
+                        .addGap(0, 73, Short.MAX_VALUE))
+                    .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(labelChassi)
+                                    .addComponent(textFielChassi, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                                    .addComponent(labelPlaca)
+                                    .addComponent(textPlaca))
+                                .addGap(28, 28, 28)
+                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelCor)
+                                    .addComponent(textFielCor, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(labelPassageiros)
+                                            .addComponent(textFielPassageiros, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(28, 28, 28)
+                                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(labelBagagem)
+                                            .addComponent(textFielBagagem, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelDiaria)
+                                    .addComponent(textFielDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(47, 47, 47)
+                                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelAtraso)
+                                    .addComponent(textFielAtraso, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         painelSuporteCadastrarClienteLayout.setVerticalGroup(
             painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,10 +174,6 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
                 .addComponent(labelModelo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(textFielAtraso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                        .addComponent(labelAtraso)
-                        .addGap(36, 36, 36))
                     .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
                         .addComponent(textFielModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -197,36 +181,35 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
                             .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
                                 .addComponent(labelPlaca)
                                 .addGap(36, 36, 36))
-                            .addComponent(textPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                .addComponent(labelCor)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textFielCor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(24, 24, 24)
-                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                    .addComponent(labelChassi)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(textFielChassi, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                    .addComponent(labelPassageiros)
-                                    .addGap(36, 36, 36))
-                                .addComponent(textFielPassageiros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                .addComponent(labelBagagem)
-                                .addGap(36, 36, 36))
-                            .addComponent(textFielBagagem, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                .addComponent(labelStatus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textFielStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26)
-                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(textFielDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
-                                .addComponent(labelDiaria)
-                                .addGap(36, 36, 36)))))
+                            .addComponent(textPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                        .addComponent(labelCor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textFielCor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(24, 24, 24)
+                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                            .addComponent(labelChassi)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(textFielChassi, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                            .addComponent(labelPassageiros)
+                            .addGap(36, 36, 36))
+                        .addComponent(textFielPassageiros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                        .addComponent(labelBagagem)
+                        .addGap(36, 36, 36))
+                    .addComponent(textFielBagagem, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textFielDiaria, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFielAtraso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteCadastrarClienteLayout.createSequentialGroup()
+                        .addGroup(painelSuporteCadastrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelDiaria, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelAtraso, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(36, 36, 36)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -347,7 +330,6 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
     private javax.swing.JLabel labelModelo;
     private javax.swing.JLabel labelPassageiros;
     private javax.swing.JLabel labelPlaca;
-    private javax.swing.JLabel labelStatus;
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JPanel painelSuporteCadastrarCliente;
     private javax.swing.JTextField textFielAtraso;
@@ -357,7 +339,6 @@ public class CadastrarVeiculo extends javax.swing.JFrame {
     private javax.swing.JTextField textFielDiaria;
     private javax.swing.JTextField textFielModelo;
     private javax.swing.JTextField textFielPassageiros;
-    private javax.swing.JTextField textFielStatus;
     private javax.swing.JTextField textPlaca;
     // End of variables declaration//GEN-END:variables
 }

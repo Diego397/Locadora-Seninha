@@ -8,6 +8,7 @@ public class DetalhesVeiculo extends javax.swing.JFrame {
 
     public DetalhesVeiculo() {
         initComponents();
+        
     }
 
 

@@ -172,6 +172,38 @@ public class LocadoraController {
         return false;
     }
 
+    public String[][] atualizaTabelaClientes(){
+        return locadora.dadosClientes();
+    }
+
+    public String[][] atualizaTabelaFuncionarios(){
+        return locadora.dadosClientes();
+    }
+
+    public String[][] atualizaTabelaReservas(){
+        return locadora.dadosReservas();
+    }
+
+    public String[][] atualizaTabelaCarros(){
+        return locadora.dadosCarros();
+    }        
+
+    public int qtdeClientes(){
+        return locadora.qtdeClientes();
+    }
+
+    public int qtdeCarros(){
+        return locadora.qtdeCarros();
+    }
+
+    public int qtdeReservas(){
+        return locadora.qtdeReservas();
+    }
+
+    public int qtdeFuncionarios(){
+        return locadora.qtdeFuncionarios();
+    }
+
 //    public boolean removerFuncionario(String cpf){
 //        if (cpf != null && cpf.length() == 11 ){
 //            return Locadora.removerFuncionario(cpf);

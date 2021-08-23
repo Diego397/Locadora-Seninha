@@ -328,6 +328,80 @@ public class Locadora {
             }
         }
     }
+
+    public String[][] dadosClientes(){
+
+        String matriz[][] = new String[listaClientes.size()][2];
+
+        for(int i=0;i<listaClientes.size();i++){
+            
+            matriz[i][0] = listaClientes.get(i).getNome();
+            matriz[i][1] = listaClientes.get(i).getCpf();
+        }
+        return matriz;
+    }
+
+    public String[][] dadosFuncionarios(){
+
+        String matriz[][] = new String[listaFuncionarios.size()][2];
+
+        for(int i=0;i<listaFuncionarios.size();i++){
+            
+            matriz[i][0] = listaFuncionarios.get(i).getNome();
+            matriz[i][1] = listaFuncionarios.get(i).getCpf();
+        }
+        return matriz;
+    }
+
+    public String[][] dadosReservas(){
+
+        String matriz[][] = new String[reservasLocadora.size()][4];
+
+        for(int i=0;i<reservasLocadora.size();i++){
+            
+
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+            String retirada = formato.format((reservasLocadora.get(i)).getDataRetirada().getTime());
+            String devolucao = formato.format((reservasLocadora.get(i)).getDataDevolucao().getTime());
+
+            matriz[i][0] = (reservasLocadora.get(i)).getCarro().getModelo();
+            matriz[i][1] = retirada;
+            matriz[i][1] = devolucao;
+            matriz[i][3] = (reservasLocadora.get(i)).getCliente().getNome();
+        }
+        return matriz;
+    }
+
+    public String[][] dadosCarros(){
+
+        String matriz[][] = new String[listaCarros.size()][3];
+
+        for(int i=0;i<listaCarros.size();i++){
+            
+            matriz[i][0] = listaCarros.get(i).getModelo();
+            matriz[i][1] = listaCarros.get(i).getCor();
+            matriz[i][2] = listaCarros.get(i).getPlaca();
+        }
+
+        return matriz;
+    }
+    
+    public int qtdeClientes(){
+        return listaClientes.size();
+    }
+
+    public int qtdeCarros(){
+        return listaCarros.size();
+    }
+
+    public int qtdeReservas(){
+        return reservasLocadora.size();
+    }
+
+    public int qtdeFuncionarios(){
+        return listaFuncionarios.size();
+    }
     
 
 }

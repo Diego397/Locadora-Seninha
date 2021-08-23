@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import locadorasenninha.Model.Main;
 
 
 public class ListaClientesAdmin extends javax.swing.JFrame {
@@ -14,6 +15,11 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
     public ListaClientesAdmin() {
         initComponents();
         CreateColumns();
+        String dados[][] = Main.controller.atualizaTabelaClientes();
+
+		for(int i=0;i<Main.controller.qtdeClientes();i++){
+				AdicionarDados(dados[i][0],dados[i][1]);
+		}
     }
     
     //Método que cria as colunas

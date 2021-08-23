@@ -1,7 +1,5 @@
-//OK
+//OKOK
 package locadorasenninha.View;
-
-import locadorasenninha.Controller.LocadoraController;
 
 import javax.swing.JOptionPane;
 import locadorasenninha.Model.Main;
@@ -16,7 +14,6 @@ public class CadastrarCliente extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -284,10 +281,10 @@ public class CadastrarCliente extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarClienteActionPerformed
-        //Funcao Cadastrar Cliente.
+    private void buttonCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {
+        //Funcao Cadastrar Cliente
         String nome = textFielNomeCliente.getText();
         String dataNascimento = textFieldDataNascimentoCliente.getText();
         String cpf = textFieldCPFCLiente.getText();
@@ -310,21 +307,16 @@ public class CadastrarCliente extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_buttonCadastrarClienteActionPerformed
+    }
 
-    private void buttonRetornarCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarCadastrarClienteActionPerformed
+    private void buttonRetornarCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {
         ListaClientes novatela = new ListaClientes();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRetornarCadastrarClienteActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -341,9 +333,7 @@ public class CadastrarCliente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CadastrarCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CadastrarCliente().setVisible(true);
@@ -351,7 +341,6 @@ public class CadastrarCliente extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastrarCliente;
     private javax.swing.JButton buttonRetornarCadastrarCliente;
     private javax.swing.JLabel labelCEPCliente;
@@ -375,5 +364,4 @@ public class CadastrarCliente extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldEnderecoCliente;
     private javax.swing.JTextField textFieldSenhaCliente;
     private javax.swing.JFormattedTextField textFieldTelefoneCliente;
-    // End of variables declaration//GEN-END:variables
 }

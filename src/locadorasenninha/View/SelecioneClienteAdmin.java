@@ -43,7 +43,6 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -197,42 +196,37 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Cliente Selecionado!");
         SelecionarDatasReservaAdmin novatela = new SelecionarDatasReservaAdmin();
         novatela.setVisible(true);
         this.setVisible(false);        
-    }//GEN-LAST:event_jTable1MouseClicked
+    }
 
-    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {
         String busca = jTextField1.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
-    }//GEN-LAST:event_jTextField1KeyReleased
+    }
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
 
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         AdicionarDados("Marcão","222.333.555-77");
         AdicionarDados("Rei Sergio","123.456.789-00");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -249,10 +243,7 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(SelecioneClienteAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SelecioneClienteAdmin().setVisible(true);
@@ -260,7 +251,6 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -272,5 +262,4 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel labelLocadora1;
     private javax.swing.JPanel painelLocadora;
-    // End of variables declaration//GEN-END:variables
 }

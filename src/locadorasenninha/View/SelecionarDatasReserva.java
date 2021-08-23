@@ -1,13 +1,9 @@
 //Tratar as entradas em relacao a data
 package locadorasenninha.View;
 
-import locadorasenninha.Controller.LocadoraController;
 import locadorasenninha.Model.Main;
-
 import javax.swing.*;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class SelecionarDatasReserva extends javax.swing.JFrame {
 
@@ -17,7 +13,6 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -246,15 +241,15 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonRetornarSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarSelecionarDatasReservaActionPerformed
+    private void buttonRetornarSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {
         SelecioneCliente novatela = new SelecioneCliente();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRetornarSelecionarDatasReservaActionPerformed
+    }
 
-    private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) throws ParseException {//GEN-FIRST:event_buttonConfirmarDatasActionPerformed
+    private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) throws ParseException {
 
         String dataRetirada = textFieldDataRetirada.getText();
         String dataDevolucao = textFieldDataDevolucaoSelecionarDatasReserva.getText();
@@ -270,25 +265,15 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Data inválida!");
         }
 
-    }//GEN-LAST:event_buttonConfirmarDatasActionPerformed
+    }
 
-    private void textFieldHoraRetiradaSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldHoraRetiradaSelecionarDatasReservaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldHoraRetiradaSelecionarDatasReservaActionPerformed
+    private void textFieldHoraRetiradaSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
-    private void textFieldHoraDevolucaoSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldHoraDevolucaoSelecionarDatasReservaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldHoraDevolucaoSelecionarDatasReservaActionPerformed
+    private void textFieldHoraDevolucaoSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -305,9 +290,7 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(SelecionarDatasReserva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SelecionarDatasReserva().setVisible(true);
@@ -315,7 +298,6 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonConfirmarDatas;
     private javax.swing.JButton buttonRetornarSelecionarDatasReserva;
     private javax.swing.JLabel labelDataDevolucaoSelecionarDatasReserva;
@@ -331,5 +313,4 @@ public class SelecionarDatasReserva extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField textFieldDataRetirada;
     private javax.swing.JFormattedTextField textFieldHoraDevolucaoSelecionarDatasReserva;
     private javax.swing.JFormattedTextField textFieldHoraRetiradaSelecionarDatasReserva;
-    // End of variables declaration//GEN-END:variables
 }

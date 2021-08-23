@@ -50,7 +50,6 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         labelLocadora = new javax.swing.JLabel();
@@ -223,43 +222,42 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void textFieldListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldListaReservasAdminActionPerformed
-//textfield
-    }//GEN-LAST:event_textFieldListaReservasAdminActionPerformed
+    private void textFieldListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
     //Método que faz a busca na tabela pelo texto digitado no textField
-    private void textFieldListaReservasAdminKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldListaReservasAdminKeyReleased
+    private void textFieldListaReservasAdminKeyReleased(java.awt.event.KeyEvent evt) {
         String busca = textFieldListaReservasAdmin.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
-    }//GEN-LAST:event_textFieldListaReservasAdminKeyReleased
+    }
 
     //Botão que volta ao menu da Locadora
-    private void buttonVoltarMenuListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarMenuListaReservasAdminActionPerformed
+    private void buttonVoltarMenuListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
         MenuAdmin novatela = new MenuAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonVoltarMenuListaReservasAdminActionPerformed
+    }
 
     //Botão que vai pra área de Nova Reserva
-    private void buttonNovaReservaListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNovaReservaListaReservasAdminActionPerformed
+    private void buttonNovaReservaListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
         SelecioneClienteAdmin novatela = new SelecioneClienteAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonNovaReservaListaReservasAdminActionPerformed
+    }
 
-    private void buttonCarregarDadosListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCarregarDadosListaReservasAdminActionPerformed
+    private void buttonCarregarDadosListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
         AdicionarDados("Fusca","15/08/2021","25/08/2021","Lulu");
         AdicionarDados("Combi","17/08/2021","29/08/2021","Lulu");
-    }//GEN-LAST:event_buttonCarregarDadosListaReservasAdminActionPerformed
+    }
 
-    private void tableListaReservasAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaReservasAdminMouseClicked
+    private void tableListaReservasAdminMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Reserva Selecionada!");
         ExibirReservaAdmin novatela = new ExibirReservaAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_tableListaReservasAdminMouseClicked
+    }
 
     public static void main(String args[]) {
 
@@ -279,9 +277,6 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ListaReservasAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -289,9 +284,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
             }
         });
     }
-    
-    //Componentes utlizadas nesse jFrame
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton buttonCarregarDadosListaReservasAdmin;
     private javax.swing.JButton buttonNovaReservaListaReservasAdmin;
     private javax.swing.JButton buttonVoltarMenuListaReservasAdmin;
@@ -304,5 +297,4 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JTable tableListaReservasAdmin;
     private javax.swing.JTextField textFieldListaReservasAdmin;
-    // End of variables declaration//GEN-END:variables
 }

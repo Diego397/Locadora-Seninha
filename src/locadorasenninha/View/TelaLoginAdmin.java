@@ -1,10 +1,7 @@
 //OK
 package locadorasenninha.View;
 
-import locadorasenninha.Controller.LocadoraController;
-
 import javax.swing.*;
-import java.util.Objects;
 
 public class TelaLoginAdmin extends javax.swing.JFrame {
 
@@ -15,7 +12,6 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -178,9 +174,8 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-
-    private void buttonEntrarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarAdminActionPerformed
+    }
+    private void buttonEntrarAdminActionPerformed(java.awt.event.ActionEvent evt) {
         String usuario = textFieldUsuarioAdmin.getText();
         String senha = String.valueOf(passwordFieldLoginAdmin.getPassword());
 
@@ -194,21 +189,16 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(null, "Login Inválido!");
         }
-    }//GEN-LAST:event_buttonEntrarAdminActionPerformed
+    }
 
-    private void retornarLoginAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarLoginAdminActionPerformed
+    private void retornarLoginAdminActionPerformed(java.awt.event.ActionEvent evt) {
         TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_retornarLoginAdminActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -225,9 +215,7 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaLoginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaLoginAdmin().setVisible(true);
@@ -235,7 +223,6 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel IntroLogAdmin;
     private javax.swing.JButton buttonEntrarAdmin;
     private javax.swing.JLabel labelLocadora10;
@@ -247,5 +234,4 @@ public class TelaLoginAdmin extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordFieldLoginAdmin;
     private javax.swing.JButton retornarLoginAdmin;
     private javax.swing.JTextField textFieldUsuarioAdmin;
-    // End of variables declaration//GEN-END:variables
 }

@@ -14,7 +14,6 @@ public class TelaLoginCliente extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -184,9 +183,9 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonEntrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarClienteActionPerformed
+    private void buttonEntrarClienteActionPerformed(java.awt.event.ActionEvent evt) {
         String cpf = textFieldCPFCliente.getText();
         String senha = String.valueOf(passwordFieldLoginCliente.getPassword());
 
@@ -200,21 +199,16 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(null, "Login Inválido!");
         }
-    }//GEN-LAST:event_buttonEntrarClienteActionPerformed
+    }
 
-    private void retornarLoginClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarLoginClienteActionPerformed
+    private void retornarLoginClienteActionPerformed(java.awt.event.ActionEvent evt) {
         TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_retornarLoginClienteActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -231,9 +225,7 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaLoginCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaLoginCliente().setVisible(true);
@@ -241,7 +233,6 @@ public class TelaLoginCliente extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel IntroLogCliente;
     private javax.swing.JButton buttonEntrarCliente;
     private javax.swing.JLabel labelCpfCliente;
@@ -253,5 +244,4 @@ public class TelaLoginCliente extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordFieldLoginCliente;
     private javax.swing.JButton retornarLoginCliente;
     private javax.swing.JFormattedTextField textFieldCPFCliente;
-    // End of variables declaration//GEN-END:variables
 }

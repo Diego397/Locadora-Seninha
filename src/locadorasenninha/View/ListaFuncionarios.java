@@ -49,7 +49,6 @@ public class ListaFuncionarios extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -210,43 +209,38 @@ public class ListaFuncionarios extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonVoltarMenuListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarMenuListaFuncionariosActionPerformed
+    private void buttonVoltarMenuListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
         MenuAdmin novatela = new MenuAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonVoltarMenuListaFuncionariosActionPerformed
+    }
 
-    private void tableListaFuncionariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaFuncionariosMouseClicked
+    private void tableListaFuncionariosMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Funcionário Selecionado!");
         ExibirFuncionario novatela = new ExibirFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);        
-    }//GEN-LAST:event_tableListaFuncionariosMouseClicked
+    }
 
-    private void buttonCarregarDadosListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCarregarDadosListaFuncionariosActionPerformed
+    private void buttonCarregarDadosListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
         AdicionarDados("Josue FODA","222.333.555-77");
         AdicionarDados("Diegao","123.456.789-00");
-    }//GEN-LAST:event_buttonCarregarDadosListaFuncionariosActionPerformed
+    }
 
-    private void textFieldFacaBuscaListaFuncionariosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldFacaBuscaListaFuncionariosKeyReleased
+    private void textFieldFacaBuscaListaFuncionariosKeyReleased(java.awt.event.KeyEvent evt) {
         String busca = textFieldFacaBuscaListaFuncionarios.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
     }//GEN-LAST:event_textFieldFacaBuscaListaFuncionariosKeyReleased
 
-    private void buttonCadastrarFuncionarioListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarFuncionarioListaFuncionariosActionPerformed
+    private void buttonCadastrarFuncionarioListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
         CadastrarFuncionario novatela = new CadastrarFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonCadastrarFuncionarioListaFuncionariosActionPerformed
+    }
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -263,9 +257,7 @@ public class ListaFuncionarios extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ListaFuncionarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ListaFuncionarios().setVisible(true);
@@ -273,7 +265,6 @@ public class ListaFuncionarios extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastrarFuncionarioListaFuncionarios;
     private javax.swing.JButton buttonCarregarDadosListaFuncionarios;
     private javax.swing.JButton buttonVoltarMenuListaFuncionarios;
@@ -285,5 +276,4 @@ public class ListaFuncionarios extends javax.swing.JFrame {
     private javax.swing.JLabel labelListaFuncionarios;
     private javax.swing.JTable tableListaFuncionarios;
     private javax.swing.JTextField textFieldFacaBuscaListaFuncionarios;
-    // End of variables declaration//GEN-END:variables
 }

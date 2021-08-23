@@ -12,7 +12,6 @@ public class ExibirCliente extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -418,20 +417,20 @@ public class ExibirCliente extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void buttonRemoverClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverClienteActionPerformed
         JOptionPane.showMessageDialog(null, "Cliente Removido!");
         ListaClientes novatela = new ListaClientes();
         novatela.setVisible(true);
         this.setVisible(false);        
-    }//GEN-LAST:event_buttonRemoverClienteActionPerformed
+    }
 
     private void buttonRetornarExibirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarExibirClienteActionPerformed
         ListaClientes novatela = new ListaClientes();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRetornarExibirClienteActionPerformed
+    }
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -465,7 +464,6 @@ public class ExibirCliente extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonRemoverCliente;
     private javax.swing.JButton buttonRetornarExibirCliente;
     private javax.swing.JLabel labelCEPCliente;
@@ -497,5 +495,4 @@ public class ExibirCliente extends javax.swing.JFrame {
     private javax.swing.JPanel painelSenhaCliente;
     private javax.swing.JPanel painelSuporteExibirCliente;
     private javax.swing.JPanel painelTelefoneCliente;
-    // End of variables declaration//GEN-END:variables
 }

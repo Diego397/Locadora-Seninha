@@ -10,7 +10,6 @@ public class MenuAdmin extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -174,45 +173,40 @@ public class MenuAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonGerenciarReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGerenciarReservasActionPerformed
+    private void buttonGerenciarReservasActionPerformed(java.awt.event.ActionEvent evt) {
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonGerenciarReservasActionPerformed
+    }
 
-    private void buttonRetornarMenuAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarMenuAdminActionPerformed
+    private void buttonRetornarMenuAdminActionPerformed(java.awt.event.ActionEvent evt) {
         TelaLoginAdmin novatela = new TelaLoginAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRetornarMenuAdminActionPerformed
+    }
 
-    private void buttonGerenciarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGerenciarClientesActionPerformed
+    private void buttonGerenciarClientesActionPerformed(java.awt.event.ActionEvent evt) {
         ListaClientesAdmin novatela = new ListaClientesAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonGerenciarClientesActionPerformed
+    }
 
-    private void buttonGerenciarFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGerenciarFuncionariosActionPerformed
+    private void buttonGerenciarFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
         ListaFuncionarios novatela = new ListaFuncionarios();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonGerenciarFuncionariosActionPerformed
+    }
 
-    private void buttonCadastrarCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarCarroActionPerformed
+    private void buttonCadastrarCarroActionPerformed(java.awt.event.ActionEvent evt) {
         CadastrarVeiculo novatela = new CadastrarVeiculo();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonCadastrarCarroActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -229,10 +223,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MenuAdmin().setVisible(true);
@@ -240,7 +231,6 @@ public class MenuAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastrarCarro;
     private javax.swing.JButton buttonGerenciarClientes;
     private javax.swing.JButton buttonGerenciarFuncionarios;
@@ -251,5 +241,4 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelInicial;
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JPanel painelPrincipal;
-    // End of variables declaration//GEN-END:variables
 }

@@ -50,7 +50,6 @@ public class ListaReservas extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         labelLocadora = new javax.swing.JLabel();
@@ -223,43 +222,42 @@ public class ListaReservas extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void textFieldFacaBuscaListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldFacaBuscaListaReservasFuncionarioActionPerformed
-//textfield
-    }//GEN-LAST:event_textFieldFacaBuscaListaReservasFuncionarioActionPerformed
+    private void textFieldFacaBuscaListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
     //Método que faz a busca na tabela pelo texto digitado no textField
-    private void textFieldFacaBuscaListaReservasFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldFacaBuscaListaReservasFuncionarioKeyReleased
+    private void textFieldFacaBuscaListaReservasFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {
         String busca = textFieldFacaBuscaListaReservasFuncionario.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
-    }//GEN-LAST:event_textFieldFacaBuscaListaReservasFuncionarioKeyReleased
+    }
 
     //Botão que volta ao menu da Locadora
-    private void buttonVoltarMenuListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarMenuListaReservasFuncionarioActionPerformed
+    private void buttonVoltarMenuListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         MenuFuncionario novatela = new MenuFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonVoltarMenuListaReservasFuncionarioActionPerformed
+    }
 
     //Botão que vai pra área de Nova Reserva
-    private void buttonNovaReservaListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNovaReservaListaReservasFuncionarioActionPerformed
+    private void buttonNovaReservaListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         SelecioneCliente novatela = new SelecioneCliente();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonNovaReservaListaReservasFuncionarioActionPerformed
+    }
 
-    private void buttonCarregarDadosListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCarregarDadosListaReservasFuncionarioActionPerformed
+    private void buttonCarregarDadosListaReservasFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         AdicionarDados("Fusca","15/08/2021","25/08/2021","Lulu");
         AdicionarDados("Combi","17/08/2021","29/08/2021","Lulu");
-    }//GEN-LAST:event_buttonCarregarDadosListaReservasFuncionarioActionPerformed
+    }
 
-    private void tableListaReservasFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaReservasFuncionarioMouseClicked
+    private void tableListaReservasFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Reserva Selecionada!");
         ExibirReservaFuncionario novatela = new ExibirReservaFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_tableListaReservasFuncionarioMouseClicked
+    }
 
     public static void main(String args[]) {
 
@@ -279,8 +277,6 @@ public class ListaReservas extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ListaReservas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -288,9 +284,7 @@ public class ListaReservas extends javax.swing.JFrame {
             }
         });
     }
-    
-    //Componentes utlizadas nesse jFrame
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton buttonCarregarDadosListaReservasFuncionario;
     private javax.swing.JButton buttonNovaReservaListaReservasFuncionario;
     private javax.swing.JButton buttonVoltarMenuListaReservasFuncionario;
@@ -303,5 +297,4 @@ public class ListaReservas extends javax.swing.JFrame {
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JTable tableListaReservasFuncionario;
     private javax.swing.JTextField textFieldFacaBuscaListaReservasFuncionario;
-    // End of variables declaration//GEN-END:variables
 }

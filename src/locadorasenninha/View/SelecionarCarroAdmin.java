@@ -49,7 +49,6 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
@@ -185,7 +184,7 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
     private void CarregarDadosActionPerformed(java.awt.event.ActionEvent evt) {
         AdicionarDados("Fusca","Azul","PQ45RSK");
@@ -239,7 +238,6 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify
     private javax.swing.JButton CarregarDados;
     private javax.swing.JButton RetornarBotao;
     private javax.swing.JButton jButton2;
@@ -249,5 +247,4 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    // End of variables declaration
 }

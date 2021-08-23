@@ -50,7 +50,6 @@ public class ListaClientes extends javax.swing.JFrame {
 
  
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -212,44 +211,39 @@ public class ListaClientes extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void buttonVoltarMenuListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarMenuListaClientesFuncionarioActionPerformed
         MenuFuncionario novatela = new MenuFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonVoltarMenuListaClientesFuncionarioActionPerformed
+    }
 
     private void tableListaClientesFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaClientesFuncionarioMouseClicked
         JOptionPane.showMessageDialog(null, "Cliente Selecionado!");
         ExibirCliente novatela = new ExibirCliente();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_tableListaClientesFuncionarioMouseClicked
+    }
 
     private void textFieldFacaBuscaListaClientesFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldFacaBuscaListaClientesFuncionarioKeyReleased
         String busca = textFieldFacaBuscaListaClientesFuncionario.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
-    }//GEN-LAST:event_textFieldFacaBuscaListaClientesFuncionarioKeyReleased
+    }
 
     private void buttonCarregarDadosListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCarregarDadosListaClientesFuncionarioActionPerformed
         AdicionarDados("Marcão","222.333.555-77");
         AdicionarDados("Rei Sergio","123.456.789-00");
-    }//GEN-LAST:event_buttonCarregarDadosListaClientesFuncionarioActionPerformed
+    }
 
     private void buttonCadastrarClienteListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarClienteListaClientesFuncionarioActionPerformed
         CadastrarCliente novatela = new CadastrarCliente();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonCadastrarClienteListaClientesFuncionarioActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -266,9 +260,7 @@ public class ListaClientes extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ListaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ListaClientes().setVisible(true);
@@ -276,7 +268,6 @@ public class ListaClientes extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastrarClienteListaClientesFuncionario;
     private javax.swing.JButton buttonCarregarDadosListaClientesFuncionario;
     private javax.swing.JButton buttonVoltarMenuListaClientesFuncionario;
@@ -288,5 +279,4 @@ public class ListaClientes extends javax.swing.JFrame {
     private javax.swing.JLabel labelListaClientesFuncionario;
     private javax.swing.JTable tableListaClientesFuncionario;
     private javax.swing.JTextField textFieldFacaBuscaListaClientesFuncionario;
-    // End of variables declaration//GEN-END:variables
 }

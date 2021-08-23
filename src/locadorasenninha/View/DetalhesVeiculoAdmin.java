@@ -6,16 +6,12 @@ import javax.swing.JOptionPane;
 
 public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DetalhesVeiculo
-     */
     public DetalhesVeiculoAdmin() {
         initComponents();
     }
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -601,7 +597,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
     private void buttonRetornarCatalogoActionPerformed(java.awt.event.ActionEvent evt) {
         SelecionarCarroAdmin novatela = new SelecionarCarroAdmin();
@@ -623,18 +619,8 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
     }
 
     private void checkBoxConfirmarDetalhesVeiculoActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
     }
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -651,10 +637,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(DetalhesVeiculoAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new DetalhesVeiculoAdmin().setVisible(true);
@@ -662,7 +645,6 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify
     private javax.swing.JButton buttonFecharReserva;
     private javax.swing.JButton buttonRetornarCatalogo;
     private javax.swing.JCheckBox checkBoxConfirmarDetalhesVeiculo;
@@ -711,5 +693,4 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelTaxaDiariaDetalhesVeiculo;
     private javax.swing.JPanel painelValorTotalDetalhesVeiculo;
     private javax.swing.JPanel painelValorTotalDiariasDetalhesVeiculo;
-    // End of variables declaration
 }

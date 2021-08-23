@@ -49,7 +49,6 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
 
  
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -211,44 +210,39 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonVoltarMenuListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarMenuListaClientesAdminActionPerformed
+    private void buttonVoltarMenuListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {
         MenuAdmin novatela = new MenuAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonVoltarMenuListaClientesAdminActionPerformed
+    }
 
-    private void tableListaClientesAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaClientesAdminMouseClicked
+    private void tableListaClientesAdminMouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Cliente Selecionado!");
         ExibirClienteAdmin novatela = new ExibirClienteAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_tableListaClientesAdminMouseClicked
+    }
 
-    private void textFieldFacaBuscaListaClientesAdminKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldFacaBuscaListaClientesAdminKeyReleased
+    private void textFieldFacaBuscaListaClientesAdminKeyReleased(java.awt.event.KeyEvent evt) {
         String busca = textFieldFacaBuscaListaClientesAdmin.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
-    }//GEN-LAST:event_textFieldFacaBuscaListaClientesAdminKeyReleased
+    }
 
-    private void buttonCarregarDadosListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCarregarDadosListaClientesAdminActionPerformed
+    private void buttonCarregarDadosListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {
         AdicionarDados("Marcão","222.333.555-77");
         AdicionarDados("Rei Sergio","123.456.789-00");
-    }//GEN-LAST:event_buttonCarregarDadosListaClientesAdminActionPerformed
+    }
 
-    private void buttonCadastrarClienteListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarClienteListaClientesAdminActionPerformed
+    private void buttonCadastrarClienteListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {
         CadastrarClienteAdmin novatela = new CadastrarClienteAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonCadastrarClienteListaClientesAdminActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -265,10 +259,7 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ListaClientesAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ListaClientesAdmin().setVisible(true);
@@ -276,7 +267,6 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCadastrarClienteListaClientesAdmin;
     private javax.swing.JButton buttonCarregarDadosListaClientesAdmin;
     private javax.swing.JButton buttonVoltarMenuListaClientesAdmin;
@@ -288,5 +278,4 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel labelListaClientesAdmin;
     private javax.swing.JTable tableListaClientesAdmin;
     private javax.swing.JTextField textFieldFacaBuscaListaClientesAdmin;
-    // End of variables declaration//GEN-END:variables
 }

@@ -10,7 +10,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -809,21 +808,16 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonRetornarExibirReservaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarExibirReservaClienteActionPerformed
+    private void buttonRetornarExibirReservaClienteActionPerformed(java.awt.event.ActionEvent evt) {
         ReservasCliente novatela = new ReservasCliente();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRetornarExibirReservaClienteActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -840,9 +834,7 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ExibirReservaCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ExibirReservaCliente().setVisible(true);
@@ -850,7 +842,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonRetornarExibirReservaCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -917,5 +908,4 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
     private javax.swing.JPanel painelTaxaTotalAtrasoCliente;
     private javax.swing.JPanel painelValorTotalCliente;
     private javax.swing.JPanel painelValorTotalDiariasCliente;
-    // End of variables declaration//GEN-END:variables
 }

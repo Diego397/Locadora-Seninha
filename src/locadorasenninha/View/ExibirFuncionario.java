@@ -12,7 +12,6 @@ public class ExibirFuncionario extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -418,27 +417,22 @@ public class ExibirFuncionario extends javax.swing.JFrame {
 
 
 
-    private void buttonRemoverFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverFuncionarioActionPerformed
+    private void buttonRemoverFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         JOptionPane.showMessageDialog(null, "Funcionário Removido!");
 
         ListaFuncionarios novatela = new ListaFuncionarios();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRemoverFuncionarioActionPerformed
+    }
 
-    private void buttonRetornarExibirFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarExibirFuncionarioActionPerformed
+    private void buttonRetornarExibirFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         ListaFuncionarios novatela = new ListaFuncionarios();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonRetornarExibirFuncionarioActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -455,9 +449,7 @@ public class ExibirFuncionario extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ExibirFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ExibirFuncionario().setVisible(true);
@@ -465,7 +457,6 @@ public class ExibirFuncionario extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonRemoverFuncionario;
     private javax.swing.JButton buttonRetornarExibirFuncionario;
     private javax.swing.JLabel labelCEPFuncionario;
@@ -497,5 +488,4 @@ public class ExibirFuncionario extends javax.swing.JFrame {
     private javax.swing.JPanel painelSenhaFuncionario;
     private javax.swing.JPanel painelSuporteExibirFuncionario;
     private javax.swing.JPanel painelTelefoneFuncionario;
-    // End of variables declaration//GEN-END:variables
 }

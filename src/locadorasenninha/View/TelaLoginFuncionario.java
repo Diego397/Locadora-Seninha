@@ -1,10 +1,7 @@
 //OK
 package locadorasenninha.View;
 
-import locadorasenninha.Controller.LocadoraController;
-import locadorasenninha.Model.Locadora;
 import locadorasenninha.Model.Main;
-
 import javax.swing.*;
 
 public class TelaLoginFuncionario extends javax.swing.JFrame {
@@ -15,7 +12,6 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -185,9 +181,8 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-
-    private void buttonEntrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarFuncionarioActionPerformed
+    }
+    private void buttonEntrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         String usuario = textFieldUsuarioFuncionario.getText();
         String senha = String.valueOf(passwordFieldLoginFuncionario.getPassword());
 
@@ -204,21 +199,16 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(null, "Login Inválido!");
         }
-    }//GEN-LAST:event_buttonEntrarFuncionarioActionPerformed
+    }
 
-    private void retornarLoginFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarLoginFuncionarioActionPerformed
+    private void retornarLoginFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_retornarLoginFuncionarioActionPerformed
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -235,9 +225,7 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaLoginFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaLoginFuncionario().setVisible(true);
@@ -245,7 +233,6 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel IntroLogFuncionario;
     private javax.swing.JButton buttonEntrarFuncionario;
     private javax.swing.JLabel labelLocadora10;
@@ -257,5 +244,4 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordFieldLoginFuncionario;
     private javax.swing.JButton retornarLoginFuncionario;
     private javax.swing.JFormattedTextField textFieldUsuarioFuncionario;
-    // End of variables declaration//GEN-END:variables
 }

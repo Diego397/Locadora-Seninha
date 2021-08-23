@@ -12,7 +12,6 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         painelPrincipal = new javax.swing.JPanel();
@@ -810,44 +809,36 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void buttonCancelarReservaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarReservaFuncionarioActionPerformed
+    private void buttonCancelarReservaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         JOptionPane.showMessageDialog(null, "Reserva Cancelada!");
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonCancelarReservaFuncionarioActionPerformed
+    }
 
-    private void buttonRetirarCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetirarCarroFuncionarioActionPerformed
+    private void buttonRetirarCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         JOptionPane.showMessageDialog(null, "Carro Retirado!");
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
         this.setVisible(false);   
-    }//GEN-LAST:event_buttonRetirarCarroFuncionarioActionPerformed
+    }
 
-    private void buttonDevolverCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDevolverCarroFuncionarioActionPerformed
+    private void buttonDevolverCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         JOptionPane.showMessageDialog(null, "Carro Devolvido!");
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
         this.setVisible(false);        
-    }//GEN-LAST:event_buttonDevolverCarroFuncionarioActionPerformed
+    }
 
-    private void buttonRetornarExibirReservaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarExibirReservaFuncionarioActionPerformed
+    private void buttonRetornarExibirReservaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
         ListaReservasAdmin novatela = new ListaReservasAdmin();
         novatela.setVisible(true);
         this.setVisible(false);   
-    }//GEN-LAST:event_buttonRetornarExibirReservaFuncionarioActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -864,10 +855,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ExibirReservaAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ExibirReservaAdmin().setVisible(true);
@@ -875,7 +863,6 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelarReservaFuncionario;
     private javax.swing.JButton buttonDevolverCarroFuncionario;
     private javax.swing.JButton buttonRetirarCarroFuncionario;
@@ -939,5 +926,4 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelTaxaTotalAtrasoFuncionario;
     private javax.swing.JPanel painelValorTotalDiariasFuncionario;
     private javax.swing.JPanel painelValorTotalFuncionario;
-    // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,4 @@
-//É aqui que inicia a
+//teste
 package locadorasenninha.Model;
 import locadorasenninha.View.TelaInicial;
 import locadorasenninha.Controller.*;

@@ -231,8 +231,6 @@ public class ListaFuncionarios extends javax.swing.JFrame {
     }
 
     private void buttonCarregarDadosListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
-        AdicionarDados("Josue FODA","222.333.555-77");
-        AdicionarDados("Diegao","123.456.789-00");
     }
 
     private void textFieldFacaBuscaListaFuncionariosKeyReleased(java.awt.event.KeyEvent evt) {

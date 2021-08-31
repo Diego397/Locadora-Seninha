@@ -3,7 +3,6 @@ import locadorasenninha.Model.Main;
 import javax.swing.JOptionPane;
 
 public class ExibirReservaAdmin extends javax.swing.JFrame {
-
     int num = Main.numeroView;
     String[] dados = new String[14];
     public ExibirReservaAdmin() {
@@ -24,6 +23,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         labelPainelDataDevolucaoExibirReservaAdmin.setText(dados[12]);
         labelPainelStatusExibirReservaAdmin.setText(dados[11]);
         labelPainelNumeroReservaExibirReservaAdmin.setText(dados[13]);
+        labelPainelDevolvidoEmExibirReservaAdmin.setText(dados[14]);
     }
 
 
@@ -72,7 +72,6 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         labelDataDevolucaoFuncionario = new javax.swing.JLabel();
         labelDataRetiradaFuncionario = new javax.swing.JLabel();
         labelDevolvidoEmFuncionario = new javax.swing.JLabel();
-        painelImagemCarroFuncionario = new javax.swing.JPanel();
         painelCapacidadePassageirosFuncionario = new javax.swing.JPanel();
         labelPainelCapaceidadePassageirosExibirReservaAdmin = new javax.swing.JLabel();
         painelCapacidadeBagagemFuncionario = new javax.swing.JPanel();
@@ -132,7 +131,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
             painelModeloCarroFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelModeloCarroFuncionarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelModeloCarroExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                .addComponent(labelPainelModeloCarroExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addContainerGap())
         );
         painelModeloCarroFuncionarioLayout.setVerticalGroup(
@@ -149,9 +148,8 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         painelCorFuncionarioLayout.setHorizontalGroup(
             painelCorFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCorFuncionarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelPainelCorExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(labelPainelCorExibirReservaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 48, Short.MAX_VALUE))
         );
         painelCorFuncionarioLayout.setVerticalGroup(
             painelCorFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +170,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
             painelPlacaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPlacaFuncionarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelPlacaAdminExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                .addComponent(labelPainelPlacaAdminExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addContainerGap())
         );
         painelPlacaFuncionarioLayout.setVerticalGroup(
@@ -199,7 +197,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         );
         painelTaxaDiariaFuncionarioLayout.setVerticalGroup(
             painelTaxaDiariaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelTaxaDiariaExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelPainelTaxaDiariaExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
         );
 
         painelTaxaDiariaAtrasoFuncionario.setBackground(new java.awt.Color(255, 255, 255));
@@ -217,7 +215,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         );
         painelTaxaDiariaAtrasoFuncionarioLayout.setVerticalGroup(
             painelTaxaDiariaAtrasoFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelTaxaDiariaAtrasoExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelPainelTaxaDiariaAtrasoExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
         );
 
         labelTaxaDiariaFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -363,7 +361,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
             .addGroup(painelDataDevolucaoFuncionarioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelPainelDataDevolucaoExibirReservaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         painelDataDevolucaoFuncionarioLayout.setVerticalGroup(
             painelDataDevolucaoFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,19 +379,6 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         labelDevolvidoEmFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelDevolvidoEmFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         labelDevolvidoEmFuncionario.setText("Devolvido em:");
-
-        painelImagemCarroFuncionario.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout painelImagemCarroFuncionarioLayout = new javax.swing.GroupLayout(painelImagemCarroFuncionario);
-        painelImagemCarroFuncionario.setLayout(painelImagemCarroFuncionarioLayout);
-        painelImagemCarroFuncionarioLayout.setHorizontalGroup(
-            painelImagemCarroFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        painelImagemCarroFuncionarioLayout.setVerticalGroup(
-            painelImagemCarroFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 128, Short.MAX_VALUE)
-        );
 
         painelCapacidadePassageirosFuncionario.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -423,12 +408,14 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
             painelCapacidadeBagagemFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCapacidadeBagagemFuncionarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelCapacidadeBagagensExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(labelPainelCapacidadeBagagensExibirReservaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         painelCapacidadeBagagemFuncionarioLayout.setVerticalGroup(
             painelCapacidadeBagagemFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelCapacidadeBagagensExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCapacidadeBagagemFuncionarioLayout.createSequentialGroup()
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(labelPainelCapacidadeBagagensExibirReservaAdmin))
         );
 
         labelCapadidadePassageirosFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -452,51 +439,19 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
             painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(labelStatusFuncionario1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelPainelNumeroReservaExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(30, 30, 30)
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(painelValorTotalFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelValorTotalAluguelFuncionario))
+                        .addGap(392, 392, 392))
                     .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
                         .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelModeloCarroFuncionario)
-                            .addComponent(painelModeloCarroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelPlacaFuncionario)
-                            .addComponent(painelPlacaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCorFuncionario)
-                            .addComponent(painelCorFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelTaxaDiariaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTaxaDiariaFuncionario))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelTaxaDiariaAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTaxaDiariaAtrasoFuncionario))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelCapacidadePassageirosFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelCapadidadePassageirosFuncionario))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelCapacidadeBagagemFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                        .addComponent(labelCapacidadeBagagemFuncionario)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addGap(98, 98, 98))
-                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(labelStatusFuncionario1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(labelPainelNumeroReservaExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(30, 30, 30)
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelValorTotalFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelValorTotalAluguelFuncionario))
-                                .addGap(161, 161, 161))
                             .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
                                 .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(labelDataRetiradaFuncionario)
@@ -508,19 +463,42 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
                                     .addComponent(labelDataDevolucaoFuncionario, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(labelStatusFuncionario, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(painelDataDevolucaoFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(painelStatusFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(painelStatusFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelValorTotalDiariasFuncionario)
-                                    .addComponent(painelValorTotalDiariasFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(29, 29, 29)
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelTaxaTotalAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelTaxaTotalAtrasoFuncionario)))
-                            .addComponent(painelImagemCarroFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(labelCapadidadePassageirosFuncionario)
+                                .addGap(40, 40, 40)
+                                .addComponent(labelCapacidadeBagagemFuncionario))
+                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                .addComponent(painelCapacidadePassageirosFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(painelCapacidadeBagagemFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelValorTotalDiariasFuncionario)
+                            .addComponent(painelValorTotalDiariasFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelTaxaDiariaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelTaxaDiariaFuncionario))
+                        .addGap(27, 27, 27)
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelTaxaDiariaAtrasoFuncionario)
+                            .addComponent(painelTaxaDiariaAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelTaxaTotalAtrasoFuncionario)
+                            .addComponent(painelTaxaTotalAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelModeloCarroFuncionario)
+                            .addComponent(painelModeloCarroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                .addComponent(labelPlacaFuncionario)
+                                .addGap(81, 81, 81)
+                                .addComponent(labelCorFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                .addComponent(painelPlacaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(painelCorFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelExibirReservaFuncionarioLayout.setVerticalGroup(
             painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -529,62 +507,74 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
                 .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelModeloCarroFuncionario)
                     .addComponent(labelPlacaFuncionario)
-                    .addComponent(labelCorFuncionario)
-                    .addComponent(labelTaxaDiariaFuncionario)
-                    .addComponent(labelTaxaDiariaAtrasoFuncionario))
+                    .addComponent(labelCorFuncionario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(painelPlacaFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(painelCorFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelTaxaDiariaFuncionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelTaxaDiariaAtrasoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(painelModeloCarroFuncionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelValorTotalDiariasFuncionario)
-                    .addComponent(labelCapadidadePassageirosFuncionario)
-                    .addComponent(labelCapacidadeBagagemFuncionario)
-                    .addComponent(labelTaxaTotalAtrasoFuncionario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelCapacidadeBagagemFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(painelTaxaTotalAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(painelValorTotalDiariasFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(45, 45, 45)
-                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                        .addComponent(painelDataRetiradaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(labelDevolvidoEmFuncionario))
-                                    .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                        .addComponent(painelDataDevolucaoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(labelStatusFuncionario)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelStatusFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(painelDevolvidoEmFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(labelValorTotalAluguelFuncionario)
-                                .addGap(3, 3, 3)
-                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(labelStatusFuncionario1)
-                                        .addComponent(labelPainelNumeroReservaExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(painelValorTotalFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                                .addComponent(painelImagemCarroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelExibirReservaFuncionarioLayout.createSequentialGroup()
-                        .addComponent(painelCapacidadePassageirosFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(37, 37, 37)
                         .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelDataRetiradaFuncionario)
-                            .addComponent(labelDataDevolucaoFuncionario))
+                            .addComponent(labelTaxaDiariaFuncionario)
+                            .addComponent(labelTaxaDiariaAtrasoFuncionario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                        .addComponent(painelTaxaDiariaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(14, 14, 14))
+                                    .addComponent(labelDataRetiradaFuncionario, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(labelDataDevolucaoFuncionario, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(labelValorTotalDiariasFuncionario)
+                                            .addComponent(labelTaxaTotalAtrasoFuncionario))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(painelTaxaTotalAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(84, 84, 84))
+                                    .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                        .addGap(7, 7, 7)
+                                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(painelDataDevolucaoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(painelDataRetiradaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(labelDevolvidoEmFuncionario)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(painelStatusFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(painelDevolvidoEmFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(labelValorTotalAluguelFuncionario)
+                                                .addGap(3, 3, 3)
+                                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(labelStatusFuncionario1)
+                                                        .addComponent(labelPainelNumeroReservaExibirReservaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addComponent(painelValorTotalFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                                .addGap(11, 11, 11)
+                                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(labelStatusFuncionario)
+                                                    .addComponent(painelValorTotalDiariasFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                .addComponent(painelTaxaDiariaAtrasoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(painelCapacidadeBagagemFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(painelExibirReservaFuncionarioLayout.createSequentialGroup()
+                                .addGroup(painelExibirReservaFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelCapadidadePassageirosFuncionario)
+                                    .addComponent(labelCapacidadeBagagemFuncionario))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(painelCapacidadePassageirosFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -693,29 +683,33 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonCancelarReservaFuncionarioActionPerformed
 
     private void buttonRetirarCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetirarCarroFuncionarioActionPerformed
-        if(Main.controller.retirarCarroController(num)){
+        boolean teste = Main.controller.retirarCarroController(num);
+        if(teste){
             JOptionPane.showMessageDialog(null, "Carro Retirado!");
             ListaReservasAdmin novatela = new ListaReservasAdmin();
             novatela.setVisible(true);
             this.setVisible(false);   
         }
-        
-        JOptionPane.showMessageDialog(null, "Carro não pode ser retirado agora!");
 
+        if(!(teste)){
+            JOptionPane.showMessageDialog(null, "Carro não pode ser retirado agora!");  
+        }
     }//GEN-LAST:event_buttonRetirarCarroFuncionarioActionPerformed
 
     private void buttonDevolverCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDevolverCarroFuncionarioActionPerformed
         
-        if(Main.controller.devolverCarroController(num)){
+        boolean teste = Main.controller.devolverCarroController(num);
+        if(teste){
             JOptionPane.showMessageDialog(null, "Carro Devolvido!");
             ListaReservasAdmin novatela = new ListaReservasAdmin();
             novatela.setVisible(true);
             this.setVisible(false);   
         }
         
-        JOptionPane.showMessageDialog(null, "Carro não pode ser devolvido agora!");
-        
-             
+        if(!(teste)){
+            JOptionPane.showMessageDialog(null, "Carro não pode ser devolvido agora!");  
+        } 
+
     }//GEN-LAST:event_buttonDevolverCarroFuncionarioActionPerformed
 
     private void buttonRetornarExibirReservaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarExibirReservaFuncionarioActionPerformed
@@ -804,7 +798,6 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelDataRetiradaFuncionario;
     private javax.swing.JPanel painelDevolvidoEmFuncionario;
     private javax.swing.JPanel painelExibirReservaFuncionario;
-    private javax.swing.JPanel painelImagemCarroFuncionario;
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JPanel painelModeloCarroFuncionario;
     private javax.swing.JPanel painelPlacaFuncionario;

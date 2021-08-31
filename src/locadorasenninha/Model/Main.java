@@ -16,6 +16,7 @@ public class Main{
     public static Locadora locadora = new Locadora();
     public static LocadoraController controller = new LocadoraController(locadora);
 
+
     public static void main(String args[]){
         ManipuladorArquivo arq = new ManipuladorArquivo();
 

@@ -83,17 +83,16 @@ public class LocadoraController {
                                         String dataDevolucao, Carro carro, Cliente cliente,
                                         double valorTotalDiaria, double valorTotalAtraso,
                                         double valorTotalGeral) throws ParseException {
-        System.out.println("entrei1");                                    
-        if (numeroReserva >= 0 && numeroReserva < 99999)
-        {System.out.println("entrei2");  
-            if (dataRetirada != null && dataDevolucao != null)
-            {System.out.println("entrei3");  
-                if (carro != null)
-                {System.out.println("entrei4");  
-                    if (cliente != null)
-                    {System.out.println("entrei5");  
 
-                            System.out.println("entrei6");   
+        if (numeroReserva >= 0 && numeroReserva < 99999)
+        {
+            if (dataRetirada != null && dataDevolucao != null)
+            {
+                if (carro != null)
+                {
+                    if (cliente != null)
+                    {
+
                             SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
                             SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -153,17 +152,10 @@ public class LocadoraController {
                 String retiradaString = formato1.format(retirada.getTime());
                 String devolucaoString = formato2.format(devolucao.getTime());
 
-                System.out.println("controller");
-                System.out.println(retiradaString);
-                System.out.println(devolucaoString);
-        
                 double totalDiaria = locadora.calcularValorReserva(retirada, devolucao, carro.getTaxaDiaria());
                 double totalAtraso = 0;
                 double totalGeral = locadora.calcularValorTotalReserva(totalDiaria, totalAtraso);
-                
-                
-                System.out.println(totalDiaria);
-                
+
                 return (verificaFazerReserva(locadora.reservasLocadora.size(), retiradaString, devolucaoString, carro, cliente
                 , totalDiaria, totalAtraso, totalGeral));
         

@@ -23,8 +23,7 @@ public class Locadora {
     public static ArrayList<Funcionario> listaFuncionarios = new ArrayList<Funcionario>();
 
     private Admin admin = new Admin("admin", "admin");
-    
-    private int numeroReservas; // Regista o numero total de reservas da locadora;
+        
     
     public ArrayList<Carro> getCarros() {
         return listaCarros;
@@ -42,9 +41,6 @@ public class Locadora {
         return listaFuncionarios;
     }
 
-    public int getNumeroReserva() {
-        return numeroReservas;
-    }
     
 
 //MÉTODO OPERACIONAL ADMIN
@@ -206,12 +202,16 @@ public class Locadora {
                                     double valorTotalDiaria, double valorTotalAtraso,
                                     double valorTotalGeral){
         //Incrementar o numero da reserva;
-        numeroReserva = numeroReserva + 1;
+        //numeroReserva = numeroReserva + 1;
+        //System.out.println("reservando");
+        System.out.println(numeroReserva);
         Reserva reserva = new Reserva(numeroReserva, dataRetirada, dataDevolucao, carro, cliente, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
         //Adicionar nas listas de reserva de cada objeto;
         reservasLocadora.add(reserva);
-        cliente.getReservasCliente().add(reserva);
-        carro.getReservasCarro().add(reserva);
+        System.out.println("tamanho:");
+        System.out.println(reservasLocadora.size());
+        (cliente.getReservasCliente()).add(reserva);
+        (carro.getReservasCarro()).add(reserva);
     }
     
     public static void cancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
@@ -234,19 +234,24 @@ public class Locadora {
     //Métodos para calcular valor de uma reserva:-----------------------------------------------------------------
     public double calcularValorReserva (Calendar dataRetirada, Calendar dataDevolucao, double taxaDiaria) throws ParseException {
         //Formato da data:
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        
+        SimpleDateFormat formato1 = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato2 = new SimpleDateFormat("dd/MM/yyyy");
+
         //Converter de Calendar para String:
-        String dataRetiradaString = formato.format(dataRetirada.getTime());
-        String dataDevolucaoString = formato.format(dataDevolucao.getTime());
+        String dataRetiradaString = formato1.format(dataRetirada.getTime());
+        String dataDevolucaoString = formato2.format(dataDevolucao.getTime());
         
+        System.out.println("model");
+        System.out.println(dataRetiradaString);
+        System.out.println(dataDevolucaoString);
+
         //Declarar variáveis do tipo Date para armazenar essas datas:
         Date dataRetiradaDate;
         Date dataDevolucaoDate;
         
         //Atribuir as strings às variáveis do tipo Date:
-        dataRetiradaDate = formato.parse(dataRetiradaString);
-        dataDevolucaoDate = formato.parse(dataDevolucaoString);
+        dataRetiradaDate = formato1.parse(dataRetiradaString);
+        dataDevolucaoDate = formato2.parse(dataDevolucaoString);
         
         //Calcular a diferença entre as datas em milissegundos:
         long diferenca = dataDevolucaoDate.getTime() - dataRetiradaDate.getTime();
@@ -269,7 +274,7 @@ public class Locadora {
     
     public double calcularTaxaTotalAtraso (Calendar dataDevolucao, Calendar dataDevolvidoEm, double taxaDiariaAtraso) throws ParseException{
       //Formato da data:
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         
         //Criar variável para armazenar o valor do atraso:
         double valorAtraso;
@@ -363,7 +368,7 @@ public class Locadora {
         for(int i=0;i<reservasLocadora.size();i++){
             
 
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
             String retirada = formato.format((reservasLocadora.get(i)).getDataRetirada().getTime());
             String devolucao = formato.format((reservasLocadora.get(i)).getDataDevolucao().getTime());

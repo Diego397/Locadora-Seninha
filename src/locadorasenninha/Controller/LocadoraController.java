@@ -83,29 +83,33 @@ public class LocadoraController {
                                         String dataDevolucao, Carro carro, Cliente cliente,
                                         double valorTotalDiaria, double valorTotalAtraso,
                                         double valorTotalGeral) throws ParseException {
-        if (numeroReserva > 1 && numeroReserva < 99999)
-        {
+        System.out.println("entrei1");                                    
+        if (numeroReserva >= 0 && numeroReserva < 99999)
+        {System.out.println("entrei2");  
             if (dataRetirada != null && dataDevolucao != null)
-            {
+            {System.out.println("entrei3");  
                 if (carro != null)
-                {
+                {System.out.println("entrei4");  
                     if (cliente != null)
-                    {
-                        
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                    {System.out.println("entrei5");  
 
-                            Calendar dataEmissaoCal = Calendar.getInstance();
+                            System.out.println("entrei6");   
+                            SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+                            SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy");
+
+                            //Calendar dataEmissaoCal = Calendar.getInstance();
                             Calendar dataRetiradaCal = Calendar.getInstance();
                             Calendar dataDevolucaoCal = Calendar.getInstance();
 
                             try{
                                 //dataEmissaoCal.setTime(sdf.parse(dataEmissao));
-                                dataRetiradaCal.setTime(sdf.parse(dataRetirada));
-                                dataDevolucaoCal.setTime(sdf.parse(dataDevolucao));
+                                dataRetiradaCal.setTime(sdf1.parse(dataRetirada));
+                                dataDevolucaoCal.setTime(sdf2.parse(dataDevolucao));
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
-                            locadora.fazerReserva(numeroReserva, dataRetiradaCal, dataDevolucaoCal, carro,
+                            System.out.println("okay");
+                            locadora.fazerReserva(locadora.reservasLocadora.size(), dataRetiradaCal, dataDevolucaoCal, carro,
                                     cliente, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
                             return true;
                         
@@ -115,6 +119,63 @@ public class LocadoraController {
         }
         return false;
     }
+
+    public boolean fecharReserva(String placa, Calendar retirada, Calendar devolucao){
+    
+        /*    
+            Calendar atualTime = Calendar.getInstance();
+            atualTime.getTime();
+        
+            String dataEmissaoString = formato.format(atualTime);
+        */
+        
+            ArrayList<Carro> carros = locadora.getCarros();
+            Carro carro = null;
+        
+            for(int i=0;i<carros.size();i++){
+                if(Objects.equals((carros).get(i).getPlaca(), placa)){
+                    carro = (carros).get(i); //Retorna o carro
+                }
+            }
+        
+            ArrayList<Cliente> clientes = locadora.getClientes();
+            Cliente cliente  = null;
+            for(int i=0;i<clientes.size();i++){
+                if(Objects.equals((clientes).get(i).getCpf(), Main.cpfView)){
+                    cliente = (clientes).get(i); //Retorna o cliente
+                }
+            }
+        
+            try{
+                SimpleDateFormat formato1 = new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat formato2 = new SimpleDateFormat("dd/MM/yyyy");
+
+                String retiradaString = formato1.format(retirada.getTime());
+                String devolucaoString = formato2.format(devolucao.getTime());
+
+                System.out.println("controller");
+                System.out.println(retiradaString);
+                System.out.println(devolucaoString);
+        
+                double totalDiaria = locadora.calcularValorReserva(retirada, devolucao, carro.getTaxaDiaria());
+                double totalAtraso = 0;
+                double totalGeral = locadora.calcularValorTotalReserva(totalDiaria, totalAtraso);
+                
+                
+                System.out.println(totalDiaria);
+                
+                return (verificaFazerReserva(locadora.reservasLocadora.size(), retiradaString, devolucaoString, carro, cliente
+                , totalDiaria, totalAtraso, totalGeral));
+        
+            }
+            catch (java.text.ParseException e) {
+                    e.printStackTrace();
+                }
+            
+            
+            return false;
+        }
+        
 
     public boolean verificaCancelarReserva(Carro carro, Reserva reserva, Cliente cliente){
         if (carro != null && reserva != null && cliente != null)
@@ -282,7 +343,7 @@ public class LocadoraController {
         String dataRetiradaString = formato.format(reserva.getDataRetirada().getTime());
         String dataDevolucaoString = formato.format(reserva.getDataDevolucao().getTime());
 
-        dados[10] = "dataEmissaoString";
+        dados[10] = "data de emissão";
         dados[11] = dataRetiradaString;
         dados[12] = reserva.getStatus();
         dados[13] = dataDevolucaoString;
@@ -317,52 +378,5 @@ public class LocadoraController {
     }
 
 
-    public boolean fecharReserva(String placa, Calendar retirada, Calendar devolucao){
-    
-/*    
-    Calendar atualTime = Calendar.getInstance();
-    atualTime.getTime();
-
-    String dataEmissaoString = formato.format(atualTime);
-*/
-
-    ArrayList<Carro> carros = locadora.getCarros();
-    Carro carro = null;
-
-    for(int i=0;i<carros.size();i++){
-        if(Objects.equals((carros).get(i).getPlaca(), placa)){
-            carro = (carros).get(i); //Retorna o cliente
-        }
-    }
-
-    ArrayList<Cliente> clientes = Main.locadora.getClientes();
-    Cliente cliente  = null;
-    for(int i=0;i<clientes.size();i++){
-        if(Objects.equals((clientes).get(i).getCpf(), Main.cpfView)){
-            cliente = (clientes).get(i); //Retorna o cliente
-        }
-    }
-
-    try{
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-
-        double totalDiaria = locadora.calcularValorReserva(retirada, devolucao, carro.getTaxaDiaria());
-        double totalAtraso = 0;
-        double totalGeral = locadora.calcularValorTotalReserva(totalDiaria, totalAtraso);
-        
-        String retiradaString = formato.format(retirada.getTime());
-        String devolucaoString = formato.format(devolucao.getTime());
-
-         return (verificaFazerReserva(locadora.getNumeroReserva(), retiradaString, devolucaoString, carro, cliente
-        , totalDiaria, totalAtraso, totalGeral));
-
-    }
-    catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-    
-    
-    return false;
-}
 
 }

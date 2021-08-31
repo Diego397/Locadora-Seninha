@@ -19,7 +19,8 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         CreateColumns();
         String dados[][] = Main.controller.atualizaTabelaReservas();
 
-        for(int i = 0; i< Main.controller.qtdeReservas(); i++){
+        for(int i = 0; i< Main.controller.locadora.qtdeReservas(); i++){
+            System.out.println(dados[i][0]);
             AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3], dados[i][4]);
         }
     }
@@ -260,7 +261,8 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
 
         int index = tableListaReservasAdmin.getSelectedRow();
         TableModel model = tableListaReservasAdmin.getModel();
-        Main.numeroView = (int)model.getValueAt(index,4);
+        Main.numeroView = Integer.parseInt((String)model.getValueAt(index,4));
+        System.out.println(Main.numeroView);
 
         ExibirReservaAdmin novatela = new ExibirReservaAdmin();
         novatela.setVisible(true);

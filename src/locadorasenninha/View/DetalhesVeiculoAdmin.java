@@ -10,16 +10,8 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         initComponents();
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         
-        /*
-        String retirada = formato.format(Main.dataRetiradaView);
-        String devolucao = formato.format(Main.dataDevolucaoView);
-        */
-
         String retirada = formato.format(Main.dataRetiradaView.getTime());
         String devolucao = formato.format(Main.dataDevolucaoView.getTime());
-
-        System.out.println(retirada);
-        System.out.println(devolucao);
 
         dados = Main.controller.exibirCarroReserva(Main.placacarroView, retirada, devolucao);
 
@@ -533,7 +525,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
     private void buttonFecharReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFecharReservaActionPerformed
         if (checkBoxConfirmarDetalhesVeiculo.isSelected()){
             
-            if (Main.controller.fecharReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataRetiradaView));
+            if (Main.controller.fecharReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataDevolucaoView));
 			{
 				JOptionPane.showMessageDialog(null, "Reserva Confirmada!"); 
                 ListaReservasAdmin novatela = new ListaReservasAdmin();

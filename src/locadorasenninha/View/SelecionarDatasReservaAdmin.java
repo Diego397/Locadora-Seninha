@@ -258,13 +258,14 @@ public class SelecionarDatasReservaAdmin extends javax.swing.JFrame {
         try {
             String dataRetirada = (String)textFieldDataRetirada.getText();;
             String dataDevolucao = (String)textFieldDataDevolucaoSelecionarDatasReserva.getText();
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat for1 = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat for2 = new SimpleDateFormat("dd/MM/yyyy");
 
             Calendar cal1 = Calendar.getInstance();
             Calendar cal2 = Calendar.getInstance();
 
-            cal1.setTime(sdf.parse(dataRetirada));
-            cal2.setTime(sdf.parse(dataDevolucao));
+            cal1.setTime(for1.parse(dataRetirada));
+            cal2.setTime(for2.parse(dataDevolucao));
 
             Main.dataRetiradaView = cal1;
             Main.dataDevolucaoView = cal2;

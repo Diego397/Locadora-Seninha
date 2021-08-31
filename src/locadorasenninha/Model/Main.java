@@ -11,6 +11,9 @@ import java.util.Calendar;
 public class Main{
     public static String cpfView = new String();
     public static int numeroView;
+    public static String placacarroView = new String();
+    public static String dataRetiradaView = new String();
+    public static String dataDevolucaoView = new String();
     public static Locadora locadora = new Locadora();
     public static LocadoraController controller = new LocadoraController(locadora);
 

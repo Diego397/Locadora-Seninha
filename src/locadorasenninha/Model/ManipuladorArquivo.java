@@ -104,6 +104,7 @@ public class ManipuladorArquivo {
 
                 linha = buffRead.readLine();
                 String cpf = linha;
+                System.out.println(linha);
 
                 linha = buffRead.readLine();
                 String dataDeNascimento = linha;
@@ -134,7 +135,7 @@ public class ManipuladorArquivo {
 
         buffRead.close();
 
-        /* //Ler reservas e gravar no ArrayList
+        //Ler reservas e gravar no ArrayList
         try{
             linha = buffRead.readLine();
             int tam = Integer.parseInt(linha);
@@ -169,7 +170,7 @@ public class ManipuladorArquivo {
         }
         catch (NumberFormatException ex){
             ex.printStackTrace();
-        }*/
+        }
     }
 
     // Escreve dados da locadora no arquivo

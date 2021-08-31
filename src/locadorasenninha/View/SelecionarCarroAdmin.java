@@ -31,16 +31,7 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
         //Adicionando colunas
         dm.addColumn("Modelo do Carro");
         dm.addColumn("Cor");
-        dm.addColumn("Disponibilidade");
         dm.addColumn("Placa");
-    }
-
-    //Método que faz uma busca na tabela
-    private void filter(String busca){
-        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
-        jTable1.setRowSorter(tr);
-
-        tr.setRowFilter(RowFilter.regexFilter(busca.substring(0,1).toUpperCase().concat(busca.substring(1))));
     }
 
     //Método que adiciona os dados nas linhas da tabela

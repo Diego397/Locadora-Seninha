@@ -93,7 +93,7 @@ public class LocadoraController {
                     {
                         if (funcionario != null)
                         {
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
                             Calendar dataEmissaoCal = Calendar.getInstance();
                             Calendar dataRetiradaCal = Calendar.getInstance();
@@ -129,7 +129,7 @@ public class LocadoraController {
     public boolean verificaDataReserva(String dataRetirada, String dataDevolucao) throws ParseException {
         if (dataRetirada != null && dataRetirada.length() > 0 && dataDevolucao != null && dataDevolucao.length() > 0)
         {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             Calendar dataDevolucaoCal = Calendar.getInstance();
             Calendar dataRetiradaCal = Calendar.getInstance();
             try{
@@ -288,19 +288,19 @@ public class LocadoraController {
         return dados;
     }
 
-    public String[] exibirCarro(String numeroReserva){
-        Reserva reserva = null;
+    /*
+    public String[] exibirCarroReserva(String cpf, String retirada, String devolucao, String placa){
+        Carro carro = null;
 
-        ArrayList<Reserva> reservas = locadora.getReservas();
+        ArrayList<Carro> carros = locadora.getCarros();
 
-        for(int i=0;i<reservas.size();i++){
-            if(Objects.equals((reservas).get(i).getNumeroReserva(), numeroReserva)){
-                reserva = (reservas).get(i); //Retorna o cliente
+        for(int i=0;i<carros.size();i++){
+            if(Objects.equals((carros).get(i).getPlaca(), placa)){
+                carro = (carros).get(i); //Retorna o cliente
             }
         }
-        String dados[] = new String[14];
+        String dados[] = new String[9];
 
-        Carro carro = reserva.getCarro();
 
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
@@ -310,13 +310,12 @@ public class LocadoraController {
         dados[2] = carro.getCor();
         dados[3] = carro.getPassageiros();
         dados[4] = carro.getBagagem();
-        dados[5] = dataEmissaoString;
-        dados[6] = String.valueOf(reserva.getValorTotalGeral());
-        dados[7] = String.valueOf(reserva.getValorTotalDiaria());
-        dados[8] = String.valueOf(carro.getTaxaDiaria());
-        dados[9] = String.valueOf(carro.getTaxaAtraso());
+        dados[5] = retirada;
+        dados[6] = devolucao;
+        dados[7] = String.valueOf(carro.getTaxaDiaria());
+        dados[8] = String.valueOf(carro.getTaxaAtraso());
 
         return dados;
     }
-
+*/
 }

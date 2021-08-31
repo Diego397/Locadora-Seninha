@@ -26,7 +26,6 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         jLabel9.setText(dados[8]);
     }
 
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -51,8 +50,6 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         labelTaxaDiariaDetalhesVeiculo = new javax.swing.JLabel();
         labelTaxaDiariaAtrasoDetalhesVeiculo = new javax.swing.JLabel();
-        painelImagemCarroDetalhesVeiculo = new javax.swing.JPanel();
-        labelImagemCarroDetalhesVeiculo = new javax.swing.JLabel();
         painelCapacidadePassageirosDetalhesVeiculo = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         painelCapacidadeBagagemDetalhesVeiculo = new javax.swing.JPanel();
@@ -121,7 +118,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         painelModeloCarroDetalhesVeiculoLayout.setVerticalGroup(
             painelModeloCarroDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelModeloCarroDetalhesVeiculoLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 11, Short.MAX_VALUE)
                 .addComponent(jLabel3))
         );
 
@@ -184,7 +181,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
             .addGroup(painelTaxaDiariaDetalhesVeiculoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         painelTaxaDiariaDetalhesVeiculoLayout.setVerticalGroup(
             painelTaxaDiariaDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +201,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
             .addGroup(painelTaxaDiariaAtrasoDetalhesVeiculoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         painelTaxaDiariaAtrasoDetalhesVeiculoLayout.setVerticalGroup(
             painelTaxaDiariaAtrasoDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,23 +217,6 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         labelTaxaDiariaAtrasoDetalhesVeiculo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelTaxaDiariaAtrasoDetalhesVeiculo.setForeground(new java.awt.Color(255, 255, 255));
         labelTaxaDiariaAtrasoDetalhesVeiculo.setText("Taxa Diária Atraso:");
-
-        painelImagemCarroDetalhesVeiculo.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout painelImagemCarroDetalhesVeiculoLayout = new javax.swing.GroupLayout(painelImagemCarroDetalhesVeiculo);
-        painelImagemCarroDetalhesVeiculo.setLayout(painelImagemCarroDetalhesVeiculoLayout);
-        painelImagemCarroDetalhesVeiculoLayout.setHorizontalGroup(
-            painelImagemCarroDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 204, Short.MAX_VALUE)
-        );
-        painelImagemCarroDetalhesVeiculoLayout.setVerticalGroup(
-            painelImagemCarroDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 106, Short.MAX_VALUE)
-        );
-
-        labelImagemCarroDetalhesVeiculo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        labelImagemCarroDetalhesVeiculo.setForeground(new java.awt.Color(255, 255, 255));
-        labelImagemCarroDetalhesVeiculo.setText("Imagem do Carro:");
 
         painelCapacidadePassageirosDetalhesVeiculo.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -302,82 +282,80 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
             .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(checkBoxConfirmarDetalhesVeiculo)
+                        .addGap(273, 273, 273))
                     .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
                         .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelModeloCarroDetalhesVeiculo)
-                            .addComponent(painelModeloCarroDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelPlacaDetalhesVeiculo)
                             .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
-                                .addComponent(painelPlacaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(114, 114, 114)
                                 .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelImagemCarroDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelImagemCarroDetalhesVeiculo)))))
-                    .addComponent(checkBoxConfirmarDetalhesVeiculo)
-                    .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
-                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
-                                .addComponent(labelTaxaDiariaDetalhesVeiculo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelTaxaDiariaAtrasoDetalhesVeiculo))
+                                    .addComponent(labelModeloCarroDetalhesVeiculo)
+                                    .addComponent(painelModeloCarroDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelPlacaDetalhesVeiculo)
+                                    .addComponent(painelPlacaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
                                 .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(painelTaxaDiariaDetalhesVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(painelCapacidadePassageirosDetalhesVeiculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(labelCapadidadePassageirosDetalhesVeiculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(31, 31, 31)
                                 .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(labelCapacidadeBagagemDetalhesVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                                    .addComponent(painelCapacidadeBagagemDetalhesVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(painelTaxaDiariaAtrasoDetalhesVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelCorDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelCorDetalhesVeiculo))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(painelCapacidadeBagagemDetalhesVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelCorDetalhesVeiculo)
+                                    .addComponent(painelCorDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
+                                        .addComponent(painelTaxaDiariaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(painelTaxaDiariaAtrasoDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
+                                        .addComponent(labelTaxaDiariaDetalhesVeiculo)
+                                        .addGap(78, 78, 78)
+                                        .addComponent(labelTaxaDiariaAtrasoDetalhesVeiculo)))))
+                        .addGap(76, 76, 76))))
         );
         painelSuporteDetalhesVeiculoLayout.setVerticalGroup(
             painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelModeloCarroDetalhesVeiculo)
-                    .addComponent(labelPlacaDetalhesVeiculo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(painelTaxaDiariaAtrasoDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
-                        .addComponent(painelCorDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
+                        .addGap(47, 47, 47)
                         .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelTaxaDiariaAtrasoDetalhesVeiculo)
                             .addComponent(labelTaxaDiariaDetalhesVeiculo))
-                        .addGap(3, 3, 3)
-                        .addComponent(painelTaxaDiariaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(painelTaxaDiariaAtrasoDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelTaxaDiariaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
                         .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelImagemCarroDetalhesVeiculo)
-                            .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(painelPlacaDetalhesVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(painelModeloCarroDetalhesVeiculo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(12, 12, 12)
-                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelSuporteDetalhesVeiculoLayout.createSequentialGroup()
-                                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelCapacidadeBagagemDetalhesVeiculo)
-                                    .addComponent(labelCapadidadePassageirosDetalhesVeiculo)
-                                    .addComponent(labelCorDetalhesVeiculo))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(painelCapacidadePassageirosDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(painelCapacidadeBagagemDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(painelImagemCarroDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                            .addComponent(labelModeloCarroDetalhesVeiculo)
+                            .addComponent(labelPlacaDetalhesVeiculo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(painelModeloCarroDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelPlacaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelCorDetalhesVeiculo)
+                            .addComponent(labelCapacidadeBagagemDetalhesVeiculo)
+                            .addComponent(labelCapadidadePassageirosDetalhesVeiculo))
+                        .addGap(15, 15, 15)
+                        .addGroup(painelSuporteDetalhesVeiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(painelCapacidadePassageirosDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelCapacidadeBagagemDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelCorDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)))
                 .addComponent(checkBoxConfirmarDetalhesVeiculo)
-                .addContainerGap())
+                .addGap(29, 29, 29))
         );
 
         buttonRetornarCatalogo.setBackground(new java.awt.Color(192, 2, 0));
@@ -495,7 +473,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
                     .addComponent(painelDataRetiradaDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelSuporteDetalhesVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonRetornarCatalogo)
                     .addComponent(buttonFecharReserva))
@@ -523,7 +501,7 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonRetornarCatalogoActionPerformed
 
     private void buttonFecharReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFecharReservaActionPerformed
-        if (checkBoxConfirmarDetalhesVeiculo.isSelected()){
+    if (checkBoxConfirmarDetalhesVeiculo.isSelected()){
             
             if (Main.controller.fecharReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataDevolucaoView));
 			{
@@ -544,9 +522,15 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_checkBoxConfirmarDetalhesVeiculoActionPerformed
 
-
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
-
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -593,7 +577,6 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel labelDataDevolucaoDetalhesVeiculo;
     private javax.swing.JLabel labelDataRetiradaDetalhesVeiculo;
     private javax.swing.JLabel labelDetalhesVeiculo;
-    private javax.swing.JLabel labelImagemCarroDetalhesVeiculo;
     private javax.swing.JLabel labelLocadora;
     private javax.swing.JLabel labelModeloCarroDetalhesVeiculo;
     private javax.swing.JLabel labelPlacaDetalhesVeiculo;
@@ -604,7 +587,6 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel painelCorDetalhesVeiculo;
     private javax.swing.JPanel painelDataDevolucaoDetalhesVeiculo;
     private javax.swing.JPanel painelDataRetiradaDetalhesVeiculo;
-    private javax.swing.JPanel painelImagemCarroDetalhesVeiculo;
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JPanel painelModeloCarroDetalhesVeiculo;
     private javax.swing.JPanel painelPlacaDetalhesVeiculo;

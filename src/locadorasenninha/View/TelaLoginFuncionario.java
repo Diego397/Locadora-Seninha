@@ -186,9 +186,6 @@ public class TelaLoginFuncionario extends javax.swing.JFrame {
         String usuario = textFieldUsuarioFuncionario.getText();
         String senha = String.valueOf(passwordFieldLoginFuncionario.getPassword());
 
-        System.out.println(usuario);
-        System.out.println(senha);
-
         if (Main.controller.verificaLoginFuncionario(usuario, senha))
         {
             MenuFuncionario novatela = new MenuFuncionario();

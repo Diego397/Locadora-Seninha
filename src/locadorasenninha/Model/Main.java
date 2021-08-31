@@ -3,6 +3,7 @@ package locadorasenninha.Model;
 import locadorasenninha.View.TelaInicial;
 import locadorasenninha.Controller.*;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -14,6 +15,20 @@ public class Main{
     public static LocadoraController controller = new LocadoraController(locadora);
 
     public static void main(String args[]){
+        ManipuladorArquivo arq = new ManipuladorArquivo();
+
+        try {
+            arq.leitor("src/locadorasenninha/Model/Dados.txt", locadora, controller);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /*try {
+            arq.escritor("src/locadorasenninha/Model/Dados.txt", locadora);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

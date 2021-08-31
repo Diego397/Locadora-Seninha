@@ -14,16 +14,16 @@ public class ManipuladorArquivo {
         //Ler Clientes e salvar no ArrayList
         try{
             linha = buffRead.readLine();
-            System.out.println(linha);
+            //System.out.println(linha);
             int tam = Integer.parseInt(linha);
             for (int i = 0; i < tam; i++) {
                 linha = buffRead.readLine();
                 String nome = linha;
-                System.out.println(nome);
+                //System.out.println(nome);
 
                 linha = buffRead.readLine();
                 String cpf = linha;
-                System.out.println(cpf);
+                //System.out.println(cpf);
 
                 linha = buffRead.readLine();
                 String dataDeNascimento = linha;
@@ -42,7 +42,7 @@ public class ManipuladorArquivo {
 
                 linha = buffRead.readLine();
                 String senha = linha;
-                System.out.println(linha);
+                //System.out.println(linha);
 
                 locadora.cadastrarCliente(nome, cpf, dataDeNascimento, email, endereco, cep, telefone, senha);
             }

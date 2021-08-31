@@ -156,7 +156,11 @@ public class LocadoraController {
         if(nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 14 && dataDeNascimento != null &&
                 dataDeNascimento.length() == 10 && endereco != null && endereco.length() > 0 && endereco.length() < 300 && email != null && email.length() > 0 &&
                 email.length() < 100 && cep != null && cep.length() == 9 && telefone!= null && telefone.length() == 16
-                && senha != null && senha.length() < 30)
+                && senha != null && senha.length() < 30)/*nome != null && nome.length() > 0 && nome.length() < 100 && cpf != null && cpf.length() == 14
+                && dataDeNascimento != null && dataDeNascimento.length() == 10 && email != null
+                && email.length() > 0 && email.length() < 100 && endereco != null && endereco.length() > 0
+                && endereco.length() < 300 && cep != null && cep.length() == 9 && telefone!= null
+                && telefone.length() == 16 &&  senha != null && senha.length() < 30*/
         {
             Funcionario funcionario = new Funcionario (nome, cpf, dataDeNascimento, endereco, email, cep, telefone, senha);
             return locadora.cadastrarFuncionario(funcionario);

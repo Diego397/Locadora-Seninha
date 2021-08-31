@@ -201,14 +201,13 @@ public class Locadora {
         return (dataDevolucaoCliente.before(dataRetiradaCarro) || dataDevolucaoCarro.before(dataRetiradaCliente));
     }
 
-    public static void fazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada,
+    public static void fazerReserva(int numeroReserva, Calendar dataRetirada,
                                     Calendar dataDevolucao, Carro carro, Cliente cliente,
                                     double valorTotalDiaria, double valorTotalAtraso,
                                     double valorTotalGeral){
         //Incrementar o numero da reserva;
         numeroReserva = numeroReserva + 1;
-        Reserva reserva = new Reserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, 
-                                    valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
+        Reserva reserva = new Reserva(numeroReserva, dataRetirada, dataDevolucao, carro, cliente, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
         //Adicionar nas listas de reserva de cada objeto;
         reservasLocadora.add(reserva);
         cliente.getReservasCliente().add(reserva);

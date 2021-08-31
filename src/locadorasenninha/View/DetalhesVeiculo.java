@@ -14,7 +14,12 @@ public class DetalhesVeiculo extends javax.swing.JFrame {
     String[] dados = new String[9];
     public DetalhesVeiculo() {
         initComponents();
-        dados = Main.controller.exibirCarroReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataDevolucaoView);
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+
+        String retirada = formato.format(Main.dataRetiradaView);
+        String devolucao = formato.format(Main.dataDevolucaoView);
+
+        dados = Main.controller.exibirCarroReserva(Main.placacarroView, retirada, devolucao);
         jLabel1.setText(dados[0]);
         jLabel2.setText(dados[1]);
         jLabel3.setText(dados[2]);
@@ -525,50 +530,21 @@ public class DetalhesVeiculo extends javax.swing.JFrame {
 
     private void buttonFecharReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFecharReservaActionPerformed
         if (checkBoxConfirmarDetalhesVeiculo.isSelected()){
-			//Main.placacarroView, Main.dataRetiradaView, 
-
-			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-
-			Calendar atualTime = Calendar.getInstance();
-			atualTime.getTime();
-
-        	String dataEmissaoString = formato.format(atualTime);
-
-			ArrayList<Reserva> reservas = Main.locadora.getReservas();
-			Reserva reserva = null;
-
-        	for(int i=0;i<reservas.size();i++){
-            if(Objects.equals((reservas).get(i).getCarro().getPlaca(), Main.placacarroView)){
-                reserva = (reservas).get(i); //Retorna o cliente
-            }
-			Carro carro = reserva.getCarro();
-
-			ArrayList<Cliente> clientes = Main.locadora.getClientes();
-			Cliente cliente  = null;
-			for(int i=0;i<clientes.size();i++){
-				if(Objects.equals((clientes).get(i).getCpf(), Main.cpfView)){
-					cliente = (clientes).get(i); //Retorna o cliente
-				}
-
 			
-
-			if (Main.controller.verificaFazerReserva(Main.locadora.getNumeroReserva(), dataEmissaoString, dados[0], dados[1], carro, cliente
-				, dados[7], dados[8], dados[7]));
+			if (Main.controller.fecharReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataRetiradaView));
 			{
-				JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
-				ListaClientes novatela = new ListaClientes();
-				novatela.setVisible(true);
-				this.setVisible(false);
-			}
-			else
-			{
-				JOptionPane.showMessageDialog(null, "Cadastro inválido!");
-			}
-           JOptionPane.showMessageDialog(null, "Reserva Confirmada!"); 
-           ListaReservas novatela = new ListaReservas();
-           novatela.setVisible(true);
-           this.setVisible(false);    
+				JOptionPane.showMessageDialog(null, "Reserva Confirmada!"); 
+                ListaReservas novatela = new ListaReservas();
+                novatela.setVisible(true);
+                this.setVisible(false); 
+			} 
+            /*
+            else{
+				JOptionPane.showMessageDialog(null, "Problemas na Reserva!");
+			}*/
+              
         }
+        
         else{
            JOptionPane.showMessageDialog(null, "Confirme sua reserva!"); 
         }

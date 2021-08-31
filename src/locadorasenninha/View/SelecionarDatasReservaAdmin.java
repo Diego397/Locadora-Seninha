@@ -4,6 +4,8 @@ package locadorasenninha.View;
 import locadorasenninha.Model.Main;
 import javax.swing.*;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class SelecionarDatasReservaAdmin extends javax.swing.JFrame {
 
@@ -250,19 +252,40 @@ public class SelecionarDatasReservaAdmin extends javax.swing.JFrame {
     }
 
     private void buttonConfirmarDatasActionPerformed(java.awt.event.ActionEvent evt) throws ParseException {//GEN-FIRST:event_buttonConfirmarDatasActionPerformed
-        String dataRetirada = textFieldDataRetirada.getText();
-        String dataDevolucao = textFieldDataDevolucaoSelecionarDatasReserva.getText();
+        //String dataRetirada = textFieldDataRetirada.getText();
+        //String dataDevolucao = textFieldDataDevolucaoSelecionarDatasReserva.getText();
 
-        if (Main.controller.verificaDataReserva(dataRetirada, dataDevolucao))
-        {
+        try {
+            String dataRetirada = (String)textFieldDataRetirada.getText();;
+            String dataDevolucao = (String)textFieldDataDevolucaoSelecionarDatasReserva.getText();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+            Calendar cal1 = Calendar.getInstance();
+            Calendar cal2 = Calendar.getInstance();
+
+            cal1.setTime(sdf.parse(dataRetirada));
+            cal2.setTime(sdf.parse(dataDevolucao));
+
+            Main.dataRetiradaView = cal1;
+            Main.dataDevolucaoView = cal2;
+
+            if (Main.controller.verificaDataReserva(dataRetirada, dataDevolucao))
+            {
             SelecionarCarroAdmin novatela = new SelecionarCarroAdmin();
             novatela.setVisible(true);
             this.setVisible(false);
-        }
-        else
-        {
+             }
+            
+             else
+             {
             JOptionPane.showMessageDialog(null, "Data inválida!");
+             }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
+
+        
     }
 
     private void textFieldHoraRetiradaSelecionarDatasReservaActionPerformed(java.awt.event.ActionEvent evt) {

@@ -79,13 +79,13 @@ public class LocadoraController {
 }
 
 //Reserva
-    public boolean verificaFazerReserva(int numeroReserva, String dataEmissao, String dataRetirada,
+    public boolean verificaFazerReserva(int numeroReserva, String dataRetirada,
                                         String dataDevolucao, Carro carro, Cliente cliente,
                                         double valorTotalDiaria, double valorTotalAtraso,
                                         double valorTotalGeral) throws ParseException {
         if (numeroReserva > 1 && numeroReserva < 99999)
         {
-            if (dataEmissao != null && dataRetirada != null && dataDevolucao != null)
+            if (dataRetirada != null && dataDevolucao != null)
             {
                 if (carro != null)
                 {
@@ -99,13 +99,13 @@ public class LocadoraController {
                             Calendar dataDevolucaoCal = Calendar.getInstance();
 
                             try{
-                                dataEmissaoCal.setTime(sdf.parse(dataEmissao));
+                                //dataEmissaoCal.setTime(sdf.parse(dataEmissao));
                                 dataRetiradaCal.setTime(sdf.parse(dataRetirada));
                                 dataDevolucaoCal.setTime(sdf.parse(dataDevolucao));
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
-                            locadora.fazerReserva(numeroReserva, dataEmissaoCal, dataRetiradaCal, dataDevolucaoCal, carro,
+                            locadora.fazerReserva(numeroReserva, dataRetiradaCal, dataDevolucaoCal, carro,
                                     cliente, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
                             return true;
                         
@@ -278,11 +278,11 @@ public class LocadoraController {
 
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
-        String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
+        //String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
         String dataRetiradaString = formato.format(reserva.getDataRetirada().getTime());
         String dataDevolucaoString = formato.format(reserva.getDataDevolucao().getTime());
 
-        dados[10] = dataEmissaoString;
+        dados[10] = "dataEmissaoString";
         dados[11] = dataRetiradaString;
         dados[12] = reserva.getStatus();
         dados[13] = dataDevolucaoString;
@@ -315,5 +315,57 @@ public class LocadoraController {
 
         return dados;
     }
+
+
+    public boolean fecharReserva(String placa, Calendar retirada, Calendar devolucao){
+    
+    
+
+        /*
+    
+
+    Calendar atualTime = Calendar.getInstance();
+    atualTime.getTime();
+
+    String dataEmissaoString = formato.format(atualTime);
+*/
+    ArrayList<Carro> carros = locadora.getCarros();
+    Carro carro = null;
+
+    for(int i=0;i<carros.size();i++){
+        if(Objects.equals((carros).get(i).getPlaca(), placa)){
+            carro = (carros).get(i); //Retorna o cliente
+        }
+    }
+
+    ArrayList<Cliente> clientes = Main.locadora.getClientes();
+    Cliente cliente  = null;
+    for(int i=0;i<clientes.size();i++){
+        if(Objects.equals((clientes).get(i).getCpf(), Main.cpfView)){
+            cliente = (clientes).get(i); //Retorna o cliente
+        }
+    }
+
+    try{
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        
+        double totalDiaria = locadora.calcularValorReserva(retirada, devolucao, carro.getTaxaDiaria());
+        double totalAtraso = 0;
+        double totalGeral = locadora.calcularValorTotalReserva(totalDiaria, totalAtraso);
+        
+        String retiradaString = formato.format(retirada);
+        String devolucaoString = formato.format(devolucao);
+
+         return (verificaFazerReserva(locadora.getNumeroReserva(), retiradaString, devolucaoString, carro, cliente
+        , totalDiaria, totalAtraso, totalGeral));
+
+    }
+    catch (java.text.ParseException e) {
+            e.printStackTrace();
+        }
+    
+    
+    return false;
+}
 
 }

@@ -1,14 +1,28 @@
 package locadorasenninha.View;
 import locadorasenninha.Model.Main;
 import javax.swing.JOptionPane;
-
+import java.text.SimpleDateFormat;
 
 public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
 
     String[] dados = new String[9];
     public DetalhesVeiculoAdmin() {
         initComponents();
-        dados = Main.controller.exibirCarroReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataDevolucaoView);
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        
+        /*
+        String retirada = formato.format(Main.dataRetiradaView);
+        String devolucao = formato.format(Main.dataDevolucaoView);
+        */
+
+        String retirada = formato.format(Main.dataRetiradaView.getTime());
+        String devolucao = formato.format(Main.dataDevolucaoView.getTime());
+
+        System.out.println(retirada);
+        System.out.println(devolucao);
+
+        dados = Main.controller.exibirCarroReserva(Main.placacarroView, retirada, devolucao);
+
         jLabel1.setText(dados[0]);
         jLabel2.setText(dados[1]);
         jLabel3.setText(dados[2]);
@@ -518,10 +532,15 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
 
     private void buttonFecharReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFecharReservaActionPerformed
         if (checkBoxConfirmarDetalhesVeiculo.isSelected()){
-           JOptionPane.showMessageDialog(null, "Reserva Confirmada!"); 
-           ListaReservasAdmin novatela = new ListaReservasAdmin();
-           novatela.setVisible(true);
-           this.setVisible(false);    
+            
+            if (Main.controller.fecharReserva(Main.placacarroView, Main.dataRetiradaView, Main.dataRetiradaView));
+			{
+				JOptionPane.showMessageDialog(null, "Reserva Confirmada!"); 
+                ListaReservasAdmin novatela = new ListaReservasAdmin();
+                novatela.setVisible(true);
+                this.setVisible(false); 
+			}     
+
         }
         else{
            JOptionPane.showMessageDialog(null, "Confirme sua reserva!"); 
@@ -533,15 +552,9 @@ public class DetalhesVeiculoAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_checkBoxConfirmarDetalhesVeiculoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

@@ -6,7 +6,6 @@ import java.util.Calendar;
 public class Reserva {
     private int numeroReserva; // identificador da reserva
   
-    private Calendar dataEmissao;
     private Calendar dataRetirada;
     private Calendar dataDevolucao;
     private String status; //reservado, retirado, devolvido, cancelado
@@ -19,11 +18,11 @@ public class Reserva {
     private double valorTotalGeral; //tipo dinheiro
     
     //Método Construtor:
-    public Reserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada, 
+    public Reserva(int numeroReserva, Calendar dataRetirada, 
             Calendar dataDevolucao, Carro carro, Cliente cliente, double valorTotalDiaria, double valorTotalAtraso, 
             double valorTotalGeral) {
         this.numeroReserva = numeroReserva;
-        this.dataEmissao = dataEmissao;
+        //this.dataEmissao = dataEmissao;
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
         this.status = "RESERVADA";
@@ -43,6 +42,7 @@ public class Reserva {
         this.numeroReserva = numeroReserva;
     }
 
+    /*
     public Calendar getDataEmissao() {
         return dataEmissao;
     }
@@ -50,7 +50,7 @@ public class Reserva {
     public void setDataEmissao(Calendar dataEmissao) {
         this.dataEmissao = dataEmissao;
     }
-
+*/
     public Calendar getDataRetirada() {
         return dataRetirada;
     }

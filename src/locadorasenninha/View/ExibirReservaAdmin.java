@@ -13,10 +13,10 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         labelPainelModeloCarroExibirReservaAdmin.setText(dados[0]);
         labelPainelPlacaAdminExibirReservaAdmin.setText(dados[1]);
         labelPainelCorExibirReservaAdmin.setText(dados[2]);
-        labelPainelCapaceidadePassageirosExibirReservaAdmin.setText(dados[3]);
-        labelPainelCapacidadeBagagensExibirReservaAdmin.setText(dados[4]);
-        labelPainelTaxaDiariaExibirReservaAdmin.setText(dados[5]);
-        labelPainelTaxaDiariaAtrasoExibirReservaAdmin.setText(dados[6]);
+        labelPainelCapaceidadePassageirosExibirReservaAdmin.setText(dados[5]);
+        labelPainelCapacidadeBagagensExibirReservaAdmin.setText(dados[6]);
+        labelPainelTaxaDiariaExibirReservaAdmin.setText(dados[3]);
+        labelPainelTaxaDiariaAtrasoExibirReservaAdmin.setText(dados[4]);
         labelPainelValorTotalDiariasExibirReservaAdmin.setText(dados[7]);
         labelPainelTaxaTotalAtrasoExibirReservaAdmin.setText(dados[8]);
         labelPainelValorTotalAluguelExibirReservaAdmin.setText(dados[9]);
@@ -701,7 +701,7 @@ public class ExibirReservaAdmin extends javax.swing.JFrame {
         }
         
         JOptionPane.showMessageDialog(null, "Carro não pode ser retirado agora!");
-        
+
     }//GEN-LAST:event_buttonRetirarCarroFuncionarioActionPerformed
 
     private void buttonDevolverCarroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDevolverCarroFuncionarioActionPerformed

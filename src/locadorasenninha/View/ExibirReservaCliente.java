@@ -1,32 +1,33 @@
-//Model
 package locadorasenninha.View;
 import locadorasenninha.Model.Main;
-public class ExibirReservaCliente extends javax.swing.JFrame {
-    String[] dados = new String[15];
+import javax.swing.JOptionPane;
 
+public class ExibirReservaCliente extends javax.swing.JFrame {
+
+    String[] dados = new String[14];
     public ExibirReservaCliente() {
         initComponents();
-
         dados = Main.controller.exibirReserva(Main.numeroView);
 
         labelPainelModeloCarroExibirReservaCliente.setText(dados[0]);
         labelPainelPlacaExibirReservaCliente.setText(dados[1]);
         labelPainelCorExibirReservaCliente.setText(dados[2]);
-        labelPainelCapacidadePassageirosExibirReservaCliente.setText(dados[3]);
-        labelPainelCapacidadeBagagensExibirReservaCliente.setText(dados[4]);
-        labelPainelTaxaDiariaExibirReservaCliente.setText(dados[5]);
-        labelPainelTaxaDiariaAtrasoExibirReservaCliente.setText(dados[6]);
+        labelPainelCapacidadePassageirosExibirReservaCliente.setText(dados[5]);
+        labelPainelCapacidadeBagagensExibirReservaCliente.setText(dados[6]);
+        labelPainelTaxaDiariaExibirReservaCliente.setText(dados[3]);
+        labelPainelTaxaDiariaAtrasoExibirReservaCliente.setText(dados[4]);
         labelPainelValorTotalDiariasExibirReservasCliente.setText(dados[7]);
         labelPainelTaxaTotalAtrasoExibirReservaCliente.setText(dados[8]);
         labelPainelValorTotalAluguelExibirReservaCliente.setText(dados[9]);
-        labelPainelDataEmissaoExibirReservaCliente.setText(dados[10]);
-        labelPainelDataRetiradaExibirReservaCliente.setText(dados[11]);
+        labelPainelDataRetiradaExibirReservaCliente.setText(dados[10]);
         labelPainelDataDevolucaoExibirReservaCliente.setText(dados[12]);
-        labelPainelStatusExibirReservaCliente.setText(dados[13]);
+        labelPainelStatusExibirReservaCliente.setText(dados[11]);
+        labelPainelDevolvidoEmExibirReservaCliente.setText(dados[14]);
     }
 
 
     @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -39,9 +40,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         painelPrincipal = new javax.swing.JPanel();
         painelLocadora = new javax.swing.JPanel();
         labelLocadora = new javax.swing.JLabel();
-        painelPerfilCliente = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         labelExibirReservaCliente = new javax.swing.JLabel();
         painelSuporteExibirReservaCliente = new javax.swing.JPanel();
         labelModeloCarroCliente = new javax.swing.JLabel();
@@ -71,29 +69,21 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         painelTaxaTotalAtrasoCliente = new javax.swing.JPanel();
         labelPainelTaxaTotalAtrasoExibirReservaCliente = new javax.swing.JLabel();
         labelStatusCliente = new javax.swing.JLabel();
-        painelDataEmissaoCliente = new javax.swing.JPanel();
-        labelPainelDataEmissaoExibirReservaCliente = new javax.swing.JLabel();
         painelDataRetiradaCliente = new javax.swing.JPanel();
         labelPainelDataRetiradaExibirReservaCliente = new javax.swing.JLabel();
         painelDevolvidoEmCliente = new javax.swing.JPanel();
         labelPainelDevolvidoEmExibirReservaCliente = new javax.swing.JLabel();
         painelDataDevolucaoCliente = new javax.swing.JPanel();
         labelPainelDataDevolucaoExibirReservaCliente = new javax.swing.JLabel();
-        labelDataEmissaoCliente = new javax.swing.JLabel();
         labelDataDevolucaoCliente = new javax.swing.JLabel();
         labelDataRetiradaCliente = new javax.swing.JLabel();
         labelDevolvidoEmCliente = new javax.swing.JLabel();
-        painelImagemCarroCliente = new javax.swing.JPanel();
-        labelImagemCarroCliente = new javax.swing.JLabel();
         painelCapacidadePassageirosCliente = new javax.swing.JPanel();
         labelPainelCapacidadePassageirosExibirReservaCliente = new javax.swing.JLabel();
         painelCapacidadeBagagemCliente = new javax.swing.JPanel();
         labelPainelCapacidadeBagagensExibirReservaCliente = new javax.swing.JLabel();
         labelCapadidadePassageirosCliente = new javax.swing.JLabel();
         labelCapacidadeBagagemCliente = new javax.swing.JLabel();
-        painelAtendenteCliente = new javax.swing.JPanel();
-        labelPainelAtendenteExibirReservaCliente = new javax.swing.JLabel();
-        labelAtendenteCliente = new javax.swing.JLabel();
         buttonRetornarExibirReservaCliente = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
@@ -174,42 +164,11 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
             .addGroup(painelLocadoraLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelLocadora, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(558, Short.MAX_VALUE))
+                .addContainerGap(554, Short.MAX_VALUE))
         );
         painelLocadoraLayout.setVerticalGroup(
             painelLocadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(labelLocadora, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
-        painelPerfilCliente.setBackground(new java.awt.Color(192, 2, 0));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nome:");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CPF:");
-
-        javax.swing.GroupLayout painelPerfilClienteLayout = new javax.swing.GroupLayout(painelPerfilCliente);
-        painelPerfilCliente.setLayout(painelPerfilClienteLayout);
-        painelPerfilClienteLayout.setHorizontalGroup(
-            painelPerfilClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelPerfilClienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(186, 186, 186))
-        );
-        painelPerfilClienteLayout.setVerticalGroup(
-            painelPerfilClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPerfilClienteLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(painelPerfilClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
-                .addContainerGap())
         );
 
         labelExibirReservaCliente.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
@@ -224,7 +183,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         painelModeloCarroCliente.setBackground(new java.awt.Color(255, 255, 255));
         painelModeloCarroCliente.setPreferredSize(new java.awt.Dimension(230, 25));
 
-        labelPainelModeloCarroExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelModeloCarroExibirReservaCliente.setText("Modelo do Carro");
 
         javax.swing.GroupLayout painelModeloCarroClienteLayout = new javax.swing.GroupLayout(painelModeloCarroCliente);
@@ -233,7 +191,7 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
             painelModeloCarroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelModeloCarroClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelModeloCarroExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(labelPainelModeloCarroExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
                 .addContainerGap())
         );
         painelModeloCarroClienteLayout.setVerticalGroup(
@@ -243,7 +201,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelCorCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelCorExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelCorExibirReservaCliente.setText("Cor");
 
         javax.swing.GroupLayout painelCorClienteLayout = new javax.swing.GroupLayout(painelCorCliente);
@@ -266,7 +223,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelPlacaCliente1.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelPlacaExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelPlacaExibirReservaCliente.setText("Placa");
 
         javax.swing.GroupLayout painelPlacaCliente1Layout = new javax.swing.GroupLayout(painelPlacaCliente1);
@@ -289,7 +245,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelTaxaDiariaCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelTaxaDiariaExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelTaxaDiariaExibirReservaCliente.setText("Taxa Diária");
 
         javax.swing.GroupLayout painelTaxaDiariaClienteLayout = new javax.swing.GroupLayout(painelTaxaDiariaCliente);
@@ -303,26 +258,24 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         );
         painelTaxaDiariaClienteLayout.setVerticalGroup(
             painelTaxaDiariaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelTaxaDiariaExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelPainelTaxaDiariaExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
         );
 
         painelTaxaDiariaAtrasoCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelTaxaDiariaAtrasoExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelTaxaDiariaAtrasoExibirReservaCliente.setText("Taxa Diária Atraso");
 
         javax.swing.GroupLayout painelTaxaDiariaAtrasoClienteLayout = new javax.swing.GroupLayout(painelTaxaDiariaAtrasoCliente);
         painelTaxaDiariaAtrasoCliente.setLayout(painelTaxaDiariaAtrasoClienteLayout);
         painelTaxaDiariaAtrasoClienteLayout.setHorizontalGroup(
             painelTaxaDiariaAtrasoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelTaxaDiariaAtrasoClienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelPainelTaxaDiariaAtrasoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(labelPainelTaxaDiariaAtrasoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         painelTaxaDiariaAtrasoClienteLayout.setVerticalGroup(
             painelTaxaDiariaAtrasoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelTaxaDiariaAtrasoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTaxaDiariaAtrasoClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelPainelTaxaDiariaAtrasoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         labelTaxaDiariaCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -339,7 +292,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelStatusCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelStatusExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelStatusExibirReservaCliente.setText("Status da Reserva");
 
         javax.swing.GroupLayout painelStatusClienteLayout = new javax.swing.GroupLayout(painelStatusCliente);
@@ -358,7 +310,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelValorTotalDiariasCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelValorTotalDiariasExibirReservasCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelValorTotalDiariasExibirReservasCliente.setText("Valor total Diárias");
 
         javax.swing.GroupLayout painelValorTotalDiariasClienteLayout = new javax.swing.GroupLayout(painelValorTotalDiariasCliente);
@@ -367,12 +318,12 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
             painelValorTotalDiariasClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelValorTotalDiariasClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelValorTotalDiariasExibirReservasCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                .addComponent(labelPainelValorTotalDiariasExibirReservasCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         painelValorTotalDiariasClienteLayout.setVerticalGroup(
             painelValorTotalDiariasClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelValorTotalDiariasExibirReservasCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelPainelValorTotalDiariasExibirReservasCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
         );
 
         labelValorTotalDiariasCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -385,7 +336,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelValorTotalCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelValorTotalAluguelExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelValorTotalAluguelExibirReservaCliente.setText("Total do Aluguel");
 
         javax.swing.GroupLayout painelValorTotalClienteLayout = new javax.swing.GroupLayout(painelValorTotalCliente);
@@ -394,8 +344,8 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
             painelValorTotalClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelValorTotalClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelValorTotalAluguelExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(labelPainelValorTotalAluguelExibirReservaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         painelValorTotalClienteLayout.setVerticalGroup(
             painelValorTotalClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -404,7 +354,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelTaxaTotalAtrasoCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelTaxaTotalAtrasoExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelTaxaTotalAtrasoExibirReservaCliente.setText("Taca Total de Atraso");
 
         javax.swing.GroupLayout painelTaxaTotalAtrasoClienteLayout = new javax.swing.GroupLayout(painelTaxaTotalAtrasoCliente);
@@ -425,28 +374,8 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         labelStatusCliente.setForeground(new java.awt.Color(255, 255, 255));
         labelStatusCliente.setText("Status:");
 
-        painelDataEmissaoCliente.setBackground(new java.awt.Color(255, 255, 255));
-
-        labelPainelDataEmissaoExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
-        labelPainelDataEmissaoExibirReservaCliente.setText("Data de Emissão");
-
-        javax.swing.GroupLayout painelDataEmissaoClienteLayout = new javax.swing.GroupLayout(painelDataEmissaoCliente);
-        painelDataEmissaoCliente.setLayout(painelDataEmissaoClienteLayout);
-        painelDataEmissaoClienteLayout.setHorizontalGroup(
-            painelDataEmissaoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelDataEmissaoClienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelPainelDataEmissaoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        painelDataEmissaoClienteLayout.setVerticalGroup(
-            painelDataEmissaoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelDataEmissaoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-        );
-
         painelDataRetiradaCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelDataRetiradaExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelDataRetiradaExibirReservaCliente.setText("Data de Retirada");
 
         javax.swing.GroupLayout painelDataRetiradaClienteLayout = new javax.swing.GroupLayout(painelDataRetiradaCliente);
@@ -465,7 +394,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelDevolvidoEmCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelDevolvidoEmExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelDevolvidoEmExibirReservaCliente.setText("Data da Devolução");
 
         javax.swing.GroupLayout painelDevolvidoEmClienteLayout = new javax.swing.GroupLayout(painelDevolvidoEmCliente);
@@ -484,7 +412,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelDataDevolucaoCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelDataDevolucaoExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelDataDevolucaoExibirReservaCliente.setText("Data de Devolução");
 
         javax.swing.GroupLayout painelDataDevolucaoClienteLayout = new javax.swing.GroupLayout(painelDataDevolucaoCliente);
@@ -501,10 +428,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
             .addComponent(labelPainelDataDevolucaoExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
         );
 
-        labelDataEmissaoCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        labelDataEmissaoCliente.setForeground(new java.awt.Color(255, 255, 255));
-        labelDataEmissaoCliente.setText("Data de Emissão:");
-
         labelDataDevolucaoCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelDataDevolucaoCliente.setForeground(new java.awt.Color(255, 255, 255));
         labelDataDevolucaoCliente.setText("Data para Devolução:");
@@ -517,26 +440,8 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         labelDevolvidoEmCliente.setForeground(new java.awt.Color(255, 255, 255));
         labelDevolvidoEmCliente.setText("Devolvido em:");
 
-        painelImagemCarroCliente.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout painelImagemCarroClienteLayout = new javax.swing.GroupLayout(painelImagemCarroCliente);
-        painelImagemCarroCliente.setLayout(painelImagemCarroClienteLayout);
-        painelImagemCarroClienteLayout.setHorizontalGroup(
-            painelImagemCarroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        painelImagemCarroClienteLayout.setVerticalGroup(
-            painelImagemCarroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        labelImagemCarroCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        labelImagemCarroCliente.setForeground(new java.awt.Color(255, 255, 255));
-        labelImagemCarroCliente.setText("Imagem do Carro:");
-
         painelCapacidadePassageirosCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelCapacidadePassageirosExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelCapacidadePassageirosExibirReservaCliente.setText("Capacidade de Passageiros");
 
         javax.swing.GroupLayout painelCapacidadePassageirosClienteLayout = new javax.swing.GroupLayout(painelCapacidadePassageirosCliente);
@@ -555,7 +460,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
 
         painelCapacidadeBagagemCliente.setBackground(new java.awt.Color(255, 255, 255));
 
-        labelPainelCapacidadeBagagensExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
         labelPainelCapacidadeBagagensExibirReservaCliente.setText("Capacidade de Bagagens");
 
         javax.swing.GroupLayout painelCapacidadeBagagemClienteLayout = new javax.swing.GroupLayout(painelCapacidadeBagagemCliente);
@@ -564,7 +468,7 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
             painelCapacidadeBagagemClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCapacidadeBagagemClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPainelCapacidadeBagagensExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelPainelCapacidadeBagagensExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                 .addContainerGap())
         );
         painelCapacidadeBagagemClienteLayout.setVerticalGroup(
@@ -579,29 +483,6 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         labelCapacidadeBagagemCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelCapacidadeBagagemCliente.setForeground(new java.awt.Color(255, 255, 255));
         labelCapacidadeBagagemCliente.setText("Capacidade de Bagagens:");
-
-        painelAtendenteCliente.setBackground(new java.awt.Color(255, 255, 255));
-
-        labelPainelAtendenteExibirReservaCliente.setForeground(new java.awt.Color(0, 0, 0));
-        labelPainelAtendenteExibirReservaCliente.setText("Atendente");
-
-        javax.swing.GroupLayout painelAtendenteClienteLayout = new javax.swing.GroupLayout(painelAtendenteCliente);
-        painelAtendenteCliente.setLayout(painelAtendenteClienteLayout);
-        painelAtendenteClienteLayout.setHorizontalGroup(
-            painelAtendenteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelAtendenteClienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelPainelAtendenteExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        painelAtendenteClienteLayout.setVerticalGroup(
-            painelAtendenteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelPainelAtendenteExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-        );
-
-        labelAtendenteCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        labelAtendenteCliente.setForeground(new java.awt.Color(255, 255, 255));
-        labelAtendenteCliente.setText("Atendente:");
 
         javax.swing.GroupLayout painelSuporteExibirReservaClienteLayout = new javax.swing.GroupLayout(painelSuporteExibirReservaCliente);
         painelSuporteExibirReservaCliente.setLayout(painelSuporteExibirReservaClienteLayout);
@@ -619,82 +500,63 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(painelPlacaCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelPlacaCliente)))
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelDataDevolucaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelDataDevolucaoCliente))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelDevolvidoEmCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelDevolvidoEmCliente))))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCorCliente)
-                            .addComponent(painelCorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(painelTaxaDiariaCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTaxaDiariaCliente, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(12, 12, 12)
-                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelTaxaDiariaAtrasoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addComponent(labelTaxaDiariaAtrasoCliente)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                    .addComponent(labelPlacaCliente)
+                                    .addComponent(labelCapacidadeBagagemCliente)
+                                    .addComponent(painelCapacidadeBagagemCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(painelDataDevolucaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelDataDevolucaoCliente)
+                            .addComponent(painelCapacidadePassageirosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelDataRetiradaCliente)
+                            .addComponent(painelDataRetiradaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelDevolvidoEmCliente)
+                            .addComponent(painelDevolvidoEmCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(painelDataEmissaoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(labelDataEmissaoCliente)
-                                        .addComponent(painelCapacidadePassageirosCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(labelCapadidadePassageirosCliente))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                        .addComponent(painelCapacidadeBagagemCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(painelValorTotalDiariasCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(13, 13, 13))
                                     .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
                                         .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(painelDataRetiradaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(labelDataRetiradaCliente)
-                                            .addComponent(labelCapacidadeBagagemCliente))
-                                        .addGap(24, 24, 24)
-                                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(painelTaxaTotalAtrasoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(painelValorTotalDiariasCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(22, 22, 22)
+                                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                                                .addComponent(labelTaxaDiariaAtrasoCliente)
+                                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                            .addComponent(painelTaxaDiariaAtrasoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                        .addGap(116, 116, 116))
+                                                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(labelTaxaDiariaCliente)
+                                                            .addComponent(painelTaxaDiariaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(0, 0, Short.MAX_VALUE))))
                                             .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
                                                 .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(painelCorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(labelValorTotalDiariasCliente)
-                                                    .addComponent(labelStatusCliente))
-                                                .addGap(40, 40, 40))
-                                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                                .addComponent(painelStatusCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(13, 13, 13)))))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(painelAtendenteCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(labelTaxaTotalAtrasoCliente))
+                                                .addGap(56, 56, 56)
+                                                .addComponent(painelStatusCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                        .addContainerGap())
                                     .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                        .addComponent(labelAtendenteCliente)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelImagemCarroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelCorCliente)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelStatusCliente)
+                                        .addGap(149, 149, 149))))
                             .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addComponent(labelTaxaTotalAtrasoCliente)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelValorTotalAluguelCliente))
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addComponent(labelImagemCarroCliente)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addComponent(painelTaxaTotalAtrasoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(painelValorTotalCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                                .addGap(32, 32, 32)
+                                .addComponent(painelValorTotalCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))
+                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                        .addComponent(labelCapadidadePassageirosCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelValorTotalAluguelCliente)
+                        .addGap(230, 230, 230))))
         );
         painelSuporteExibirReservaClienteLayout.setVerticalGroup(
             painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -704,66 +566,60 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
                     .addComponent(labelModeloCarroCliente)
                     .addComponent(labelPlacaCliente)
                     .addComponent(labelCorCliente)
-                    .addComponent(labelTaxaDiariaCliente)
-                    .addComponent(labelTaxaDiariaAtrasoCliente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(painelPlacaCliente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelCorCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelTaxaDiariaCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelTaxaDiariaAtrasoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelModeloCarroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelTaxaTotalAtrasoCliente)
-                    .addComponent(labelValorTotalDiariasCliente)
-                    .addComponent(labelValorTotalAluguelCliente)
-                    .addComponent(labelCapadidadePassageirosCliente)
-                    .addComponent(labelCapacidadeBagagemCliente))
+                    .addComponent(labelStatusCliente))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(painelPlacaCliente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(painelCorCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(painelModeloCarroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(painelStatusCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCapadidadePassageirosCliente)
+                    .addComponent(labelCapacidadeBagagemCliente)
+                    .addComponent(labelValorTotalAluguelCliente))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
                         .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(painelTaxaTotalAtrasoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(painelValorTotalDiariasCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(painelValorTotalCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelCapacidadePassageirosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(painelCapacidadeBagagemCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelDataEmissaoCliente)
-                                    .addComponent(labelImagemCarroCliente))
-                                .addComponent(labelDataRetiradaCliente))
-                            .addComponent(labelStatusCliente))
+                        .addComponent(labelDataRetiradaCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(painelDataRetiradaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(labelDataDevolucaoCliente))
+                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                        .addComponent(painelValorTotalCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelImagemCarroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                        .addComponent(painelDataEmissaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(labelDataDevolucaoCliente)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(painelDataDevolucaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(painelDataRetiradaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(painelStatusCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(labelDevolvidoEmCliente)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(painelDevolvidoEmCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                                .addComponent(labelAtendenteCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(labelValorTotalDiariasCliente)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(painelAtendenteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(painelValorTotalDiariasCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(labelTaxaDiariaCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(painelTaxaDiariaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteExibirReservaClienteLayout.createSequentialGroup()
-                        .addComponent(painelCapacidadePassageirosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(painelDataDevolucaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(labelDevolvidoEmCliente))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuporteExibirReservaClienteLayout.createSequentialGroup()
+                        .addGroup(painelSuporteExibirReservaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelTaxaTotalAtrasoCliente)
+                            .addComponent(labelTaxaDiariaAtrasoCliente))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(painelTaxaTotalAtrasoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(painelTaxaDiariaAtrasoCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(painelDevolvidoEmCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         buttonRetornarExibirReservaCliente.setBackground(new java.awt.Color(192, 2, 0));
@@ -781,31 +637,26 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         painelPrincipalLayout.setHorizontalGroup(
             painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(painelLocadora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalLayout.createSequentialGroup()
                         .addComponent(painelSuporteExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(painelPrincipalLayout.createSequentialGroup()
-                        .addComponent(labelExibirReservaCliente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(painelPerfilCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalLayout.createSequentialGroup()
-                        .addComponent(buttonRetornarExibirReservaCliente)
+                        .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelExibirReservaCliente)
+                            .addComponent(buttonRetornarExibirReservaCliente))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(painelPrincipalLayout.createSequentialGroup()
+                .addComponent(painelLocadora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         painelPrincipalLayout.setVerticalGroup(
             painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalLayout.createSequentialGroup()
-                .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalLayout.createSequentialGroup()
-                        .addComponent(painelLocadora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(painelPerfilCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(labelExibirReservaCliente))
+                .addComponent(painelLocadora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(labelExibirReservaCliente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(painelSuporteExibirReservaCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(4, 4, 4)
@@ -825,16 +676,21 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         );
 
         pack();
-    }
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonRetornarExibirReservaClienteActionPerformed(java.awt.event.ActionEvent evt) {
+    private void buttonRetornarExibirReservaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarExibirReservaClienteActionPerformed
         ReservasCliente novatela = new ReservasCliente();
         novatela.setVisible(true);
         this.setVisible(false);
-    }
+    }//GEN-LAST:event_buttonRetornarExibirReservaClienteActionPerformed
 
 
     public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -851,7 +707,9 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ExibirReservaCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
 
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ExibirReservaCliente().setVisible(true);
@@ -859,34 +717,28 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
         });
     }
 
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonRetornarExibirReservaCliente;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JLabel labelAtendenteCliente;
     private javax.swing.JLabel labelCapacidadeBagagemCliente;
     private javax.swing.JLabel labelCapadidadePassageirosCliente;
     private javax.swing.JLabel labelCorCliente;
     private javax.swing.JLabel labelDataDevolucaoCliente;
-    private javax.swing.JLabel labelDataEmissaoCliente;
     private javax.swing.JLabel labelDataRetiradaCliente;
     private javax.swing.JLabel labelDevolvidoEmCliente;
     private javax.swing.JLabel labelExibirReservaCliente;
-    private javax.swing.JLabel labelImagemCarroCliente;
     private javax.swing.JLabel labelLocadora;
     private javax.swing.JLabel labelModeloCarroCliente;
-    private javax.swing.JLabel labelPainelAtendenteExibirReservaCliente;
     private javax.swing.JLabel labelPainelCapacidadeBagagensExibirReservaCliente;
     private javax.swing.JLabel labelPainelCapacidadePassageirosExibirReservaCliente;
     private javax.swing.JLabel labelPainelCorExibirReservaCliente;
     private javax.swing.JLabel labelPainelDataDevolucaoExibirReservaCliente;
-    private javax.swing.JLabel labelPainelDataEmissaoExibirReservaCliente;
     private javax.swing.JLabel labelPainelDataRetiradaExibirReservaCliente;
     private javax.swing.JLabel labelPainelDevolvidoEmExibirReservaCliente;
     private javax.swing.JLabel labelPainelModeloCarroExibirReservaCliente;
@@ -904,18 +756,14 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel labelTaxaTotalAtrasoCliente;
     private javax.swing.JLabel labelValorTotalAluguelCliente;
     private javax.swing.JLabel labelValorTotalDiariasCliente;
-    private javax.swing.JPanel painelAtendenteCliente;
     private javax.swing.JPanel painelCapacidadeBagagemCliente;
     private javax.swing.JPanel painelCapacidadePassageirosCliente;
     private javax.swing.JPanel painelCorCliente;
     private javax.swing.JPanel painelDataDevolucaoCliente;
-    private javax.swing.JPanel painelDataEmissaoCliente;
     private javax.swing.JPanel painelDataRetiradaCliente;
     private javax.swing.JPanel painelDevolvidoEmCliente;
-    private javax.swing.JPanel painelImagemCarroCliente;
     private javax.swing.JPanel painelLocadora;
     private javax.swing.JPanel painelModeloCarroCliente;
-    private javax.swing.JPanel painelPerfilCliente;
     private javax.swing.JPanel painelPlacaCliente1;
     private javax.swing.JPanel painelPrincipal;
     private javax.swing.JPanel painelStatusCliente;
@@ -925,4 +773,5 @@ public class ExibirReservaCliente extends javax.swing.JFrame {
     private javax.swing.JPanel painelTaxaTotalAtrasoCliente;
     private javax.swing.JPanel painelValorTotalCliente;
     private javax.swing.JPanel painelValorTotalDiariasCliente;
+    // End of variables declaration//GEN-END:variables
 }

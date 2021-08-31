@@ -288,8 +288,7 @@ public class LocadoraController {
         return dados;
     }
 
-    /*
-    public String[] exibirCarroReserva(String cpf, String retirada, String devolucao, String placa){
+    public String[] exibirCarroReserva(String retirada, String devolucao, String placa){
         Carro carro = null;
 
         ArrayList<Carro> carros = locadora.getCarros();
@@ -300,10 +299,6 @@ public class LocadoraController {
             }
         }
         String dados[] = new String[9];
-
-
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
 
         dados[0] = retirada;
         dados[1] = devolucao;
@@ -317,5 +312,5 @@ public class LocadoraController {
 
         return dados;
     }
-*/
+
 }

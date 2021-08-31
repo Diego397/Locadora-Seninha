@@ -1,9 +1,11 @@
 //Model
 package locadorasenninha.View;
+import locadorasenninha.Model.Main;
 
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 
@@ -15,6 +17,12 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
     public SelecioneClienteAdmin() {
         initComponents();
         CreateColumns();
+
+        String dados[][] = Main.controller.atualizaTabelaClientes();
+
+        for(int i = 0; i< Main.controller.qtdeClientes(); i++){
+            AdicionarDados(dados[i][0],dados[i][1]);
+        }
     }
 
     //Método que cria as colunas
@@ -206,9 +214,14 @@ public class SelecioneClienteAdmin extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Cliente Selecionado!");
+
+        int index = jTable1.getSelectedRow();
+        TableModel model = jTable1.getModel();
+        Main.cpfView = (String)model.getValueAt(index,1);
+
         SelecionarDatasReservaAdmin novatela = new SelecionarDatasReservaAdmin();
         novatela.setVisible(true);
-        this.setVisible(false);        
+        this.setVisible(false);   
     }
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {

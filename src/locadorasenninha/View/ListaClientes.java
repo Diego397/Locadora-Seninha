@@ -238,8 +238,7 @@ public class ListaClientes extends javax.swing.JFrame {
     }
 
     private void buttonCarregarDadosListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                            
-        AdicionarDados("Marcão","222.333.555-77");
-        AdicionarDados("Rei Sergio","123.456.789-00");
+
     }
 
     private void buttonCadastrarClienteListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                               

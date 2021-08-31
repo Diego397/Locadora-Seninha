@@ -18,7 +18,7 @@ public class ReservasCliente extends javax.swing.JFrame {
         String dados[][] = Main.controller.atualizaTabelaReservas();
 
         for(int i = 0; i< Main.controller.qtdeReservas(); i++){
-            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][14]);
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][4]);
         }
     }
 

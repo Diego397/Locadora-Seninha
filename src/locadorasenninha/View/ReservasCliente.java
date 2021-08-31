@@ -14,6 +14,12 @@ public class ReservasCliente extends javax.swing.JFrame {
     public ReservasCliente() {
         initComponents();
         CreateColumns();
+
+        String dados[][] = Main.controller.atualizaTabelaReservas();
+
+        for(int i = 0; i< Main.controller.qtdeReservas(); i++){
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][14]);
+        }
     }
 
     //Método que cria as colunas
@@ -25,6 +31,7 @@ public class ReservasCliente extends javax.swing.JFrame {
         dm.addColumn("Modelo do Carro");
         dm.addColumn("Retirada Prevista");
         dm.addColumn("Devolução Prevista");
+        dm.addColumn("Nº Reserva");
     }
 
     //Método que faz uma busca na tabela
@@ -37,8 +44,8 @@ public class ReservasCliente extends javax.swing.JFrame {
     }
     
     //Método que adiciona os dados nas linhas da tabela
-    private void AdicionarDados(String modelo,String retirada, String devolucao){
-        String[] rowData = {modelo,retirada,devolucao};
+    private void AdicionarDados(String modelo,String retirada, String devolucao, String numero){
+        String[] rowData = {modelo,retirada,devolucao,numero};
         dm.addRow(rowData);
     }
     
@@ -246,8 +253,7 @@ public class ReservasCliente extends javax.swing.JFrame {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        AdicionarDados("Fusca","15/08/2021 10:00","25/08/2021");
-        AdicionarDados("Combi","17/08/2021 12:00","29/08/2021");
+
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {

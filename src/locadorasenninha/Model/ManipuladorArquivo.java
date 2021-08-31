@@ -57,7 +57,7 @@ public class ManipuladorArquivo {
         try{
             linha = buffRead.readLine();
             int tam = Integer.parseInt(linha);
-            System.out.println(tam);
+            //System.out.println(tam);
             for (int i = 0; i < tam; i++) {
 
                 linha = buffRead.readLine();
@@ -96,7 +96,7 @@ public class ManipuladorArquivo {
         try{
             linha = buffRead.readLine();
             int tam = Integer.parseInt(linha);
-            System.out.println(tam);
+            //System.out.println(tam);
             for (int i = 0; i < tam; i++) {
 
                 linha = buffRead.readLine();

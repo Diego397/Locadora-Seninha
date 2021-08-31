@@ -16,7 +16,7 @@ public class ManipuladorArquivo {
             linha = buffRead.readLine();
             //System.out.println(linha);
             int tam = Integer.parseInt(linha);
-            System.out.println(tam);
+            //System.out.println(tam);
             for (int i = 0; i < tam; i++) {
                 linha = buffRead.readLine();
                 String nome = linha;

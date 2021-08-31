@@ -1,11 +1,19 @@
-1
-marcus
+2
+Marcus
 111.111.111-11
 12/12/2000
-najfja@gmail.com
+marcus@gmail.com
 rua a
 60720-806
 (85) 9 8888-8888
+123
+Diego
+222.222.222-22
+20/11/1999
+diego@gmail.com
+rua a
+60734-456
+(85) 9 8878-8888
 123
 3
 Volkswagen Fusca
@@ -22,22 +30,30 @@ verde
 56764
 5
 100
-50
-50
+100
+100
 Fiat Mobi
 HYU7657
-azul
+branco
 56767
 5
 100
-50
-50
-1
-jose
-222.222.222-22
-12/12/2000
-najfja@gmail.com
+150
+150
+2
+Jose
+333.333.333-33
+20/05/2000
+jose@gmail.com
 rua a
 60720-806
 (85) 9 8888-8888
+123
+Josue
+444.444.444-44
+12/12/2001
+josue@gmail.com
+rua b
+61235-503
+(85) 9 9988-8345
 123

@@ -288,7 +288,7 @@ public class LocadoraController {
         return dados;
     }
 
-    public String[] exibirCarroReserva(String retirada, String devolucao, String placa){
+    public String[] exibirCarroReserva(String placa, String retirada, String devolucao){
         Carro carro = null;
 
         ArrayList<Carro> carros = locadora.getCarros();

@@ -81,7 +81,7 @@ public class LocadoraController {
 //Reserva
     public boolean verificaFazerReserva(int numeroReserva, String dataEmissao, String dataRetirada,
                                         String dataDevolucao, Carro carro, Cliente cliente,
-                                        Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso,
+                                        double valorTotalDiaria, double valorTotalAtraso,
                                         double valorTotalGeral) throws ParseException {
         if (numeroReserva > 1 && numeroReserva < 99999)
         {
@@ -91,8 +91,7 @@ public class LocadoraController {
                 {
                     if (cliente != null)
                     {
-                        if (funcionario != null)
-                        {
+                        
                             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
                             Calendar dataEmissaoCal = Calendar.getInstance();
@@ -107,9 +106,9 @@ public class LocadoraController {
                                 e.printStackTrace();
                             }
                             locadora.fazerReserva(numeroReserva, dataEmissaoCal, dataRetiradaCal, dataDevolucaoCal, carro,
-                                    cliente, funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
+                                    cliente, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
                             return true;
-                        }
+                        
                     }
                 }
             }
@@ -277,7 +276,7 @@ public class LocadoraController {
         dados[8] = String.valueOf(reserva.getValorTotalAtraso());
         dados[9] = String.valueOf(reserva.getValorTotalGeral());
 
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
         String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
         String dataRetiradaString = formato.format(reserva.getDataRetirada().getTime());

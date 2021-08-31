@@ -1,6 +1,12 @@
 package locadorasenninha.View;
 import locadorasenninha.Model.Main;
 import javax.swing.JOptionPane;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.text.ParseException;
+import java.util.Objects;
+import locadorasenninha.Model.*;
 
 
 public class DetalhesVeiculo extends javax.swing.JFrame {
@@ -511,6 +517,7 @@ public class DetalhesVeiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonRetornarCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRetornarCatalogoActionPerformed
+        
         SelecionarCarro novatela = new SelecionarCarro();
         novatela.setVisible(true);
         this.setVisible(false);
@@ -518,6 +525,45 @@ public class DetalhesVeiculo extends javax.swing.JFrame {
 
     private void buttonFecharReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFecharReservaActionPerformed
         if (checkBoxConfirmarDetalhesVeiculo.isSelected()){
+			//Main.placacarroView, Main.dataRetiradaView, 
+
+			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+
+			Calendar atualTime = Calendar.getInstance();
+			atualTime.getTime();
+
+        	String dataEmissaoString = formato.format(atualTime);
+
+			ArrayList<Reserva> reservas = Main.locadora.getReservas();
+			Reserva reserva = null;
+
+        	for(int i=0;i<reservas.size();i++){
+            if(Objects.equals((reservas).get(i).getCarro().getPlaca(), Main.placacarroView)){
+                reserva = (reservas).get(i); //Retorna o cliente
+            }
+			Carro carro = reserva.getCarro();
+
+			ArrayList<Cliente> clientes = Main.locadora.getClientes();
+			Cliente cliente  = null;
+			for(int i=0;i<clientes.size();i++){
+				if(Objects.equals((clientes).get(i).getCpf(), Main.cpfView)){
+					cliente = (clientes).get(i); //Retorna o cliente
+				}
+
+			
+
+			if (Main.controller.verificaFazerReserva(Main.locadora.getNumeroReserva(), dataEmissaoString, dados[0], dados[1], carro, cliente
+				, dados[7], dados[8], dados[7]));
+			{
+				JOptionPane.showMessageDialog(null, "Cliente Cadastrado!");
+				ListaClientes novatela = new ListaClientes();
+				novatela.setVisible(true);
+				this.setVisible(false);
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Cadastro inválido!");
+			}
            JOptionPane.showMessageDialog(null, "Reserva Confirmada!"); 
            ListaReservas novatela = new ListaReservas();
            novatela.setVisible(true);

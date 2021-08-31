@@ -41,6 +41,10 @@ public class Locadora {
     public ArrayList<Funcionario> getFuncionarios(){
         return listaFuncionarios;
     }
+
+    public int getNumeroReserva() {
+        return numeroReservas;
+    }
     
 
 //MÉTODO OPERACIONAL ADMIN
@@ -199,12 +203,12 @@ public class Locadora {
 
     public static void fazerReserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada,
                                     Calendar dataDevolucao, Carro carro, Cliente cliente,
-                                    Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso,
+                                    double valorTotalDiaria, double valorTotalAtraso,
                                     double valorTotalGeral){
         //Incrementar o numero da reserva;
         numeroReserva = numeroReserva + 1;
         Reserva reserva = new Reserva(numeroReserva, dataEmissao, dataRetirada, dataDevolucao, carro, cliente, 
-                                    funcionario, valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
+                                    valorTotalDiaria, valorTotalAtraso, valorTotalGeral);
         //Adicionar nas listas de reserva de cada objeto;
         reservasLocadora.add(reserva);
         cliente.getReservasCliente().add(reserva);

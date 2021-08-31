@@ -13,7 +13,6 @@ public class Reserva {
 
     private Carro carro;
     private Cliente cliente;
-    private Funcionario funcionario;
 
     private double valorTotalDiaria; //tipo dinheiro
     private double valorTotalAtraso; //tipo dinheiro
@@ -21,8 +20,7 @@ public class Reserva {
     
     //Método Construtor:
     public Reserva(int numeroReserva, Calendar dataEmissao, Calendar dataRetirada, 
-            Calendar dataDevolucao, Carro carro, Cliente cliente, 
-            Funcionario funcionario, double valorTotalDiaria, double valorTotalAtraso, 
+            Calendar dataDevolucao, Carro carro, Cliente cliente, double valorTotalDiaria, double valorTotalAtraso, 
             double valorTotalGeral) {
         this.numeroReserva = numeroReserva;
         this.dataEmissao = dataEmissao;
@@ -31,7 +29,6 @@ public class Reserva {
         this.status = "RESERVADA";
         this.carro = carro;
         this.cliente = cliente;
-        this.funcionario = funcionario;
         this.valorTotalDiaria = valorTotalDiaria;
         this.valorTotalAtraso = valorTotalAtraso;
         this.valorTotalGeral = valorTotalGeral;
@@ -92,14 +89,6 @@ public class Reserva {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-
-    public Funcionario getFuncionario() {
-        return funcionario;
-    }
-
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
     }
 
     public double getValorTotalDiaria() {

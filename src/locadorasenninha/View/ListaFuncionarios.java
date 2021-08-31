@@ -238,7 +238,7 @@ public class ListaFuncionarios extends javax.swing.JFrame {
     private void textFieldFacaBuscaListaFuncionariosKeyReleased(java.awt.event.KeyEvent evt) {
         String busca = textFieldFacaBuscaListaFuncionarios.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
-    }//GEN-LAST:event_textFieldFacaBuscaListaFuncionariosKeyReleased
+    }                                                               
 
     private void buttonCadastrarFuncionarioListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
         CadastrarFuncionario novatela = new CadastrarFuncionario();

@@ -93,7 +93,7 @@ public class LocadoraController {
                     {
                         if (funcionario != null)
                         {
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
                             Calendar dataEmissaoCal = Calendar.getInstance();
                             Calendar dataRetiradaCal = Calendar.getInstance();
@@ -129,7 +129,7 @@ public class LocadoraController {
     public boolean verificaDataReserva(String dataRetirada, String dataDevolucao) throws ParseException {
         if (dataRetirada != null && dataRetirada.length() > 0 && dataDevolucao != null && dataDevolucao.length() > 0)
         {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             Calendar dataDevolucaoCal = Calendar.getInstance();
             Calendar dataRetiradaCal = Calendar.getInstance();
             try{

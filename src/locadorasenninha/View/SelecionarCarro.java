@@ -188,7 +188,9 @@ public class SelecionarCarro extends javax.swing.JFrame {
     }
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
+
         JOptionPane.showMessageDialog(null, "Carro Selecionado!");
+
         DetalhesVeiculo novatela = new DetalhesVeiculo();
         novatela.setVisible(true);
         this.setVisible(false);

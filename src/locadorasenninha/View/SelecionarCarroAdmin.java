@@ -89,7 +89,7 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
         CarregarDados.setBackground(new java.awt.Color(192, 2, 0));
         CarregarDados.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         CarregarDados.setForeground(new java.awt.Color(255, 255, 255));
-        CarregarDados.setText("CARREGAR DADOS");
+        CarregarDados.setText("TELA INICIAL");
         CarregarDados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CarregarDadosActionPerformed(evt);
@@ -180,8 +180,9 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
     }
 
     private void CarregarDadosActionPerformed(java.awt.event.ActionEvent evt) {
-        AdicionarDados("Fusca","Azul","PQ45RSK");
-        AdicionarDados("Kombi","Verde da Filadélfia","4CBR33");
+        TelaInicial novatela = new TelaInicial();
+        novatela.setVisible(true);
+        this.setVisible(false);
     }
 
     private void RetornarBotaoActionPerformed(java.awt.event.ActionEvent evt) {

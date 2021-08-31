@@ -7,19 +7,27 @@ rua a
 60720-806
 (85) 9 8888-8888
 123
-2
-Fusca
-pyp1234
+3
+Volkswagen Fusca
+PYP1234
 azul
 56767
 5
 100
 50
 50
-Celta
-pyp1235
+Chevrolet Celta
+PYP1235
 verde
 56764
+5
+100
+50
+50
+Fiat Mobi
+HYU7657
+azul
+56767
 5
 100
 50

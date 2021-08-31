@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class ExibirReservaAdmin extends javax.swing.JFrame {
     int num = Main.numeroView;
-    String[] dados = new String[14];
+    String[] dados = new String[15];
     public ExibirReservaAdmin() {
         initComponents();
         dados = Main.controller.exibirReserva(Main.numeroView);

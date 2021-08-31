@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import javax.swing.table.TableModel;
 
 public class SelecionarCarroAdmin extends javax.swing.JFrame {
     DefaultTableModel dm;
@@ -191,6 +192,10 @@ public class SelecionarCarroAdmin extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
         JOptionPane.showMessageDialog(null, "Carro Selecionado!");
+        int index = jTable1.getSelectedRow();
+        TableModel model = jTable1.getModel();
+        Main.placacarroView = (String)model.getValueAt(index,2);
+
         DetalhesVeiculoAdmin novatela = new DetalhesVeiculoAdmin();
         novatela.setVisible(true);
         this.setVisible(false);

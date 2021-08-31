@@ -214,13 +214,13 @@ public class ListaClientes extends javax.swing.JFrame {
         pack();
     }
 
-    private void buttonVoltarMenuListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarMenuListaClientesFuncionarioActionPerformed
+    private void buttonVoltarMenuListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                         
         MenuFuncionario novatela = new MenuFuncionario();
         novatela.setVisible(true);
         this.setVisible(false);
     }
 
-    private void tableListaClientesFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableListaClientesFuncionarioMouseClicked
+    private void tableListaClientesFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {                                                           
         JOptionPane.showMessageDialog(null, "Cliente Selecionado!");
 
         int index = tableListaClientesFuncionario.getSelectedRow();
@@ -232,17 +232,17 @@ public class ListaClientes extends javax.swing.JFrame {
         this.setVisible(false);
     }
 
-    private void textFieldFacaBuscaListaClientesFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldFacaBuscaListaClientesFuncionarioKeyReleased
+    private void textFieldFacaBuscaListaClientesFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {                                                                       
         String busca = textFieldFacaBuscaListaClientesFuncionario.getText().toLowerCase(); //convertendo para minúsculo
         filter(busca); //realizando a busca
     }
 
-    private void buttonCarregarDadosListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCarregarDadosListaClientesFuncionarioActionPerformed
+    private void buttonCarregarDadosListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                            
         AdicionarDados("Marcão","222.333.555-77");
         AdicionarDados("Rei Sergio","123.456.789-00");
     }
 
-    private void buttonCadastrarClienteListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarClienteListaClientesFuncionarioActionPerformed
+    private void buttonCadastrarClienteListaClientesFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                               
         CadastrarCliente novatela = new CadastrarCliente();
         novatela.setVisible(true);
         this.setVisible(false);

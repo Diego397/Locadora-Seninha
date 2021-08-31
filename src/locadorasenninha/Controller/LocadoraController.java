@@ -177,7 +177,7 @@ public class LocadoraController {
     }
 
     public String[][] atualizaTabelaFuncionarios(){
-        return locadora.dadosClientes();
+        return locadora.dadosFuncionarios();
     }
 
     public String[][] atualizaTabelaReservas(){

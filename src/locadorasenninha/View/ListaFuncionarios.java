@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
-import locadorasenninha.Model.Main;
 import javax.swing.table.TableModel;
 
 public class ListaFuncionarios extends javax.swing.JFrame {

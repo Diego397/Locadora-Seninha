@@ -248,7 +248,7 @@ public class LocadoraController {
         return dados;
     }
 
-    public String[] exibirReserva(String numeroReserva){
+    public String[] exibirReserva(int numeroReserva){
         Reserva reserva = null;
 
         ArrayList<Reserva> reservas = locadora.getReservas();
@@ -258,7 +258,7 @@ public class LocadoraController {
                 reserva = (reservas).get(i); //Retorna o cliente
             }
         }
-        String dados[] = new String[14];
+        String dados[] = new String[15];
 
         Carro carro = reserva.getCarro();
 
@@ -283,6 +283,7 @@ public class LocadoraController {
         dados[11] = dataRetiradaString;
         dados[12] = reserva.getStatus();
         dados[13] = dataDevolucaoString;
+        dados[14] = String.valueOf(reserva.getNumeroReserva());
 
         return dados;
     }

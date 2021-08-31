@@ -10,7 +10,7 @@ import java.util.Calendar;
 
 public class Main{
     public static String cpfView = new String();
-    public static String numeroView = new String();
+    public static int numeroView;
     public static Locadora locadora = new Locadora();
     public static LocadoraController controller = new LocadoraController(locadora);
 

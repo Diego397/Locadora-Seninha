@@ -238,7 +238,7 @@ public class ReservasCliente extends javax.swing.JFrame {
 
         int index = jTable1.getSelectedRow();
         TableModel model = jTable1.getModel();
-        Main.numeroView = (String)model.getValueAt(index,4);
+        Main.numeroView = (int)model.getValueAt(index,4);
 
         ExibirReservaCliente novatela = new ExibirReservaCliente();
         novatela.setVisible(true);

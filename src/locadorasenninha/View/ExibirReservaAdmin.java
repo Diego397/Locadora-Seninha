@@ -4,7 +4,8 @@ import locadorasenninha.Model.Main;
 import javax.swing.JOptionPane;
 
 public class ExibirReservaAdmin extends javax.swing.JFrame {
-    String[] dados = new String[14];
+    String[] dados = new String[15];
+
 
     public ExibirReservaAdmin() {
         initComponents();

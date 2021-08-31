@@ -20,7 +20,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         String dados[][] = Main.controller.atualizaTabelaReservas();
 
         for(int i = 0; i< Main.controller.qtdeReservas(); i++){
-            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3]);
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3], dados[i][14]);
         }
     }
     
@@ -34,6 +34,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         dm.addColumn("Retirada Prevista");
         dm.addColumn("Devolução Prevista");
         dm.addColumn("Nome do Cliente");
+        dm.addColumn("Nº Reserva");
     }
     
     //Método que faz uma busca na tabela
@@ -45,8 +46,8 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
     }
     
     //Método que adiciona os dados nas linhas da tabela
-    private void AdicionarDados(String modelo,String retirada, String devolucao, String cliente){
-        String[] rowData = {modelo,retirada,devolucao,cliente};
+    private void AdicionarDados(String modelo,String retirada, String devolucao, String cliente, String numero){
+        String[] rowData = {modelo,retirada,devolucao,cliente,numero};
         dm.addRow(rowData);
     }
 
@@ -249,8 +250,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
     }
 
     private void buttonCarregarDadosListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
-        AdicionarDados("Fusca","15/08/2021","25/08/2021","Lulu");
-        AdicionarDados("Combi","17/08/2021","29/08/2021","Lulu");
+
     }
 
     private void tableListaReservasAdminMouseClicked(java.awt.event.MouseEvent evt) {
@@ -258,7 +258,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
 
         int index = tableListaReservasAdmin.getSelectedRow();
         TableModel model = tableListaReservasAdmin.getModel();
-        Main.numeroView = (String)model.getValueAt(index,4);
+        Main.numeroView = (int)model.getValueAt(index,4);
 
         ExibirReservaAdmin novatela = new ExibirReservaAdmin();
         novatela.setVisible(true);

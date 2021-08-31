@@ -21,7 +21,7 @@ public class ListaReservas extends javax.swing.JFrame {
         String dados[][] = Main.controller.atualizaTabelaReservas();
 
         for(int i = 0; i< Main.controller.qtdeReservas(); i++){
-            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3], dados[i][4]);
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3], dados[i][14]);
         }
     }
     
@@ -260,7 +260,7 @@ public class ListaReservas extends javax.swing.JFrame {
 
         int index = tableListaReservasFuncionario.getSelectedRow();
         TableModel model = tableListaReservasFuncionario.getModel();
-        Main.numeroView = (String)model.getValueAt(index,4);
+        Main.numeroView = (int)model.getValueAt(index,4);
 
         ExibirReservaFuncionario novatela = new ExibirReservaFuncionario();
         novatela.setVisible(true);

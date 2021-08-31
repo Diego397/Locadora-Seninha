@@ -339,15 +339,20 @@ public class LocadoraController {
 
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
-        //String dataEmissaoString = formato.format(reserva.getDataEmissao().getTime());
+        String devolvidoEMString = new String();
+        if (reserva.getStatus().equals("DEVOLVIDO")){
+             devolvidoEMString = formato.format(reserva.getDevolvidoEM().getTime());}
+        
+        else{devolvidoEMString = "----";}
+        
         String dataRetiradaString = formato.format(reserva.getDataRetirada().getTime());
         String dataDevolucaoString = formato.format(reserva.getDataDevolucao().getTime());
 
-        dados[10] = "data de emissão";
-        dados[11] = dataRetiradaString;
-        dados[12] = reserva.getStatus();
-        dados[13] = dataDevolucaoString;
-        dados[14] = String.valueOf(reserva.getNumeroReserva());
+        dados[10] = dataRetiradaString;
+        dados[11] = reserva.getStatus();
+        dados[12] = dataDevolucaoString;
+        dados[13] = String.valueOf(reserva.getNumeroReserva());
+        dados[14] = devolvidoEMString;
 
         return dados;
     }
@@ -377,6 +382,62 @@ public class LocadoraController {
         return dados;
     }
 
+    public boolean retirarCarroController(int numeroReserva){
 
+        ArrayList<Reserva> reservas = locadora.getReservas();
+        Reserva reserva = null;
+
+        for(int i=0;i<reservas.size();i++){
+            if(Objects.equals((reservas).get(i).getNumeroReserva(), numeroReserva)){
+                reserva = (reservas).get(i); //Retorna a reserva
+            }
+        }
+        if (reserva.getStatus().equals("RESERVADA")){
+            Calendar atualTime = Calendar.getInstance();
+            atualTime.getTime();        
+            reserva.setDevolvidoEM(atualTime);
+            reserva.setStatus("RETIRADO");
+            return true;
+        }
+        return false;
+        
+        
+    }
+
+    public boolean devolverCarroController(int numeroReserva){
+
+        ArrayList<Reserva> reservas = locadora.getReservas();
+        Reserva reserva = null;
+
+        for(int i=0;i<reservas.size();i++){
+            if(Objects.equals((reservas).get(i).getNumeroReserva(), numeroReserva)){
+                reserva = (reservas).get(i); //Retorna a reserva
+            }
+        }
+
+        if (reserva.getStatus().equals("RETIRADO")){
+            Calendar atualTime = Calendar.getInstance();
+            atualTime.getTime();        
+            reserva.setDevolvidoEM(atualTime);
+            reserva.setStatus("DEVOLVIDO");
+            return true;
+        }
+        return false;
+        
+        
+    }
+
+    public void cancelarController(int numeroReserva){
+
+        ArrayList<Reserva> reservas = locadora.getReservas();
+        Reserva reserva = null;
+
+        for(int i=0;i<reservas.size();i++){
+            if(Objects.equals((reservas).get(i).getNumeroReserva(), numeroReserva)){
+                reserva = (reservas).get(i); //Retorna a reserva
+            }
+        }
+        reserva.setStatus("CANCELADO");
+    }    
 
 }

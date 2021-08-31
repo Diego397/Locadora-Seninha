@@ -9,6 +9,7 @@ public class Reserva {
     private Calendar dataRetirada;
     private Calendar dataDevolucao;
     private String status; //reservado, retirado, devolvido, cancelado
+    private Calendar devolvidoEM;
 
     private Carro carro;
     private Cliente cliente;
@@ -41,6 +42,14 @@ public class Reserva {
     public void setNumeroReserva(int numeroReserva) {
         this.numeroReserva = numeroReserva;
     }
+
+    public Calendar getDevolvidoEM() {
+        return devolvidoEM;
+    }
+
+    public void setDevolvidoEM(Calendar devolvidoEM) {
+        this.devolvidoEM = devolvidoEM;
+    }    
 
     /*
     public Calendar getDataEmissao() {

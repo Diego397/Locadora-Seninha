@@ -47,47 +47,37 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="painelLocadora" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="labelExibirReservaFuncionario" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="painelPerfilCliente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="painelExibirReservaFuncionario" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="buttonRetornarExibirReservaFuncionario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="buttonCancelarReservaFuncionario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="buttonRetirarCarroFuncionario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="buttonDevolverCarroFuncionario" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="buttonRetornarExibirReservaFuncionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="buttonCancelarReservaFuncionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="buttonRetirarCarroFuncionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="buttonDevolverCarroFuncionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="painelLocadora" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Component id="painelExibirReservaFuncionario" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="painelLocadora" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="painelPerfilCliente" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="labelExibirReservaFuncionario" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="painelLocadora" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                  <Component id="labelExibirReservaFuncionario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="painelExibirReservaFuncionario" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -119,7 +109,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="labelLocadora" min="-2" pref="236" max="-2" attributes="0"/>
-                      <EmptySpace pref="558" max="32767" attributes="0"/>
+                      <EmptySpace pref="554" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -142,26 +132,6 @@
               </Properties>
             </Component>
           </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="painelPerfilCliente">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="2" red="c0" type="rgb"/>
-            </Property>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="536" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
         </Container>
         <Component class="javax.swing.JLabel" name="labelExibirReservaFuncionario">
           <Properties>
@@ -186,137 +156,94 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="painelDataDevolucaoFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelDataDevolucaoFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="painelDevolvidoEmFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelDevolvidoEmFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="labelModeloCarroFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="painelModeloCarroFuncionario" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="labelPlacaFuncionario" min="-2" max="-2" attributes="0"/>
-                                          <Component id="painelPlacaFuncionario" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="labelModeloCarroFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="painelModeloCarroFuncionario" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="painelCorFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPlacaFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="painelPlacaFuncionario" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelCorFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="painelCorFuncionario" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="painelTaxaDiariaFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelTaxaDiariaFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="painelTaxaDiariaAtrasoFuncionario" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelTaxaDiariaAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="painelTaxaDiariaFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelTaxaDiariaFuncionario" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="painelTaxaDiariaAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelTaxaDiariaAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="painelDataEmissaoFuncionario" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="labelDataEmissaoFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="painelCapacidadePassageirosFuncionario" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="painelCapacidadePassageirosFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="labelCapadidadePassageirosFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="painelCapacidadeBagagemFuncionario" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="painelCapacidadeBagagemFuncionario" max="32767" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="painelValorTotalDiariasFuncionario" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="painelDataRetiradaFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="labelDataRetiradaFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="labelCapacidadeBagagemFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                                      <Component id="labelValorTotalDiariasFuncionario" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="labelStatusFuncionario" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="painelStatusFuncionario" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="painelAtendenteFuncionario" alignment="0" max="32767" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="labelAtendenteFuncionario" min="-2" max="-2" attributes="0"/>
+                                              <Component id="labelCapacidadeBagagemFuncionario" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="painelStatusFuncionario1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="labelStatusFuncionario1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelTaxaTotalAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                      <Component id="labelStatusFuncionario1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="labelPainelNumeroReservaExibirReservaAdmin" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="painelValorTotalFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelValorTotalAluguelFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelDataRetiradaFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="painelDataRetiradaFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelDevolvidoEmFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="painelDevolvidoEmFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="labelDataDevolucaoFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelStatusFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="painelDataDevolucaoFuncionario" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="painelStatusFuncionario" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="labelValorTotalAluguelFuncionario" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="painelTaxaTotalAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="painelValorTotalFuncionario" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="labelImagemCarroFuncionario" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Component id="painelImagemCarroFuncionario" max="32767" attributes="0"/>
-                                      </Group>
                                   </Group>
                               </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelValorTotalDiariasFuncionario" min="-2" max="-2" attributes="0"/>
+                                          <Component id="painelValorTotalDiariasFuncionario" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="painelTaxaTotalAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelTaxaTotalAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="painelImagemCarroFuncionario" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -341,73 +268,63 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelTaxaTotalAtrasoFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="labelValorTotalDiariasFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelValorTotalAluguelFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="labelCapadidadePassageirosFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="labelCapacidadeBagagemFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelTaxaTotalAtrasoFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="painelTaxaTotalAtrasoFuncionario" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="painelValorTotalDiariasFuncionario" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="painelValorTotalFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="painelCapacidadeBagagemFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="painelTaxaTotalAtrasoFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="painelValorTotalDiariasFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="labelImagemCarroFuncionario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="labelDataRetiradaFuncionario" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="labelStatusFuncionario" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="painelDataRetiradaFuncionario" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="painelStatusFuncionario" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="labelDevolvidoEmFuncionario" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="painelDevolvidoEmFuncionario" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="labelStatusFuncionario1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="painelStatusFuncionario1" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="painelDataRetiradaFuncionario" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="labelDevolvidoEmFuncionario" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelDataEmissaoFuncionario" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="painelDataEmissaoFuncionario" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="25" max="32767" attributes="0"/>
-                                              <Component id="labelDataDevolucaoFuncionario" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
                                               <Component id="painelDataDevolucaoFuncionario" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="labelStatusFuncionario" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="12" max="32767" attributes="0"/>
-                                      <Component id="labelAtendenteFuncionario" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="painelAtendenteFuncionario" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="painelStatusFuncionario" min="-2" max="-2" attributes="0"/>
+                                          <Component id="painelDevolvidoEmFuncionario" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="labelValorTotalAluguelFuncionario" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="labelStatusFuncionario1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="labelPainelNumeroReservaExibirReservaAdmin" alignment="3" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="painelValorTotalFuncionario" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Component id="painelImagemCarroFuncionario" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="painelImagemCarroFuncionario" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="painelCapacidadePassageirosFuncionario" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelDataRetiradaFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelDataDevolucaoFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -443,7 +360,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelModeloCarroExibirReservaAdmin" pref="198" max="32767" attributes="0"/>
+                          <Component id="labelPainelModeloCarroExibirReservaAdmin" pref="190" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -457,9 +374,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelModeloCarroExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Modelo do Carro"/>
                   </Properties>
                 </Component>
@@ -477,7 +391,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelCorExibirReservaAdmin" pref="124" max="32767" attributes="0"/>
+                          <Component id="labelPainelCorExibirReservaAdmin" pref="72" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -491,9 +405,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelCorExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Cor"/>
                   </Properties>
                 </Component>
@@ -536,9 +447,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelPlacaAdminExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Placa"/>
                   </Properties>
                 </Component>
@@ -581,9 +489,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelTaxaDiariaExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Taxa Di&#xe1;ria"/>
                   </Properties>
                 </Component>
@@ -601,7 +506,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelTaxaDiariaAtrasoExibirReservaAdmin" max="32767" attributes="0"/>
+                          <Component id="labelPainelTaxaDiariaAtrasoExibirReservaAdmin" pref="108" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -615,9 +520,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelTaxaDiariaAtrasoExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Taxa Di&#xe1;ria Atraso"/>
                   </Properties>
                 </Component>
@@ -653,7 +555,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Taxa Total de Atraso:"/>
+                <Property name="text" type="java.lang.String" value="Total de Atraso:"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="painelStatusFuncionario">
@@ -668,7 +570,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelStatusExibirReservaAdmin" pref="118" max="32767" attributes="0"/>
+                          <Component id="labelPainelStatusExibirReservaAdmin" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -682,9 +584,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelStatusExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Status da Reserva"/>
                   </Properties>
                 </Component>
@@ -702,23 +601,20 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelValorTotalDiariasExibirReservaAdmin" pref="122" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelPainelValorTotalDiariasExibirReservaAdmin" min="-2" pref="95" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelPainelValorTotalDiariasExibirReservaAdmin" alignment="0" max="32767" attributes="0"/>
+                      <Component id="labelPainelValorTotalDiariasExibirReservaAdmin" alignment="0" pref="25" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelValorTotalDiariasExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Valor Total Di&#xe1;rias"/>
                   </Properties>
                 </Component>
@@ -743,7 +639,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Valor Total do Aluguel:"/>
+                <Property name="text" type="java.lang.String" value=" Total do Aluguel:"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="painelValorTotalFuncionario">
@@ -772,9 +668,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelValorTotalAluguelExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Valor Total"/>
                   </Properties>
                 </Component>
@@ -792,7 +685,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelTaxaTotalAtrasoExibirReservaAdmin" max="32767" attributes="0"/>
+                          <Component id="labelPainelTaxaTotalAtrasoExibirReservaAdmin" pref="115" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -806,9 +699,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelTaxaTotalAtrasoExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Taxa Total de Atraso"/>
                   </Properties>
                 </Component>
@@ -825,40 +715,6 @@
                 <Property name="text" type="java.lang.String" value="Status:"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="painelDataEmissaoFuncionario">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelDataEmissaoExibirReservaAdmin" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelPainelDataEmissaoExibirReservaAdmin" alignment="0" pref="25" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelPainelDataEmissaoExibirReservaAdmin">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Data de Emiss&#xe3;o"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Container class="javax.swing.JPanel" name="painelDataRetiradaFuncionario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -885,9 +741,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelDataRetiradaExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Data de Retirada"/>
                   </Properties>
                 </Component>
@@ -919,10 +772,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelDevolvidoEmExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Data da Devolu&#xe7;&#xe3;o"/>
+                    <Property name="text" type="java.lang.String" value="------"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -939,8 +789,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelDataDevolucaoExibirReservaAdmin" pref="158" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelPainelDataDevolucaoExibirReservaAdmin" min="-2" pref="138" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -953,25 +803,11 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelDataDevolucaoExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Data para Devolu&#xe7;&#xe3;o"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="labelDataEmissaoFuncionario">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Data de Emiss&#xe3;o:"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="labelDataDevolucaoFuncionario">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1020,22 +856,11 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="128" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="labelImagemCarroFuncionario">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Imagem do Carro:"/>
-              </Properties>
-            </Component>
             <Container class="javax.swing.JPanel" name="painelCapacidadePassageirosFuncionario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1062,9 +887,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelCapaceidadePassageirosExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Capacidade de Passageiros"/>
                   </Properties>
                 </Component>
@@ -1096,9 +918,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPainelCapacidadeBagagensExibirReservaAdmin">
                   <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="CApacidade de Bagagens"/>
                   </Properties>
                 </Component>
@@ -1126,51 +945,6 @@
                 <Property name="text" type="java.lang.String" value="Capacidade de Bagagens:"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="painelAtendenteFuncionario">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelAtendenteExibirReservaAdmin" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelPainelAtendenteExibirReservaAdmin" alignment="0" pref="25" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelPainelAtendenteExibirReservaAdmin">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Atendente"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JLabel" name="labelAtendenteFuncionario">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Atendente:"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="labelStatusFuncionario1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1182,40 +956,14 @@
                 <Property name="text" type="java.lang.String" value="N&#xba; Reserva:"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="painelStatusFuncionario1">
+            <Component class="javax.swing.JLabel" name="labelPainelNumeroReservaExibirReservaAdmin">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="Numero da Reserva"/>
               </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelPainelNumeroReservaExibirReservaAdmin" pref="122" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelPainelNumeroReservaExibirReservaAdmin" alignment="0" pref="25" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelPainelNumeroReservaExibirReservaAdmin">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="0" green="0" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Numero da Reserva"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
+            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JButton" name="buttonRetornarExibirReservaFuncionario">

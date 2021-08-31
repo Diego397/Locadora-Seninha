@@ -319,16 +319,13 @@ public class LocadoraController {
 
     public boolean fecharReserva(String placa, Calendar retirada, Calendar devolucao){
     
-    
-
-        /*
-    
-
+/*    
     Calendar atualTime = Calendar.getInstance();
     atualTime.getTime();
 
     String dataEmissaoString = formato.format(atualTime);
 */
+
     ArrayList<Carro> carros = locadora.getCarros();
     Carro carro = null;
 
@@ -348,13 +345,13 @@ public class LocadoraController {
 
     try{
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        
+
         double totalDiaria = locadora.calcularValorReserva(retirada, devolucao, carro.getTaxaDiaria());
         double totalAtraso = 0;
         double totalGeral = locadora.calcularValorTotalReserva(totalDiaria, totalAtraso);
         
-        String retiradaString = formato.format(retirada);
-        String devolucaoString = formato.format(devolucao);
+        String retiradaString = formato.format(retirada.getTime());
+        String devolucaoString = formato.format(devolucao.getTime());
 
          return (verificaFazerReserva(locadora.getNumeroReserva(), retiradaString, devolucaoString, carro, cliente
         , totalDiaria, totalAtraso, totalGeral));

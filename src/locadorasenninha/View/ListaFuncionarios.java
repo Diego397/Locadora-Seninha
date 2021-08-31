@@ -98,7 +98,7 @@ public class ListaFuncionarios extends javax.swing.JFrame {
         buttonVoltarMenuListaFuncionarios.setBackground(new java.awt.Color(192, 2, 0));
         buttonVoltarMenuListaFuncionarios.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         buttonVoltarMenuListaFuncionarios.setForeground(new java.awt.Color(255, 255, 255));
-        buttonVoltarMenuListaFuncionarios.setText("VOLTAR AO MENU");
+        buttonVoltarMenuListaFuncionarios.setText("TELA INICIAL");
         buttonVoltarMenuListaFuncionarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonVoltarMenuListaFuncionariosActionPerformed(evt);
@@ -142,7 +142,7 @@ public class ListaFuncionarios extends javax.swing.JFrame {
         buttonCarregarDadosListaFuncionarios.setBackground(new java.awt.Color(192, 2, 0));
         buttonCarregarDadosListaFuncionarios.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         buttonCarregarDadosListaFuncionarios.setForeground(new java.awt.Color(255, 255, 255));
-        buttonCarregarDadosListaFuncionarios.setText("CARREGAR DADOS");
+        buttonCarregarDadosListaFuncionarios.setText("VOLTAR AO MENU ADMIN");
         buttonCarregarDadosListaFuncionarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCarregarDadosListaFuncionariosActionPerformed(evt);
@@ -213,7 +213,7 @@ public class ListaFuncionarios extends javax.swing.JFrame {
     }
 
     private void buttonVoltarMenuListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
-        MenuAdmin novatela = new MenuAdmin();
+        TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
     }
@@ -230,6 +230,9 @@ public class ListaFuncionarios extends javax.swing.JFrame {
     }
 
     private void buttonCarregarDadosListaFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {
+        MenuAdmin novatela = new MenuAdmin();
+        novatela.setVisible(true);
+        this.setVisible(false);
     }
 
     private void textFieldFacaBuscaListaFuncionariosKeyReleased(java.awt.event.KeyEvent evt) {

@@ -371,7 +371,7 @@ public class ExibirClienteAdmin extends javax.swing.JFrame {
         buttonRemoverCliente.setBackground(new java.awt.Color(192, 2, 0));
         buttonRemoverCliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         buttonRemoverCliente.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRemoverCliente.setText("REMOVER CLIENTE");
+        buttonRemoverCliente.setText("TELA INICIAL");
         buttonRemoverCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRemoverClienteActionPerformed(evt);
@@ -432,8 +432,7 @@ public class ExibirClienteAdmin extends javax.swing.JFrame {
     }
 
     private void buttonRemoverClienteActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Cliente Removido!");
-        ListaClientesAdmin novatela = new ListaClientesAdmin();
+        TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);        
     }//GEN-LAST:event_buttonRemoverClienteActionPerformed

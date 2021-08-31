@@ -366,7 +366,7 @@ public class ExibirFuncionario extends javax.swing.JFrame {
         buttonRemoverFuncionario.setBackground(new java.awt.Color(192, 2, 0));
         buttonRemoverFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         buttonRemoverFuncionario.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRemoverFuncionario.setText("REMOVER FUNCIONÁRIO");
+        buttonRemoverFuncionario.setText("TELA INICIAL");
         buttonRemoverFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRemoverFuncionarioActionPerformed(evt);
@@ -429,9 +429,7 @@ public class ExibirFuncionario extends javax.swing.JFrame {
 
 
     private void buttonRemoverFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Funcionário Removido!");
-
-        ListaFuncionarios novatela = new ListaFuncionarios();
+        TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
     }

@@ -112,7 +112,7 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
         buttonVoltarMenuListaClientesAdmin.setBackground(new java.awt.Color(192, 2, 0));
         buttonVoltarMenuListaClientesAdmin.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         buttonVoltarMenuListaClientesAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        buttonVoltarMenuListaClientesAdmin.setText("VOLTAR AO MENU");
+        buttonVoltarMenuListaClientesAdmin.setText("TELA INICIAL");
         buttonVoltarMenuListaClientesAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonVoltarMenuListaClientesAdminActionPerformed(evt);
@@ -122,7 +122,7 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
         buttonCarregarDadosListaClientesAdmin.setBackground(new java.awt.Color(192, 2, 0));
         buttonCarregarDadosListaClientesAdmin.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         buttonCarregarDadosListaClientesAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        buttonCarregarDadosListaClientesAdmin.setText("CARREGAR DADOS");
+        buttonCarregarDadosListaClientesAdmin.setText("VOLTAR AO MENU ADMIN");
         buttonCarregarDadosListaClientesAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCarregarDadosListaClientesAdminActionPerformed(evt);
@@ -214,7 +214,7 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
     }
 
     private void buttonVoltarMenuListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {
-        MenuAdmin novatela = new MenuAdmin();
+        TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
     }
@@ -237,8 +237,9 @@ public class ListaClientesAdmin extends javax.swing.JFrame {
     }
 
     private void buttonCarregarDadosListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {
-        AdicionarDados("Marcão","222.333.555-77");
-        AdicionarDados("Rei Sergio","123.456.789-00");
+        MenuAdmin novatela = new MenuAdmin();
+        novatela.setVisible(true);
+        this.setVisible(false);
     }
 
     private void buttonCadastrarClienteListaClientesAdminActionPerformed(java.awt.event.ActionEvent evt) {

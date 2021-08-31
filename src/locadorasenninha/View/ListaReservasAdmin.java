@@ -20,7 +20,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         String dados[][] = Main.controller.atualizaTabelaReservas();
 
         for(int i = 0; i< Main.controller.qtdeReservas(); i++){
-            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3], dados[i][14]);
+            AdicionarDados(dados[i][0],dados[i][1], dados[i][2], dados[i][3], dados[i][4]);
         }
     }
     
@@ -128,7 +128,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         buttonVoltarMenuListaReservasAdmin.setBackground(new java.awt.Color(192, 2, 0));
         buttonVoltarMenuListaReservasAdmin.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         buttonVoltarMenuListaReservasAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        buttonVoltarMenuListaReservasAdmin.setText("VOLTAR AO MENU");
+        buttonVoltarMenuListaReservasAdmin.setText("TELA INICIAL");
         buttonVoltarMenuListaReservasAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonVoltarMenuListaReservasAdminActionPerformed(evt);
@@ -148,7 +148,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
         buttonCarregarDadosListaReservasAdmin.setBackground(new java.awt.Color(192, 2, 0));
         buttonCarregarDadosListaReservasAdmin.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         buttonCarregarDadosListaReservasAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        buttonCarregarDadosListaReservasAdmin.setText("CARREGAR DADOS");
+        buttonCarregarDadosListaReservasAdmin.setText("VOLTAR AO MENU ADMIN");
         buttonCarregarDadosListaReservasAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCarregarDadosListaReservasAdminActionPerformed(evt);
@@ -237,7 +237,7 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
 
     //Botão que volta ao menu da Locadora
     private void buttonVoltarMenuListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
-        MenuAdmin novatela = new MenuAdmin();
+        TelaInicial novatela = new TelaInicial();
         novatela.setVisible(true);
         this.setVisible(false);
     }
@@ -250,7 +250,9 @@ public class ListaReservasAdmin extends javax.swing.JFrame {
     }
 
     private void buttonCarregarDadosListaReservasAdminActionPerformed(java.awt.event.ActionEvent evt) {
-        //AdicionarDados("Fusca","15/08/2021","25/08/2021","Lulu","1");
+        MenuAdmin novatela = new MenuAdmin();
+        novatela.setVisible(true);
+        this.setVisible(false);
     }
 
     private void tableListaReservasAdminMouseClicked(java.awt.event.MouseEvent evt) {

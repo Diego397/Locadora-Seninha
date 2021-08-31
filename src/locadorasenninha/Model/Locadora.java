@@ -358,7 +358,7 @@ public class Locadora {
 
     public String[][] dadosReservas(){
 
-        String matriz[][] = new String[reservasLocadora.size()][4];
+        String matriz[][] = new String[reservasLocadora.size()][5];
 
         for(int i=0;i<reservasLocadora.size();i++){
             
@@ -370,8 +370,9 @@ public class Locadora {
 
             matriz[i][0] = (reservasLocadora.get(i)).getCarro().getModelo();
             matriz[i][1] = retirada;
-            matriz[i][1] = devolucao;
+            matriz[i][2] = devolucao;
             matriz[i][3] = (reservasLocadora.get(i)).getCliente().getNome();
+            matriz[i][4] = Integer.toString((reservasLocadora.get(i)).getNumeroReserva());
         }
         return matriz;
     }
